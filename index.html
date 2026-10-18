@@ -152,7 +152,11 @@ p { margin: 0; }
 /* Hero */
 .hero { padding-block: clamp(16px, 3vw, 32px) clamp(40px, 6vw, 72px); }
 .hero-card { position: relative; border-radius: 36px; overflow: hidden; min-height: clamp(560px, 58vw, 700px); display: flex; align-items: flex-end; padding: clamp(20px, 3vw, 40px); background: var(--tint); }
-.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 55%; }
+.concept-tag { position: absolute; z-index: 1; font: 500 .6875rem/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 7px 10px; border-radius: 999px; background: rgb(23 18 58 / .6); color: #fff; pointer-events: none; }
+.hero-card > .concept-tag { top: clamp(20px, 3vw, 40px); left: clamp(20px, 3vw, 40px); }
+.media { position: relative; margin: 0; }
+.media > .concept-tag { right: 14px; bottom: 14px; }
 .hero-panel { position: relative; max-width: 600px; display: grid; gap: 20px; padding: clamp(24px, 3vw, 40px); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
 .hero h1 { font-size: clamp(2.4rem, 1.2rem + 3vw, 3.5rem); line-height: 1.04; letter-spacing: -.03em; }
 .hero .lead { font-size: var(--s-md); }
@@ -172,7 +176,7 @@ p { margin: 0; }
 .promo svg { color: var(--lime); }
 @media (max-width: 760px) {
   .hero-card { display: grid; min-height: 0; padding: 0; overflow: visible; background: none; border-radius: 0; }
-  .hero-bg { position: static; aspect-ratio: 4 / 3; border-radius: 28px; order: 1; }
+  .hero-bg { position: static; aspect-ratio: 1 / 1; object-position: 100% 70%; border-radius: 28px; order: 1; }
   .hero-panel { margin: -48px 12px 0; order: 2; }
   .promo { position: static; width: auto; max-width: none; margin: 12px 0 0; order: 3; }
 }
@@ -260,7 +264,7 @@ p { margin: 0; }
 /* Product band */
 .product-band { background: var(--deep); color: var(--on-deep); }
 .product { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: center; padding-block: clamp(56px, 7vw, 96px); }
-.product-img img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center 62%; border-radius: 32px; }
+.product-img img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: center; border-radius: 32px; }
 .product-copy { display: grid; gap: 20px; min-width: 0; }
 .product-copy .eyebrow { color: var(--lime); }
 .product-copy h3 { font-size: var(--s-xl); font-weight: 800; letter-spacing: -.03em; line-height: 1; }
@@ -279,6 +283,9 @@ p { margin: 0; }
 .flavors-head .eyebrow { color: var(--lime); }
 .flavors-head h4 { font-size: 1.75rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
 .flavors-head p { color: var(--deep-muted); }
+.flavors-img { margin-bottom: 22px; }
+.flavors-img img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; object-position: center 52%; border-radius: 28px; }
+@media (max-width: 600px) { .flavors-img img { aspect-ratio: 3 / 2; } }
 .flavors-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .flavors-grid li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 14px 16px; border-radius: 18px; border: 1px solid var(--deep-line); background: rgb(255 255 255 / .04); }
 .flavors-grid b { display: block; font-size: var(--s-md); line-height: 1.25; }
@@ -293,7 +300,10 @@ p { margin: 0; }
 
 /* Wraps product family */
 .lavas-wrap { padding-block: clamp(56px, 7vw, 96px) 0; }
-.lavas-head { display: grid; gap: 12px; max-width: 760px; margin-bottom: 28px; }
+.lavas-top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin-bottom: 28px; }
+.lavas-top .media img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 28px; }
+@media (max-width: 880px) { .lavas-top { grid-template-columns: 1fr; } }
+.lavas-head { display: grid; gap: 12px; max-width: 760px; }
 .lavas-head h3 { font-size: var(--s-xl); font-weight: 800; letter-spacing: -.03em; line-height: 1; }
 .lavas-head p { color: var(--muted); }
 .lavas-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
@@ -483,7 +493,8 @@ p { margin: 0; }
   <section class="hero">
     <div class="wrap">
       <div class="hero-card">
-        <img class="hero-bg" src="img/hero-wide.webp" width="1122" height="623" alt="Mutfak tezgahında smoothie, yoğurt, kuruyemiş ezmesi, granola barlar, taze sebze ve wellbeing uygulaması açık bir telefon" data-i18n-attr="alt:alt.hero">
+        <img class="hero-bg" src="img/konsept-giris.webp" width="1536" height="1024" alt="Güneşli traverten tezgahta açık INSOVIO Ege Kekikli Sürülebilir Peynir kasesi, kapağı yanında; peynir sürülmüş ekmek, kekik, zeytin ve domates salatalık" data-i18n-attr="alt:alt.hero">
+        <span class="concept-tag" data-i18n="concept">Konsept görsel</span>
         <a class="promo" href="#etkinlik">
           <img src="img/etkinlik.webp" width="1007" height="941" alt="">
           <span class="promo-text"><small data-i18n="promo.s">Yeni · Urla, İlkbahar 2027</small><b>GastroSens</b><span class="promo-sub" data-i18n="promo.d">Duyusal tadım deneyimi</span></span>
@@ -632,9 +643,10 @@ p { margin: 0; }
     </div>
     <div class="product-band">
       <div class="wrap product">
-        <div class="product-img">
-          <img src="img/peynir.webp" width="1000" height="1500" loading="lazy" alt="INSOVIO sürülebilir peynir kutusu; etrafında ıspanak, avokado, chia, kinoa ve ceviz" data-i18n-attr="alt:alt.cheese">
-        </div>
+        <figure class="product-img media">
+          <img src="img/konsept-peynir.webp" width="1536" height="1024" loading="lazy" alt="Açık bir INSOVIO Ege Kekikli Sürülebilir Peynir kâğıt kasesi; yanında peynir sürülmüş ekmek, kekik, zeytin ve domates salatalık" data-i18n-attr="alt:alt.cheese">
+          <span class="concept-tag" data-i18n="concept">Konsept görsel</span>
+        </figure>
         <div class="product-copy">
           <span class="eyebrow" data-i18n="product.badge">İlk formülasyon · Geliştirme aşamasında</span>
           <h3 data-i18n="product.h">Sürülebilir Peynir</h3>
@@ -655,6 +667,10 @@ p { margin: 0; }
           <h4 data-i18n="fl.h">Her kutuda birkaç bitki daha</h4>
           <p data-i18n="fl.p">Sürülebilir peynirimizi Anadolu ve Akdeniz mutfağının kuru otları ve baharatlarıyla çeşitlendiriyoruz. Her çeşit, haftalık bitki sayına birkaç bitki daha ekliyor.</p>
         </div>
+        <figure class="flavors-img media">
+          <img src="img/konsept-cesitler.webp" width="1536" height="1024" loading="lazy" alt="Üç INSOVIO Sürülebilir Peynir çeşidi: Ege Kekikli, Za'atar ve Dereotu ile Limon" data-i18n-attr="alt:alt.flavors">
+          <span class="concept-tag" data-i18n="concept">Konsept görsel</span>
+        </figure>
         <ul class="flavors-grid">
           <li><span class="herb-dots" style="--a: #6E8B3D; --b: #A9B665; --c: #D9C27A" aria-hidden="true"></span><div><b data-i18n="fl.1.n">Ege Kekikli</b><span data-i18n="fl.1.i">Kekik, zeytinyağı</span></div><span class="flavor-plants" data-i18n="fl.1.p">+2 bitki</span></li>
           <li><span class="herb-dots" style="--a: #6E8B3D; --b: #B23A48; --c: #E8D9B0" aria-hidden="true"></span><div><b data-i18n="fl.2.n">Za'atar</b><span data-i18n="fl.2.i">Kekik, sumak, susam</span></div><span class="flavor-plants" data-i18n="fl.2.p">+3 bitki</span></li>
@@ -666,10 +682,16 @@ p { margin: 0; }
       </div>
     </div>
     <div class="wrap lavas-wrap">
-      <div class="lavas-head">
-        <span class="eyebrow" data-i18n="lv.e">Ürün ailesi · Geliştirme aşamasında</span>
-        <h3 data-i18n="lv.h">Lavaşlar</h3>
-        <p data-i18n="lv.p">Un yerine sebze ve baklagillerle yapılan, katkısız ve koruyucusuz üretmeyi hedeflediğimiz lavaşlar. Her biri haftalık bitki çeşitliliğine katkı sağlıyor. İlk seride malzemesi en az, tamamen bitkisel ve üretimi en kolay olan mercimek ve nohut unu lavaşlarıyla başlıyoruz. Kurucumuzun yüksek lisans çalışması da katkısız ve koruyucusuz ürün geliştirme üzerine.</p>
+      <div class="lavas-top">
+        <div class="lavas-head">
+          <span class="eyebrow" data-i18n="lv.e">Ürün ailesi · Geliştirme aşamasında</span>
+          <h3 data-i18n="lv.h">Lavaşlar</h3>
+          <p data-i18n="lv.p">Un yerine sebze ve baklagillerle yapılan, katkısız ve koruyucusuz üretmeyi hedeflediğimiz lavaşlar. Her biri haftalık bitki çeşitliliğine katkı sağlıyor. İlk seride malzemesi en az, tamamen bitkisel ve üretimi en kolay olan mercimek ve nohut unu lavaşlarıyla başlıyoruz. Kurucumuzun yüksek lisans çalışması da katkısız ve koruyucusuz ürün geliştirme üzerine.</p>
+        </div>
+        <figure class="media">
+          <img src="img/konsept-lavas.webp" width="1536" height="1024" loading="lazy" alt="Yuvarlak pencereli kâğıt kılıf içinde INSOVIO Kırmızı Mercimek Lavaş; yanında bir kase kırmızı mercimek ve maydanoz" data-i18n-attr="alt:alt.lavas">
+          <span class="concept-tag" data-i18n="concept">Konsept görsel</span>
+        </figure>
       </div>
       <ul class="lavas-grid">
         <li class="lavas-card first">
@@ -929,7 +951,10 @@ p { margin: 0; }
     'hero.h1': 'The <em>delicious</em> side of healthy aging.',
     'hero.lead': 'We develop functional foods you will enjoy every day, grounded in microbiota-based clinical research. Our focus is living well and healthy aging, with brain health as a key part of it.',
     'hero.secondary': 'Try the plant counter',
-    'alt.hero': 'Kitchen counter with a smoothie, yogurt, nut butter, granola bars, fresh vegetables and a phone showing a well-being app',
+    'alt.hero': 'Open INSOVIO Aegean Thyme spreadable cheese tub on a sunlit travertine counter, lid beside it, with bread, thyme, olives and cucumber and tomatoes',
+    'concept': 'Concept image',
+    'alt.flavors': 'Three INSOVIO spreadable cheese flavors: Aegean Thyme, Za\'atar, and Dill and Lemon',
+    'alt.lavas': 'INSOVIO red lentil wraps in a paper sleeve with a round window, next to a bowl of red lentils and parsley',
     'alt.shelves': 'Store shelves packed with supplement and capsule bottles',
     'problem.caption': 'Shelves are packed with supplements, while our plates stay the same.',
     'problem.eyebrow': 'The problem', 'problem.h2': 'Why is living healthily so hard?',
@@ -950,7 +975,7 @@ p { margin: 0; }
     'add.h': 'Not on the list? <small>add your own</small>', 'add.label': 'Plant name', 'add.ph': 'e.g. arugula, purslane, quince', 'add.btn': 'Add',
     'products.eyebrow': 'Products', 'products.h2': 'Our first formulations',
     'products.lead': 'We turn everyday foods into functional foods using scientific data. Our products will be tested with pilot user groups.',
-    'alt.cheese': 'INSOVIO spreadable cheese tub surrounded by spinach, avocado, chia, quinoa and walnuts',
+    'alt.cheese': 'Open INSOVIO Aegean Thyme spreadable cheese paper tub with bread, thyme, olives, cucumber and tomatoes',
     'product.badge': 'First formulation · In development', 'product.h': 'Spreadable Cheese',
     'product.p': 'We are developing a nourishing, natural and sustainable spreadable cheese made with a plant-based culture, meant to be easy to eat every day: at breakfast, in a wrap or on a slice of bread.',
     'product.note': 'These are target properties. Final values will be confirmed by product analyses.',
