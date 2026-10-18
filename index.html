@@ -150,45 +150,44 @@ p { margin: 0; }
 @media (max-width: 460px) { .site-header .header-actions > .btn { display: none; } }
 
 /* Hero */
-.hero { padding-block: clamp(40px, 6vw, 72px) clamp(56px, 7vw, 96px); }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
-.hero-copy { display: grid; gap: 28px; min-width: 0; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); margin-top: 6px; }
-.stats div { display: grid; gap: 4px; align-content: start; padding: 18px 16px 0; border-left: 1px solid var(--line); }
-.stats div:first-child { padding-left: 0; border-left: 0; }
-.stats strong { font-family: var(--f-mono); font-weight: 500; font-size: 1.5rem; line-height: 1.2; }
-.stats span { font-size: var(--s-xs); color: var(--muted); line-height: 1.4; }
-.hero-figure { position: relative; margin: 0; min-width: 0; }
-.hero-figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 36px; }
-.mini-card {
-  position: absolute; left: -28px; bottom: 36px; width: 260px; max-width: calc(100% - 24px);
-  display: grid; gap: 10px; padding: 18px 20px; border-radius: 20px;
-  background: var(--surface); box-shadow: var(--shadow);
+.hero { padding-block: clamp(16px, 3vw, 32px) clamp(40px, 6vw, 72px); }
+.hero-card { position: relative; border-radius: 36px; overflow: hidden; min-height: clamp(560px, 58vw, 700px); display: flex; align-items: flex-end; padding: clamp(20px, 3vw, 40px); background: var(--tint); }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.hero-panel { position: relative; max-width: 560px; display: grid; gap: 20px; padding: clamp(24px, 3vw, 40px); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
+.hero h1 { font-size: clamp(2.5rem, 1.3rem + 3.2vw, 4rem); line-height: 1.02; letter-spacing: -.03em; }
+.hero .lead { font-size: var(--s-md); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.promo {
+  position: absolute; top: clamp(20px, 3vw, 40px); right: clamp(20px, 3vw, 40px); width: 330px; max-width: calc(100% - 40px);
+  display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; gap: 14px; align-items: center;
+  padding: 10px 18px 10px 10px; border-radius: 22px; background: var(--deep); color: var(--on-deep);
+  text-decoration: none; box-shadow: var(--shadow); transition: transform .2s ease;
 }
-.mini-card .eyebrow { font-size: .6875rem; }
-.mini-card b { font-size: var(--s-sm); }
-.mini-cells { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; }
-.mini-cells i { aspect-ratio: 1; border-radius: 4px; background: var(--tint); }
-.mini-cells i.on { background: var(--violet); }
-.mini-cells i.lime { background: var(--lime); }
-.mini-cells i.ink { background: var(--ink); }
-@media (max-width: 880px) {
-  .hero .wrap { grid-template-columns: 1fr; }
-  .hero-figure { max-width: 520px; }
-  .mini-card { left: 12px; }
+.promo:hover { transform: translateY(-2px); }
+.promo img { width: 72px; height: 72px; border-radius: 14px; object-fit: cover; }
+.promo-text { display: grid; gap: 2px; min-width: 0; }
+.promo small { font: 500 .6875rem/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--lime); }
+.promo b { font-size: 1.25rem; font-weight: 800; letter-spacing: -.01em; line-height: 1.1; }
+.promo-sub { font-size: var(--s-xs); color: var(--deep-muted); }
+.promo svg { color: var(--lime); }
+@media (max-width: 760px) {
+  .hero-card { display: grid; min-height: 0; padding: 0; overflow: visible; background: none; border-radius: 0; }
+  .hero-bg { position: static; aspect-ratio: 4 / 3; border-radius: 28px; }
+  .hero-panel { margin: -48px 12px 0; }
+  .promo { position: static; width: auto; max-width: none; margin: 12px 0 0; }
 }
-@media (max-width: 520px) { .stats strong { font-size: 1.1875rem; } .stats div { padding-right: 8px; padding-left: 10px; } }
 
 /* Trust strip */
 .trust { background: var(--surface); border-block: 1px solid var(--line); }
-.trust .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; padding-block: 30px; }
-.trust-item { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 14px; align-items: start; }
-.trust-item svg { width: 28px; height: 28px; stroke: var(--violet); }
-.trust-item b { display: block; font-size: var(--s-md); line-height: 1.3; }
-.trust-item span { font-size: var(--s-sm); color: var(--muted); }
+.trust .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; padding-block: 28px; }
+.trust-item { display: grid; gap: 4px; align-content: start; padding-left: 20px; border-left: 2px solid var(--lime); }
+.trust-item strong { font-size: 1.375rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; color: var(--violet); }
+.trust-item span { font-size: var(--s-sm); color: var(--muted); line-height: 1.45; }
 @media (max-width: 960px) { .trust .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .trust .wrap { grid-template-columns: 1fr; gap: 18px; } }
+
+/* Products spacing after the event band */
+#urunler { padding-top: clamp(64px, 9vw, 120px); }
 
 /* Problem */
 .problem { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
@@ -401,7 +400,7 @@ p { margin: 0; }
 <body>
 
 
-<div class="topbar"><a href="#iletisim"><span data-i18n="bar.text">Pilot program başvuruları açık</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="topbar"><a href="#etkinlik"><span data-i18n="bar.text">Yeni · GastroSens duyusal tadım deneyimi · Urla, İlkbahar 2027</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 
 <header class="site-header">
   <div class="wrap">
@@ -430,49 +429,32 @@ p { margin: 0; }
 <main id="top">
   <section class="hero">
     <div class="wrap">
-      <div class="hero-copy">
-        <span class="eyebrow" data-i18n="hero.eyebrow">Mikrobiyota temelli fonksiyonel gıda</span>
-        <h1 data-i18n="hero.h1">Lezzet, <em>bilim</em> ve iyi yaşam.</h1>
-        <p class="lead" data-i18n="hero.lead">Daha iyi bir yaşam için lezzeti, bilimi ve teknolojiyi bir araya getiriyoruz. Mikrobiyota temelli klinik araştırmalara dayanan fonksiyonel gıdalar geliştiriyor, bunları dijital wellbeing takibiyle birleştiriyoruz.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#iletisim" data-i18n="cta.pilot">Pilot programa katıl</a>
-          <a class="btn btn-ghost" href="#yaklasim" data-i18n="hero.secondary">Yaklaşımımızı gör</a>
-        </div>
-        <div class="stats">
-          <div><strong>7</strong><span data-i18n="stat1">Adımda laboratuvardan sofraya</span></div>
-          <div><strong>3</strong><span data-i18n="stat2">Disiplin tek ekipte: gıda mühendisliği, nöroloji, mikrobiyota</span></div>
-          <div><strong data-i18n="stat3.v">Klinik</strong><span data-i18n="stat3">Beyin sağlığı ve mikrobiyota odaklı çalışmalar</span></div>
+      <div class="hero-card">
+        <img class="hero-bg" src="img/hero-wide.webp" width="1122" height="623" alt="Mutfak tezgahında smoothie, yoğurt, kuruyemiş ezmesi, granola barlar, taze sebze ve wellbeing uygulaması açık bir telefon" data-i18n-attr="alt:alt.hero">
+        <a class="promo" href="#etkinlik">
+          <img src="img/etkinlik.webp" width="1007" height="941" alt="">
+          <span class="promo-text"><small data-i18n="promo.s">Yeni · Urla, İlkbahar 2027</small><b>GastroSens</b><span class="promo-sub" data-i18n="promo.d">Duyusal tadım deneyimi</span></span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <div class="hero-panel">
+          <span class="eyebrow" data-i18n="hero.eyebrow">Lezzet · Bilim · İyi yaşam</span>
+          <h1 data-i18n="hero.h1">Beyin sağlığı için <em>gerçek gıda</em>.</h1>
+          <p class="lead" data-i18n="hero.lead">Mikrobiyota temelli klinik araştırmalara dayanan, her gün severek yiyeceğin fonksiyonel gıdalar geliştiriyor, bunları dijital wellbeing takibiyle birleştiriyoruz.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#iletisim" data-i18n="cta.pilot">Pilot programa katıl</a>
+            <a class="btn btn-ghost" href="#cesitlilik" data-i18n="hero.secondary">Bitki sayacını dene</a>
+          </div>
         </div>
       </div>
-      <figure class="hero-figure">
-        <img src="img/hero.webp" width="1100" height="1375" alt="Mutfak tezgahında yoğurt, smoothie, kuruyemiş ezmesi, granola barlar, taze sebze ve meyveler; yanında wellbeing uygulaması açık bir telefon" data-i18n-attr="alt:alt.hero">
-        <div class="mini-card" aria-hidden="true">
-          <span class="eyebrow" data-i18n="card.label">Çeşitlilik takibi · örnek</span>
-          <div class="mini-cells"><i class="on"></i><i class="on"></i><i class="on"></i><i class="lime"></i><i class="lime"></i><i class="ink"></i><i></i><i></i><i></i><i></i></div>
-          <b data-i18n="card.q">Bu hafta kaç farklı bitki?</b>
-        </div>
-      </figure>
     </div>
   </section>
 
   <section class="trust" aria-label="Neden INSOVIO" data-i18n-attr="aria-label:a.trust">
     <div class="wrap">
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg>
-        <div><b data-i18n="t1.h">Klinik araştırmaya dayalı</b><span data-i18n="t1.p">Mikrobiyom verisinden ürüne</span></div>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6.5-7-10.5A7 7 0 0 1 12 3a7 7 0 0 1 7 7.5c0 4-3 7.5-7 10.5Z"/><path d="M12 8v6"/></svg>
-        <div><b data-i18n="t2.h">Gerçek gıda</b><span data-i18n="t2.p">Kapsül değil, her gün yenen ürünler</span></div>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c.5-3.5 3-5.5 6-5.5s5.5 2 6 5.5M15 15c2.5 0 5 1.5 5.5 5"/></svg>
-        <div><b data-i18n="t3.h">Bilim insanlarından oluşan ekip</b><span data-i18n="t3.p">Gıda mühendisliği, nöroloji, mikrobiyota</span></div>
-      </div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>
-        <div><b data-i18n="t4.h">Dijital takip</b><span data-i18n="t4.p">Çeşitlilik ve wellbeing paneli</span></div>
-      </div>
+      <div class="trust-item"><strong data-i18n="t1.v">Klinik</strong><span data-i18n="t1.p">Beyin sağlığı ve mikrobiyota odaklı çalışmalar</span></div>
+      <div class="trust-item"><strong data-i18n="t2.v">3 disiplin</strong><span data-i18n="t2.p">Gıda mühendisliği, nöroloji ve mikrobiyota tek ekipte</span></div>
+      <div class="trust-item"><strong data-i18n="t3.v">7 adım</strong><span data-i18n="t3.p">Laboratuvardan sofraya ürün geliştirme</span></div>
+      <div class="trust-item"><strong data-i18n="t4.v">Gerçek gıda</strong><span data-i18n="t4.p">Her gün yenen ürünler, kapsül değil</span></div>
     </div>
   </section>
 
@@ -556,6 +538,33 @@ p { margin: 0; }
             <div class="chips" id="custom-chips" style="margin-top:10px"></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint event-band" id="etkinlik" aria-labelledby="etkinlik-title">
+    <div class="wrap event">
+      <figure class="event-img">
+        <img src="img/etkinlik.webp" width="1007" height="941" loading="lazy" alt="Masada portakal kabuğu, biberiye, tarçın ve kahve çekirdeği dolu cam kavanozlar ile tadım kaseleri" data-i18n-attr="alt:alt.event">
+      </figure>
+      <div class="event-copy">
+        <span class="badge" data-i18n="event.badge">Planlanıyor · Urla, İlkbahar 2027</span>
+        <span class="eyebrow" data-i18n="event.eyebrow">Duyusal tadım deneyimi</span>
+        <h2 id="etkinlik-title">GastroSens</h2>
+        <p class="event-tag" data-i18n="event.tag">Gözler kapalı, damak açık.</p>
+        <p data-i18n="event.p">Şef Aydan Üstkanat ile birlikte tasarladığımız bu buluşmalarda katılımcılar koku ve tadı tanımayı, adlandırmayı ve hatırlamayı çalışıyor. Bilim tarafı lezzet algısının nörobilimini ve bağırsak-beyin eksenini, gastronomi tarafı aroma ve lezzet mimarisini getiriyor.</p>
+        <ol class="layers">
+          <li><b data-i18n="l1.b">Tanı</b><span data-i18n="l1.s">Koku kapsülleriyle imza notaları tek tek koklayıp tadıyoruz.</span></li>
+          <li><b data-i18n="l2.b">Tat</b><span data-i18n="l2.s">Gözler kapalı, farklı tabaklar geliyor. Her tabakta bu notalar gizli ya da hiç yok.</span></li>
+          <li><b data-i18n="l3.b">Bul</b><span data-i18n="l3.s">Misafir tahmin kartını dolduruyor, sonunda cevaplar ve reçetelerin hikâyesi açıklanıyor.</span></li>
+        </ol>
+        <dl class="facts">
+          <div><dt data-i18n="e1.t">Süre</dt><dd data-i18n="e1.d">Yaklaşık 3 saat</dd></div>
+          <div><dt data-i18n="e2.t">Misafir</dt><dd data-i18n="e2.d">40 kişi / oturum</dd></div>
+          <div><dt data-i18n="e3.t">İlk seri</dt><dd data-i18n="e3.d">4 hafta, 4 oturum</dd></div>
+          <div><dt data-i18n="e4.t">Temalar</dt><dd data-i18n="e4.d">Çiçekler, baharatlar, Ege otları, imza notalar</dd></div>
+        </dl>
+        <p class="event-cta" data-i18n="event.cta">Marka ortaklığı, sponsorluk ya da katılım için <a href="mailto:rabia@insovio.com?subject=GastroSens">rabia@insovio.com</a> adresine yaz.</p>
       </div>
     </div>
   </section>
@@ -688,32 +697,6 @@ p { margin: 0; }
     </div>
   </section>
 
-  <section class="band tint event-band" id="etkinlik" aria-labelledby="etkinlik-title">
-    <div class="wrap event">
-      <figure class="event-img">
-        <img src="img/etkinlik.webp" width="1007" height="941" loading="lazy" alt="Masada portakal kabuğu, biberiye, tarçın ve kahve çekirdeği dolu cam kavanozlar ile tadım kaseleri" data-i18n-attr="alt:alt.event">
-      </figure>
-      <div class="event-copy">
-        <span class="badge" data-i18n="event.badge">Planlanıyor · Urla, İlkbahar 2027</span>
-        <span class="eyebrow" data-i18n="event.eyebrow">Duyusal tadım deneyimi</span>
-        <h2 id="etkinlik-title">GastroSens</h2>
-        <p class="event-tag" data-i18n="event.tag">Gözler kapalı, damak açık.</p>
-        <p data-i18n="event.p">Şef Aydan Üstkanat ile birlikte tasarladığımız bu buluşmalarda katılımcılar koku ve tadı tanımayı, adlandırmayı ve hatırlamayı çalışıyor. Bilim tarafı lezzet algısının nörobilimini ve bağırsak-beyin eksenini, gastronomi tarafı aroma ve lezzet mimarisini getiriyor.</p>
-        <ol class="layers">
-          <li><b data-i18n="l1.b">Tanı</b><span data-i18n="l1.s">Koku kapsülleriyle imza notaları tek tek koklayıp tadıyoruz.</span></li>
-          <li><b data-i18n="l2.b">Tat</b><span data-i18n="l2.s">Gözler kapalı, farklı tabaklar geliyor. Her tabakta bu notalar gizli ya da hiç yok.</span></li>
-          <li><b data-i18n="l3.b">Bul</b><span data-i18n="l3.s">Misafir tahmin kartını dolduruyor, sonunda cevaplar ve reçetelerin hikâyesi açıklanıyor.</span></li>
-        </ol>
-        <dl class="facts">
-          <div><dt data-i18n="e1.t">Süre</dt><dd data-i18n="e1.d">Yaklaşık 3 saat</dd></div>
-          <div><dt data-i18n="e2.t">Misafir</dt><dd data-i18n="e2.d">40 kişi / oturum</dd></div>
-          <div><dt data-i18n="e3.t">İlk seri</dt><dd data-i18n="e3.d">4 hafta, 4 oturum</dd></div>
-          <div><dt data-i18n="e4.t">Temalar</dt><dd data-i18n="e4.d">Çiçekler, baharatlar, Ege otları, imza notalar</dd></div>
-        </dl>
-        <p class="event-cta" data-i18n="event.cta">Marka ortaklığı, sponsorluk ya da katılım için <a href="mailto:rabia@insovio.com?subject=GastroSens">rabia@insovio.com</a> adresine yaz.</p>
-      </div>
-    </div>
-  </section>
 
   <section class="band" id="ekip" aria-labelledby="ekip-title">
     <div class="wrap">
@@ -782,20 +765,22 @@ p { margin: 0; }
     'a.home': 'INSOVIO home', 'a.nav': 'Main menu', 'a.timeline': 'Development stages',
     'nav.approach': 'Approach', 'nav.diversity': 'Diversity', 'nav.products': 'Products', 'nav.science': 'Science', 'nav.event': 'Event', 'nav.team': 'Team',
     'cta.pilot': 'Join the pilot',
-    'bar.text': 'Pilot program applications are open',
-    'hero.eyebrow': 'Microbiota-based functional food',
+    'promo.s': 'New · Urla, spring 2027', 'promo.d': 'Sensory tasting experience',
+    'bar.text': 'New · GastroSens sensory tasting experience · Urla, spring 2027',
+    'hero.eyebrow': 'Taste · Science · Living well',
     'stat1': 'Steps from lab to table', 'stat2': 'Disciplines in one team: food engineering, neurology, microbiota', 'stat3.v': 'Clinical', 'stat3': 'Studies focused on brain health and the microbiota',
     'card.label': 'Diversity tracking · example', 'card.q': 'How many plants this week?',
     'a.trust': 'Why INSOVIO',
-    't1.h': 'Grounded in clinical research', 't1.p': 'From microbiome data to product',
-    't2.h': 'Real food', 't2.p': 'Everyday foods, not capsules',
-    't3.h': 'A team of scientists', 't3.p': 'Food engineering, neurology, microbiota',
-    't4.h': 'Digital tracking', 't4.p': 'Diversity and well-being dashboard',
+    't1.v': 'Clinical', 't2.v': '3 disciplines', 't3.v': '7 steps', 't4.v': 'Real food',
+    't1.h': 'Grounded in clinical research', 't1.p': 'Studies focused on brain health and the microbiota',
+    't2.h': 'Real food', 't2.p': 'Food engineering, neurology and microbiota in one team',
+    't3.h': 'A team of scientists', 't3.p': 'Product development from lab to table',
+    't4.h': 'Digital tracking', 't4.p': 'Everyday foods, not capsules',
     'product.cta': 'Be among the first to try it',
-    'hero.h1': 'Taste, <em>science</em> and living well.',
-    'hero.lead': 'We bring together taste, science and technology for a better life. We develop functional foods grounded in microbiota-based clinical research and pair them with digital well-being tracking.',
-    'hero.secondary': 'See our approach',
-    'alt.hero': 'Kitchen counter with yogurt, a smoothie, nut butter, granola bars, fresh vegetables and fruit, next to a phone showing a well-being app',
+    'hero.h1': '<em>Real food</em> for brain health.',
+    'hero.lead': 'We develop functional foods you will enjoy every day, grounded in microbiota-based clinical research, and pair them with digital well-being tracking.',
+    'hero.secondary': 'Try the plant counter',
+    'alt.hero': 'Kitchen counter with a smoothie, yogurt, nut butter, granola bars, fresh vegetables and a phone showing a well-being app',
     'alt.shelves': 'Store shelves packed with supplement and capsule bottles',
     'problem.caption': 'Shelves are packed with supplements, while our plates stay the same.',
     'problem.eyebrow': 'The problem', 'problem.h2': 'Why is living healthily so hard?',
