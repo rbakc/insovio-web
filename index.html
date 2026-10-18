@@ -151,14 +151,14 @@ p { margin: 0; }
 
 /* Hero */
 .hero { padding-block: clamp(16px, 3vw, 32px) clamp(40px, 6vw, 72px); }
-.hero-card { position: relative; border-radius: 36px; overflow: hidden; min-height: clamp(560px, 50vw, 680px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; background: var(--tint); }
-.hero-bg { position: absolute; grid-column: 1 / 2; grid-row: 1 / -1; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
-.hero-panel { grid-column: 2; grid-row: 1; align-self: center; margin: clamp(20px, 3vw, 40px) clamp(20px, 3vw, 40px) 0; position: relative; max-width: 600px; display: grid; gap: 20px; padding: clamp(24px, 3vw, 40px); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
+.hero-card { position: relative; border-radius: 36px; overflow: hidden; min-height: clamp(560px, 58vw, 700px); display: flex; align-items: flex-end; justify-content: flex-end; padding: clamp(20px, 3vw, 40px); background: var(--tint); }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.hero-panel { position: relative; max-width: 600px; display: grid; gap: 20px; padding: clamp(24px, 3vw, 40px); border-radius: 28px; background: var(--surface); box-shadow: var(--shadow); }
 .hero h1 { font-size: clamp(2.4rem, 1.2rem + 3vw, 3.5rem); line-height: 1.04; letter-spacing: -.03em; }
 .hero .lead { font-size: var(--s-md); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .promo {
-  grid-column: 2; grid-row: 2; position: relative; margin: 16px clamp(20px, 3vw, 40px) clamp(20px, 3vw, 40px); max-width: 600px;
+  position: absolute; bottom: clamp(20px, 3vw, 40px); left: clamp(20px, 3vw, 40px); width: 330px; max-width: calc(100% - 40px);
   display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; gap: 14px; align-items: center;
   padding: 10px 18px 10px 10px; border-radius: 22px; background: var(--deep); color: var(--on-deep);
   text-decoration: none; box-shadow: var(--shadow); transition: transform .2s ease;
@@ -170,13 +170,16 @@ p { margin: 0; }
 .promo b { font-size: 1.25rem; font-weight: 800; letter-spacing: -.01em; line-height: 1.1; }
 .promo-sub { font-size: var(--s-xs); color: var(--deep-muted); }
 .promo svg { color: var(--lime); }
-@media (max-width: 900px) {
-  .hero-card { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; min-height: 0; overflow: visible; background: none; border-radius: 0; }
-  .hero-bg { position: static; grid-column: auto; grid-row: auto; height: auto; aspect-ratio: 4 / 3; border-radius: 28px; order: 1; }
-  .hero-panel { grid-column: auto; grid-row: auto; margin: -48px 12px 0; max-width: none; order: 2; }
-  .promo { grid-column: auto; grid-row: auto; max-width: none; margin: 12px 0 0; order: 3; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .hero-card { flex-direction: column; justify-content: space-between; align-items: flex-end; gap: 24px; }
+  .promo { position: relative; bottom: auto; left: auto; align-self: flex-start; }
 }
-@media (max-width: 600px) { .hero-bg { aspect-ratio: 1 / 1; object-position: 50% 40%; } }
+@media (max-width: 760px) {
+  .hero-card { display: grid; min-height: 0; padding: 0; overflow: visible; background: none; border-radius: 0; }
+  .hero-bg { position: static; aspect-ratio: 4 / 3; border-radius: 28px; order: 1; }
+  .hero-panel { margin: -48px 12px 0; order: 2; }
+  .promo { position: static; width: auto; max-width: none; margin: 12px 0 0; order: 3; }
+}
 
 /* Trust strip */
 .trust { background: var(--surface); border-block: 1px solid var(--line); }
@@ -484,7 +487,7 @@ p { margin: 0; }
   <section class="hero">
     <div class="wrap">
       <div class="hero-card">
-        <img class="hero-bg" src="img/hero-peynir.webp" width="1024" height="1200" alt="INSOVIO sürülebilir peynir kutusu; çevresinde ıspanak, avokado, ceviz, chia, kinoa, yulaf ve taze sebzeler" data-i18n-attr="alt:alt.hero">
+        <img class="hero-bg" src="img/hero-wide.webp" width="1122" height="623" alt="Mutfak tezgahında smoothie, yoğurt, kuruyemiş ezmesi, granola barlar, taze sebze ve wellbeing uygulaması açık bir telefon" data-i18n-attr="alt:alt.hero">
         <a class="promo" href="#etkinlik">
           <img src="img/etkinlik.webp" width="1007" height="941" alt="">
           <span class="promo-text"><small data-i18n="promo.s">Yeni · Urla, İlkbahar 2027</small><b>GastroSens</b><span class="promo-sub" data-i18n="promo.d">Duyusal tadım deneyimi</span></span>
@@ -634,7 +637,7 @@ p { margin: 0; }
     <div class="product-band">
       <div class="wrap product">
         <div class="product-img">
-          <img src="img/peynir-yakin.webp" width="784" height="784" loading="lazy" alt="Açık bir INSOVIO sürülebilir peynir kutusu, yakın çekim" data-i18n-attr="alt:alt.cheese">
+          <img src="img/peynir.webp" width="1000" height="1500" loading="lazy" alt="INSOVIO sürülebilir peynir kutusu; etrafında ıspanak, avokado, chia, kinoa ve ceviz" data-i18n-attr="alt:alt.cheese">
         </div>
         <div class="product-copy">
           <span class="eyebrow" data-i18n="product.badge">İlk formülasyon · Geliştirme aşamasında</span>
@@ -930,7 +933,7 @@ p { margin: 0; }
     'hero.h1': 'The <em>delicious</em> side of healthy aging.',
     'hero.lead': 'We develop functional foods you will enjoy every day, grounded in microbiota-based clinical research. Our focus is living well and healthy aging, with brain health as a key part of it.',
     'hero.secondary': 'Try the plant counter',
-    'alt.hero': 'INSOVIO spreadable cheese tub surrounded by spinach, avocado, walnuts, chia, quinoa, oats and fresh vegetables',
+    'alt.hero': 'Kitchen counter with a smoothie, yogurt, nut butter, granola bars, fresh vegetables and a phone showing a well-being app',
     'alt.shelves': 'Store shelves packed with supplement and capsule bottles',
     'problem.caption': 'Shelves are packed with supplements, while our plates stay the same.',
     'problem.eyebrow': 'The problem', 'problem.h2': 'Why is living healthily so hard?',
@@ -951,7 +954,7 @@ p { margin: 0; }
     'add.h': 'Not on the list? <small>add your own</small>', 'add.label': 'Plant name', 'add.ph': 'e.g. arugula, purslane, quince', 'add.btn': 'Add',
     'products.eyebrow': 'Products', 'products.h2': 'Our first formulations',
     'products.lead': 'We turn everyday foods into functional foods using scientific data. Our products will be tested with pilot user groups.',
-    'alt.cheese': 'Close-up of an open INSOVIO spreadable cheese tub',
+    'alt.cheese': 'INSOVIO spreadable cheese tub surrounded by spinach, avocado, chia, quinoa and walnuts',
     'product.badge': 'First formulation · In development', 'product.h': 'Spreadable Cheese',
     'product.p': 'We are developing a nourishing, natural and sustainable spreadable cheese made with a plant-based culture, meant to be easy to eat every day: at breakfast, in a wrap or on a slice of bread.',
     'product.note': 'These are target properties. Final values will be confirmed by product analyses.',
