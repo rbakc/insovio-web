@@ -273,6 +273,38 @@ p { margin: 0; }
 .product-copy .btn { justify-self: start; margin-top: 4px; }
 @media (max-width: 880px) { .product { grid-template-columns: 1fr; } .product-img { max-width: 520px; } }
 
+/* Wraps product family */
+.lavas-wrap { padding-block: clamp(56px, 7vw, 96px) 0; }
+.lavas-head { display: grid; gap: 12px; max-width: 760px; margin-bottom: 28px; }
+.lavas-head h3 { font-size: var(--s-xl); font-weight: 800; letter-spacing: -.03em; line-height: 1; }
+.lavas-head p { color: var(--muted); }
+.lavas-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.lavas-card { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 18px; align-items: start; padding: 22px; border-radius: 24px; background: var(--surface); border: 1px solid var(--line); }
+.disc {
+  width: 84px; height: 84px; border-radius: 50%; background-color: var(--disc);
+  background-image: radial-gradient(rgb(255 255 255 / .45) 1.3px, transparent 1.8px), radial-gradient(rgb(0 0 0 / .22) 1.2px, transparent 1.7px);
+  background-size: 13px 13px, 17px 17px; background-position: 0 0, 6px 8px;
+  box-shadow: inset 0 0 0 5px rgb(255 255 255 / .22), 0 6px 14px -8px rgb(23 18 58 / .5);
+}
+.lavas-card h4 { font-size: 1.125rem; font-weight: 700; line-height: 1.25; margin-bottom: 4px; }
+.lavas-card p { font-size: var(--s-sm); color: var(--muted); }
+.lavas-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.lavas-tags span { font: 500 .6875rem/1 var(--f-mono); text-transform: uppercase; letter-spacing: .06em; padding: 6px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.lavas-tags .plants { background: var(--lime); border-color: var(--lime); color: var(--on-lime); }
+.lavas-foot { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; margin-top: 22px; }
+.lavas-foot p { font-size: var(--s-xs); color: var(--muted); }
+@media (max-width: 960px) { .lavas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .lavas-grid { grid-template-columns: 1fr; } }
+.inspo { margin-top: clamp(40px, 6vw, 72px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: clamp(24px, 4vw, 56px); align-items: center; padding: clamp(24px, 4vw, 48px); border-radius: 32px; background: var(--tint); }
+.inspo-copy { display: grid; gap: 14px; }
+.inspo-copy h3 { font-size: 1.75rem; font-weight: 800; letter-spacing: -.02em; }
+.inspo-copy p { color: var(--muted); }
+.inspo-credit { font-size: var(--s-xs); }
+.ig-card { margin: 0; display: grid; gap: 8px; padding: 22px; border-radius: 20px; background: var(--surface); border: 1px solid var(--line); min-width: 0; }
+.ig-card b { font-size: 1.25rem; }
+.ig-card a { color: var(--violet); font-weight: 600; text-underline-offset: 3px; }
+@media (max-width: 760px) { .inspo { grid-template-columns: 1fr; } }
+
 /* Process */
 .process-wrap { padding-block: clamp(56px, 7vw, 96px) 0; }
 .process-head { display: grid; gap: 8px; margin-bottom: 24px; }
@@ -597,6 +629,81 @@ p { margin: 0; }
         </div>
       </div>
     </div>
+    <div class="wrap lavas-wrap">
+      <div class="lavas-head">
+        <span class="eyebrow" data-i18n="lv.e">Ürün ailesi · Geliştirme aşamasında</span>
+        <h3 data-i18n="lv.h">Lavaşlar</h3>
+        <p data-i18n="lv.p">Un yerine sebze ve baklagillerle yapılan, katkısız ve koruyucusuz üretmeyi hedeflediğimiz lavaşlar. Her biri haftalık bitki çeşitliliğine katkı sağlıyor. Kurucumuzun yüksek lisans çalışması da katkısız ve koruyucusuz ürün geliştirme üzerine.</p>
+      </div>
+      <ul class="lavas-grid">
+        <li class="lavas-card">
+          <span class="disc" style="--disc: #86B84A" aria-hidden="true"></span>
+          <div>
+            <h4 data-i18n="lv.avokado.n">Avokado Lavaş</h4>
+            <p data-i18n="lv.avokado.i">Avokado, yumurta, limon, susam, çörek otu</p>
+            <div class="lavas-tags"><span class="plants" data-i18n="lv.avokado.p">4 bitki</span><span data-i18n="lv.avokado.t0">Unsuz</span><span data-i18n="lv.avokado.t1">Yumurtalı</span></div>
+          </div>
+        </li>
+        <li class="lavas-card">
+          <span class="disc" style="--disc: #E58A3A" aria-hidden="true"></span>
+          <div>
+            <h4 data-i18n="lv.mercimek.n">Kırmızı Mercimek Lavaşı</h4>
+            <p data-i18n="lv.mercimek.i">Kırmızı mercimek, su, tuz, kimyon</p>
+            <div class="lavas-tags"><span class="plants" data-i18n="lv.mercimek.p">2 bitki</span><span data-i18n="lv.mercimek.t0">Baklagil bazlı</span><span data-i18n="lv.mercimek.t1">3–4 malzeme</span></div>
+          </div>
+        </li>
+        <li class="lavas-card">
+          <span class="disc" style="--disc: #B5CF6B" aria-hidden="true"></span>
+          <div>
+            <h4 data-i18n="lv.kabak.n">Kabak Lavaşı</h4>
+            <p data-i18n="lv.kabak.i">Kabak, yumurta, peynir, karabiber</p>
+            <div class="lavas-tags"><span class="plants" data-i18n="lv.kabak.p">2 bitki</span><span data-i18n="lv.kabak.t0">Sebze bazlı</span><span data-i18n="lv.kabak.t1">Yumurtalı</span></div>
+          </div>
+        </li>
+        <li class="lavas-card">
+          <span class="disc" style="--disc: #3F8F55" aria-hidden="true"></span>
+          <div>
+            <h4 data-i18n="lv.ispanak.n">Ispanaklı Nohut Lavaşı</h4>
+            <p data-i18n="lv.ispanak.i">Nohut unu, ıspanak, zeytinyağı, tuz</p>
+            <div class="lavas-tags"><span class="plants" data-i18n="lv.ispanak.p">3 bitki</span><span data-i18n="lv.ispanak.t0">Baklagil bazlı</span><span data-i18n="lv.ispanak.t1">Vegan tarif</span></div>
+          </div>
+        </li>
+        <li class="lavas-card">
+          <span class="disc" style="--disc: #B3366B" aria-hidden="true"></span>
+          <div>
+            <h4 data-i18n="lv.pancar.n">Pancarlı Mercimek Lavaşı</h4>
+            <p data-i18n="lv.pancar.i">Kırmızı mercimek, pancar, kimyon, tuz</p>
+            <div class="lavas-tags"><span class="plants" data-i18n="lv.pancar.p">3 bitki</span><span data-i18n="lv.pancar.t0">Baklagil bazlı</span><span data-i18n="lv.pancar.t1">Vegan tarif</span></div>
+          </div>
+        </li>
+        <li class="lavas-card">
+          <span class="disc" style="--disc: #9C7752" aria-hidden="true"></span>
+          <div>
+            <h4 data-i18n="lv.karabugday.n">Fermente Karabuğday Lavaşı</h4>
+            <p data-i18n="lv.karabugday.i">Karabuğday, su, tuz; doğal fermentasyon</p>
+            <div class="lavas-tags"><span class="plants" data-i18n="lv.karabugday.p">1 bitki</span><span data-i18n="lv.karabugday.t0">Fermente</span><span data-i18n="lv.karabugday.t1">Vegan tarif</span></div>
+          </div>
+        </li>
+      </ul>
+      <div class="lavas-foot">
+        <a class="btn btn-primary" href="mailto:info@insovio.com?subject=Lava%C5%9F%20%C3%B6n%20listesi" data-i18n="lv.cta" data-i18n-attr="href:lv.href">İlk deneyenler listesine yazıl</a>
+        <p data-i18n="lv.note">Tarifler ve isimler geliştirme sürecinde değişebilir.</p>
+      </div>
+
+      <div class="inspo">
+        <div class="inspo-copy">
+          <span class="eyebrow" data-i18n="ins.e">İlham aldığımız tarifler</span>
+          <h3 data-i18n="ins.h">Avokado Lavaş fikri bu tariften doğdu</h3>
+          <p data-i18n="ins.p">Diyetisyen Enis Can Arslan'ın “Avokado Dürüm” tarifi; avokado ve yumurtayla fırında hazırlanan, içi labne, roka, domates ve hellimle doldurulan bir lavaş.</p>
+          <p class="inspo-credit" data-i18n="ins.c">Video ve tarif Dyt. Enis Can Arslan'a (@dyt.eniscanarslan) aittir; bir INSOVIO ürününü göstermez.</p>
+        </div>
+        <blockquote class="instagram-media ig-card" data-instgrm-permalink="https://www.instagram.com/reel/DXUqoRvDTE2/" data-instgrm-version="14">
+          <span class="eyebrow">Instagram · @dyt.eniscanarslan</span>
+          <b>Avokado Dürüm</b>
+          <a href="https://www.instagram.com/reel/DXUqoRvDTE2/" target="_blank" rel="noopener" data-i18n="ins.l">Videoyu Instagram'da izle →</a>
+        </blockquote>
+      </div>
+    </div>
     <div class="wrap process-wrap">
       <div class="process-head">
         <h3 data-i18n="process.h">Bir ürün nasıl geliştiriliyor?</h3>
@@ -806,6 +913,47 @@ p { margin: 0; }
     'product.p': 'We are developing a nourishing, natural and sustainable spreadable cheese made with a plant-based culture, meant to be easy to eat every day: at breakfast, in a wrap or on a slice of bread.',
     'product.note': 'These are target properties. Final values will be confirmed by product analyses.',
     'f1.t': 'Culture', 'f1.d': 'Probiotic', 'f2.t': 'Starter', 'f2.d': 'Plant-based', 'f3.t': 'Ingredients', 'f3.d': 'Natural', 'f4.t': 'Nutrition', 'f4.d': 'High protein',
+    'lv.avokado.n': 'Avocado Wrap',
+    'lv.avokado.i': 'Avocado, egg, lemon, sesame, nigella seeds',
+    'lv.avokado.p': '4 plants',
+    'lv.avokado.t0': 'Flour-free',
+    'lv.avokado.t1': 'With egg',
+    'lv.mercimek.n': 'Red Lentil Wrap',
+    'lv.mercimek.i': 'Red lentils, water, salt, cumin',
+    'lv.mercimek.p': '2 plants',
+    'lv.mercimek.t0': 'Legume-based',
+    'lv.mercimek.t1': '3–4 ingredients',
+    'lv.kabak.n': 'Zucchini Wrap',
+    'lv.kabak.i': 'Zucchini, egg, cheese, black pepper',
+    'lv.kabak.p': '2 plants',
+    'lv.kabak.t0': 'Vegetable-based',
+    'lv.kabak.t1': 'With egg',
+    'lv.ispanak.n': 'Spinach Chickpea Wrap',
+    'lv.ispanak.i': 'Chickpea flour, spinach, olive oil, salt',
+    'lv.ispanak.p': '3 plants',
+    'lv.ispanak.t0': 'Legume-based',
+    'lv.ispanak.t1': 'Vegan recipe',
+    'lv.pancar.n': 'Beet & Lentil Wrap',
+    'lv.pancar.i': 'Red lentils, beetroot, cumin, salt',
+    'lv.pancar.p': '3 plants',
+    'lv.pancar.t0': 'Legume-based',
+    'lv.pancar.t1': 'Vegan recipe',
+    'lv.karabugday.n': 'Fermented Buckwheat Wrap',
+    'lv.karabugday.i': 'Buckwheat, water, salt; natural fermentation',
+    'lv.karabugday.p': '1 plant',
+    'lv.karabugday.t0': 'Fermented',
+    'lv.karabugday.t1': 'Vegan recipe',
+    'lv.e': 'Product family · In development',
+    'lv.h': 'Wraps',
+    'lv.p': 'Wraps made with vegetables and legumes instead of flour, which we aim to produce without additives or preservatives. Each one adds to your weekly plant diversity. Our founder’s master’s research was also on additive- and preservative-free product development.',
+    'lv.cta': 'Join the early tasters list',
+    'lv.href': 'mailto:info@insovio.com?subject=Wrap%20early%20list',
+    'lv.note': 'Recipes and names may change during development.',
+    'ins.e': 'Recipes that inspire us',
+    'ins.h': 'The idea for our Avocado Wrap came from this recipe',
+    'ins.p': 'Dietitian Enis Can Arslan’s “Avokado Dürüm”: a wrap baked from avocado and egg, filled with labneh, arugula, tomato and halloumi.',
+    'ins.c': 'The video and recipe belong to Dyt. Enis Can Arslan (@dyt.eniscanarslan); it does not show an INSOVIO product.',
+    'ins.l': 'Watch the video on Instagram →',
     'process.h': 'How is a product developed?', 'process.p': 'Every product goes through the same seven steps from lab to table.',
     's1.h': 'Need and literature', 's1.p': 'We assess the target consumer’s needs and the scientific literature.',
     's2.h': 'Ingredients and recipe', 's2.p': 'We select suitable food ingredients and design the recipe.',
@@ -1053,6 +1201,11 @@ p { margin: 0; }
       catch (e) { fallback(); }
     });
   });
+
+  /* Instagram embed: only on the live site, the preview blocks external scripts */
+  if (/(^|\.)insovio\.com$|\.pages\.dev$/.test(location.hostname)) {
+    var ig = document.createElement('script'); ig.async = true; ig.src = 'https://www.instagram.com/embed.js'; document.body.appendChild(ig);
+  }
 
   applyLang();
 })();
