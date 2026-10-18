@@ -194,6 +194,13 @@ p { margin: 0; }
 #urunler { padding-top: clamp(64px, 9vw, 120px); }
 
 /* Problem */
+.why .section-head { margin-bottom: clamp(24px, 4vw, 40px); }
+.why-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: w; }
+.why-list li { counter-increment: w; display: grid; gap: 14px; align-content: start; padding: 26px; border-radius: 24px; background: var(--surface); border: 1px solid var(--line); }
+.why-list li::before { content: "0" counter(w); font: 500 .75rem/1 var(--f-mono); letter-spacing: .08em; color: var(--violet); }
+.why-from { font-size: var(--s-sm); color: var(--muted); text-decoration: line-through; text-decoration-color: color-mix(in oklab, var(--muted) 60%, transparent); }
+.why-list b { font-size: 1.3125rem; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; }
+@media (max-width: 880px) { .why-list { grid-template-columns: 1fr; } }
 .problem { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
 .problem figure { margin: 0; position: sticky; top: 110px; }
 .problem figure img { border-radius: 28px; aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
@@ -472,8 +479,8 @@ p { margin: 0; }
       <span class="logo-word" aria-hidden="true"></span>
     </a>
     <nav class="nav" aria-label="Ana menü" data-i18n-attr="aria-label:a.nav">
-      <a href="#yaklasim" data-i18n="nav.approach">Yaklaşım</a>
       <a href="#cesitlilik" data-i18n="nav.diversity">Çeşitlilik</a>
+      <a href="#yaklasim" data-i18n="nav.approach">Yaklaşım</a>
       <a href="#urunler" data-i18n="nav.products">Ürünler</a>
       <a href="#bilim" data-i18n="nav.science">Bilim</a>
       <a href="#etkinlik">GastroSens</a>
@@ -522,55 +529,6 @@ p { margin: 0; }
     </div>
   </section>
 
-  <section class="band" aria-labelledby="problem-title">
-    <div class="wrap problem">
-      <figure>
-        <img src="img/raflar.webp" width="1100" height="623" loading="lazy" alt="Takviye ve kapsül şişeleriyle dolu market rafları" data-i18n-attr="alt:alt.shelves">
-        <figcaption data-i18n="problem.caption">Raflar takviyeyle dolu. Tabaklarımız ise hâlâ tek düze.</figcaption>
-      </figure>
-      <div>
-        <div class="section-head">
-          <span class="eyebrow" data-i18n="problem.eyebrow">Problem</span>
-          <h2 id="problem-title" data-i18n="problem.h2">Sağlıklı yaşamak neden bu kadar zor?</h2>
-        </div>
-        <ul class="problem-list">
-          <li><h3 data-i18n="p1.h">Aşırı medikalizasyon</h3><p data-i18n="p1.p">Daha fazla kapsül, daha fazla takviye, daha fazla vaat.</p></li>
-          <li><h3 data-i18n="p2.h">Bilgi eksikliği ve kirliliği</h3><p data-i18n="p2.p">Raflarda sağlıklı diye satılan ürünler her zaman vaat ettikleri içeriği ve çeşitliliği sunmuyor.</p></li>
-          <li><h3 data-i18n="p3.h">Sürdürülmesi zor rutinler</h3><p data-i18n="p3.p">Sağlıklı tarifler çoğu zaman özel malzeme ve uzun hazırlık istiyor. Metabolik yükü ve kronik inflamasyonu azaltmaya yönelik alışkanlıklar bu yüzden uzun süre devam ettirilemiyor.</p></li>
-          <li><h3 data-i18n="p4.h">Pratik olan her zaman dengeli değil</h3><p data-i18n="p4.p">Rutin zorlaşınca insanlar pratik ama dengeli olmayan ürünlere yöneliyor.</p></li>
-          <li><h3 data-i18n="p5.h">Ölçmek ve takip etmek zahmetli</h3><p data-i18n="p5.p">İnsanların kendi wellbeing süreçlerini yönetebileceği araçlar ve sistemler eksik.</p></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="yaklasim" aria-labelledby="yaklasim-title">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow" data-i18n="approach.eyebrow">Yaklaşımımız</span>
-        <h2 id="yaklasim-title" data-i18n="approach.h2">Kapsül yerine <em>gerçek gıda</em>. Tahmin yerine takip.</h2>
-      </div>
-      <img class="approach-img" src="img/tabaklar.webp" width="1400" height="781" loading="lazy" alt="Meyve, sebze, tahıl, kuruyemiş ve yumurtayla hazırlanmış renkli kahvaltı ve öğle tabakları" data-i18n-attr="alt:alt.plates">
-      <div class="pillars">
-        <div class="pillar">
-          <span class="eyebrow" data-i18n="pl1.e">Gerçek gıda</span>
-          <h3 data-i18n="pl1.h">Lezzetli ve fonksiyonel beslenme</h3>
-          <p data-i18n="pl1.p">Ürünlerimizi mikrobiyota temelli klinik araştırmalara dayanarak geliştiriyoruz. Her gün severek yiyeceğin gıdalar, bilimsel veriyle tasarlanıyor.</p>
-        </div>
-        <div class="pillar">
-          <span class="eyebrow" data-i18n="pl2.e">Çeşitlilik takibi</span>
-          <h3 data-i18n="pl2.h">Haftada kaç farklı bitki?</h3>
-          <p data-i18n="pl2.p">Haftalık tükettiğin meyve ve sebze çeşitlerini saymak, bağırsak sağlığına dikkat etmenin basit ve bilimsel temeli olan bir yolu.</p>
-        </div>
-        <div class="pillar">
-          <span class="eyebrow" data-i18n="pl3.e">Sürdürülebilir ilişki</span>
-          <h3 data-i18n="pl3.h">Abonelikle düzenli destek</h3>
-          <p data-i18n="pl3.p">Dijital abonelik modelimizle düzenli takip, kişiselleştirilmiş ürün önerileri ve güncel ihtiyacına göre önerilen ürünlere tek tuşla erişim.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="band" id="cesitlilik" aria-labelledby="cesitlilik-title">
     <div class="wrap">
       <div class="counter-panel">
@@ -605,6 +563,23 @@ p { margin: 0; }
       </div>
     </div>
   </section>
+
+  <section class="band" id="yaklasim" aria-labelledby="yaklasim-title">
+    <div class="wrap why">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="why.e">Neden INSOVIO</span>
+        <h2 id="yaklasim-title" data-i18n="approach.h2">Kapsül yerine <em>gerçek gıda</em>. Tahmin yerine takip.</h2>
+      </div>
+      <ol class="why-list">
+        <li><span class="why-from" data-i18n="w1.a">Raflar takviyeyle dolu</span><b data-i18n="w1.b">Her gün yenen gıdaları fonksiyonel hale getiriyoruz.</b></li>
+        <li><span class="why-from" data-i18n="w2.a">Sağlıklı rutinler kolay bırakılıyor</span><b data-i18n="w2.b">Hazırlık istemeyen, severek yiyeceğin ürünler.</b></li>
+        <li><span class="why-from" data-i18n="w3.a">Çeşitliliği takip etmek zor</span><b data-i18n="w3.b">Haftalık bitki sayacıyla kendin gör.</b></li>
+      </ol>
+    </div>
+  </section>
+
+
+
 
   <section class="band tint event-band" id="etkinlik" aria-labelledby="etkinlik-title">
     <div class="wrap event">
@@ -849,16 +824,6 @@ p { margin: 0; }
           </li>
         </ol>
       </div>
-      <div class="field">
-        <figure>
-          <img src="img/lab.webp" width="900" height="1120" loading="lazy" alt="Laboratuvarda çeker ocak önünde pipetle çalışan araştırmacı" data-i18n-attr="alt:alt.lab">
-          <figcaption data-i18n="cap.lab">Laboratuvar çalışmaları</figcaption>
-        </figure>
-        <figure>
-          <img src="img/topluluk.webp" width="1024" height="502" loading="lazy" alt="Açık havada pankartla toplu fotoğraf veren kalabalık bir grup" data-i18n-attr="alt:alt.community">
-          <figcaption data-i18n="cap.community">Toplumsal çalışmalar</figcaption>
-        </figure>
-      </div>
       <a class="press" href="https://foodonline.com.tr/dijital-dergi/sonbahar-26-sayi-24" target="_blank" rel="noopener">
         <span class="eyebrow" data-i18n="press.e">Basında</span>
         <span class="press-title" data-i18n="press.t">Food Online · Sonbahar 2026, Sayı 24</span>
@@ -952,6 +917,10 @@ p { margin: 0; }
     'hero.lead': 'We develop functional foods you will enjoy every day, grounded in microbiota-based clinical research. Our focus is living well and healthy aging, with brain health as a key part of it.',
     'hero.secondary': 'Try the plant counter',
     'alt.hero': 'Open INSOVIO Aegean Thyme spreadable cheese tub on a sunlit travertine counter, lid beside it, with bread, thyme, olives and cucumber and tomatoes',
+    'why.e': 'Why INSOVIO',
+    'w1.a': 'Shelves full of supplements', 'w1.b': 'We make everyday foods functional.',
+    'w2.a': 'Healthy routines are easy to drop', 'w2.b': 'Products you enjoy, with no prep needed.',
+    'w3.a': 'Variety is hard to track', 'w3.b': 'See it yourself with the weekly plant counter.',
     'concept': 'Concept image',
     'alt.flavors': 'Three INSOVIO spreadable cheese flavors: Aegean Thyme, Za\'atar, and Dill and Lemon',
     'alt.lavas': 'INSOVIO red lentil wraps in a paper sleeve with a round window, next to a bowl of red lentils and parsley',
