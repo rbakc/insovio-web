@@ -273,6 +273,24 @@ p { margin: 0; }
 .product-copy .btn { justify-self: start; margin-top: 4px; }
 @media (max-width: 880px) { .product { grid-template-columns: 1fr; } .product-img { max-width: 520px; } }
 
+/* Spreadable cheese flavors */
+.flavors { padding-block: 0 clamp(56px, 7vw, 96px); }
+.flavors-head { display: grid; gap: 10px; max-width: 720px; margin-bottom: 22px; }
+.flavors-head .eyebrow { color: var(--lime); }
+.flavors-head h4 { font-size: 1.75rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+.flavors-head p { color: var(--deep-muted); }
+.flavors-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.flavors-grid li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 14px 16px; border-radius: 18px; border: 1px solid var(--deep-line); background: rgb(255 255 255 / .04); }
+.flavors-grid b { display: block; font-size: var(--s-md); line-height: 1.25; }
+.flavors-grid li div span { font-size: var(--s-xs); color: var(--deep-muted); }
+.flavor-plants { font: 500 .6875rem/1 var(--f-mono); text-transform: uppercase; letter-spacing: .06em; padding: 6px 9px; border-radius: 999px; background: var(--lime); color: var(--on-lime); white-space: nowrap; }
+.herb-dots {
+  width: 44px; height: 44px; border-radius: 50%; background-color: rgb(255 255 255 / .07);
+  background-image: radial-gradient(circle at 32% 36%, var(--a) 0 7px, transparent 7.5px), radial-gradient(circle at 68% 42%, var(--b) 0 6px, transparent 6.5px), radial-gradient(circle at 46% 72%, var(--c) 0 5.5px, transparent 6px);
+}
+@media (max-width: 960px) { .flavors-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .flavors-grid { grid-template-columns: 1fr; } }
+
 /* Wraps product family */
 .lavas-wrap { padding-block: clamp(56px, 7vw, 96px) 0; }
 .lavas-head { display: grid; gap: 12px; max-width: 760px; margin-bottom: 28px; }
@@ -473,8 +491,8 @@ p { margin: 0; }
         </a>
         <div class="hero-panel">
           <span class="eyebrow" data-i18n="hero.eyebrow">Lezzet · Bilim · İyi yaşam</span>
-          <h1 data-i18n="hero.h1">Beyin sağlığı için <em>gerçek gıda</em>.</h1>
-          <p class="lead" data-i18n="hero.lead">Mikrobiyota temelli klinik araştırmalara dayanan, her gün severek yiyeceğin fonksiyonel gıdalar geliştiriyor, bunları dijital wellbeing takibiyle birleştiriyoruz.</p>
+          <h1 data-i18n="hero.h1">Sağlıklı yaş almanın <em>lezzetli</em> hali.</h1>
+          <p class="lead" data-i18n="hero.lead">Mikrobiyota temelli klinik araştırmalara dayanan, her gün severek yiyeceğin fonksiyonel gıdalar geliştiriyoruz. Odağımızda iyi yaşam ve sağlıklı yaş alma, onun önemli bir parçası olarak da beyin sağlığı var.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#iletisim" data-i18n="cta.pilot">Pilot programa katıl</a>
             <a class="btn btn-ghost" href="#cesitlilik" data-i18n="hero.secondary">Bitki sayacını dene</a>
@@ -630,6 +648,21 @@ p { margin: 0; }
           <p class="product-note" data-i18n="product.note">Bunlar hedeflenen özellikler. Kesin değerler ürün analizleriyle netleşecek.</p>
           <a class="btn btn-lime" href="#iletisim" data-i18n="product.cta">İlk deneyenlerden ol</a>
         </div>
+      </div>
+      <div class="wrap flavors">
+        <div class="flavors-head">
+          <span class="eyebrow" data-i18n="fl.e">Lezzet çeşitleri · Geliştirme aşamasında</span>
+          <h4 data-i18n="fl.h">Her kutuda birkaç bitki daha</h4>
+          <p data-i18n="fl.p">Sürülebilir peynirimizi Anadolu ve Akdeniz mutfağının kuru otları ve baharatlarıyla çeşitlendiriyoruz. Her çeşit, haftalık bitki sayına birkaç bitki daha ekliyor.</p>
+        </div>
+        <ul class="flavors-grid">
+          <li><span class="herb-dots" style="--a: #6E8B3D; --b: #A9B665; --c: #D9C27A" aria-hidden="true"></span><div><b data-i18n="fl.1.n">Ege Kekikli</b><span data-i18n="fl.1.i">Kekik, zeytinyağı</span></div><span class="flavor-plants" data-i18n="fl.1.p">+2 bitki</span></li>
+          <li><span class="herb-dots" style="--a: #6E8B3D; --b: #B23A48; --c: #E8D9B0" aria-hidden="true"></span><div><b data-i18n="fl.2.n">Za'atar</b><span data-i18n="fl.2.i">Kekik, sumak, susam</span></div><span class="flavor-plants" data-i18n="fl.2.p">+3 bitki</span></li>
+          <li><span class="herb-dots" style="--a: #7FAF5A; --b: #F2D04B; --c: #B7D27A" aria-hidden="true"></span><div><b data-i18n="fl.3.n">Dereotu ve Limon</b><span data-i18n="fl.3.i">Dereotu, limon kabuğu</span></div><span class="flavor-plants" data-i18n="fl.3.p">+2 bitki</span></li>
+          <li><span class="herb-dots" style="--a: #D2483A; --b: #4E8F3A; --c: #E8836A" aria-hidden="true"></span><div><b data-i18n="fl.4.n">Kurutulmuş Domates ve Fesleğen</b><span data-i18n="fl.4.i">Kurutulmuş domates, fesleğen</span></div><span class="flavor-plants" data-i18n="fl.4.p">+2 bitki</span></li>
+          <li><span class="herb-dots" style="--a: #A83232; --b: #B5764A; --c: #D6B48A" aria-hidden="true"></span><div><b data-i18n="fl.5.n">İsot ve Ceviz</b><span data-i18n="fl.5.i">İsot, ceviz</span></div><span class="flavor-plants" data-i18n="fl.5.p">+2 bitki</span></li>
+          <li><span class="herb-dots" style="--a: #8E86A8; --b: #9BCB6B; --c: #E8E2D0" aria-hidden="true"></span><div><b data-i18n="fl.6.n">Çörek Otu ve Taze Soğan</b><span data-i18n="fl.6.i">Çörek otu, taze soğan</span></div><span class="flavor-plants" data-i18n="fl.6.p">+2 bitki</span></li>
+        </ul>
       </div>
     </div>
     <div class="wrap lavas-wrap">
@@ -893,8 +926,8 @@ p { margin: 0; }
     't3.h': 'A team of scientists', 't3.p': 'Product development from lab to table',
     't4.h': 'Digital tracking', 't4.p': 'Everyday foods, not capsules',
     'product.cta': 'Be among the first to try it',
-    'hero.h1': '<em>Real food</em> for brain health.',
-    'hero.lead': 'We develop functional foods you will enjoy every day, grounded in microbiota-based clinical research, and pair them with digital well-being tracking.',
+    'hero.h1': 'The <em>delicious</em> side of healthy aging.',
+    'hero.lead': 'We develop functional foods you will enjoy every day, grounded in microbiota-based clinical research. Our focus is living well and healthy aging, with brain health as a key part of it.',
     'hero.secondary': 'Try the plant counter',
     'alt.hero': 'Kitchen counter with a smoothie, yogurt, nut butter, granola bars, fresh vegetables and a phone showing a well-being app',
     'alt.shelves': 'Store shelves packed with supplement and capsule bottles',
@@ -952,6 +985,27 @@ p { margin: 0; }
     'lv.karabugday.p': '1 plant',
     'lv.karabugday.t0': 'Fermented',
     'lv.karabugday.t1': 'Vegan recipe',
+    'fl.1.n': 'Aegean Thyme',
+    'fl.1.i': 'Thyme, olive oil',
+    'fl.1.p': '+2 plants',
+    'fl.2.n': 'Za\'atar',
+    'fl.2.i': 'Thyme, sumac, sesame',
+    'fl.2.p': '+3 plants',
+    'fl.3.n': 'Dill & Lemon',
+    'fl.3.i': 'Dill, lemon zest',
+    'fl.3.p': '+2 plants',
+    'fl.4.n': 'Sun-dried Tomato & Basil',
+    'fl.4.i': 'Sun-dried tomato, basil',
+    'fl.4.p': '+2 plants',
+    'fl.5.n': 'Isot Pepper & Walnut',
+    'fl.5.i': 'Isot pepper, walnut',
+    'fl.5.p': '+2 plants',
+    'fl.6.n': 'Nigella & Spring Onion',
+    'fl.6.i': 'Nigella seeds, spring onion',
+    'fl.6.p': '+2 plants',
+    'fl.e': 'Flavors · In development',
+    'fl.h': 'A few more plants in every tub',
+    'fl.p': 'We are building flavors of our spreadable cheese with dried herbs and spices from Anatolian and Mediterranean cooking. Each flavor adds a few more plants to your weekly count.',
     'lv.first': 'First series', 'lv.later': 'Next stage',
     'lv.e': 'Product family · In development',
     'lv.h': 'Wraps',
