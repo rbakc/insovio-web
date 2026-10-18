@@ -331,6 +331,15 @@ p { margin: 0; }
 .field figcaption { position: absolute; left: 12px; bottom: 12px; right: 12px; width: fit-content; font-size: var(--s-xs); font-weight: 600; padding: 7px 12px; border-radius: 999px; background: color-mix(in oklab, var(--surface) 92%, transparent); color: var(--ink); }
 @media (max-width: 640px) { .field { grid-template-columns: 1fr; } }
 
+/* Press */
+.press { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 24px; row-gap: 4px; align-items: center; padding: 20px 24px; border-radius: 20px; background: var(--surface); border: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: border-color .15s ease; }
+.press:hover { border-color: var(--violet); }
+.press > :not(.press-cta) { grid-column: 1; }
+.press-title { font-weight: 700; font-size: var(--s-md); }
+.press-desc { color: var(--muted); font-size: var(--s-sm); }
+.press-cta { grid-column: 2; grid-row: 1 / span 3; font-weight: 600; color: var(--violet); white-space: nowrap; }
+@media (max-width: 520px) { .press { grid-template-columns: 1fr; } .press-cta { grid-column: 1; grid-row: auto; margin-top: 6px; } }
+
 /* Event */
 .event-band { background: var(--tint); }
 .event { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(32px, 6vw, 72px); align-items: center; }
@@ -670,6 +679,12 @@ p { margin: 0; }
           <figcaption data-i18n="cap.community">Toplumsal çalışmalar</figcaption>
         </figure>
       </div>
+      <a class="press" href="https://foodonline.com.tr/dijital-dergi/sonbahar-26-sayi-24" target="_blank" rel="noopener">
+        <span class="eyebrow" data-i18n="press.e">Basında</span>
+        <span class="press-title" data-i18n="press.t">Food Online · Sonbahar 2026, Sayı 24</span>
+        <span class="press-desc" data-i18n="press.d">“1 Avuç Sağlık”: Rabia Akçatemiz'in, takviye rutinleri yerine tabaktaki bitki çeşitliliğini anlatan yazısı.</span>
+        <span class="press-cta" data-i18n="press.c">Dergide oku →</span>
+      </a>
     </div>
   </section>
 
@@ -711,7 +726,7 @@ p { margin: 0; }
           <img src="img/rabia.webp" width="520" height="520" loading="lazy" alt="Fatma Rabia Akçatemiz">
           <span class="role" data-i18n="role.founder">Kurucu</span>
           <h3>Fatma Rabia Akçatemiz</h3>
-          <p data-i18n="bio.rabia">Gıda Mühendisi, Nörobilim PhD(c), RTTP. Beyin sağlığı ve mikrobiyota odaklı klinik çalışmalar yürütüyor. Mallorca'da (İspanya) misafir araştırmacı olarak kısa zincirli yağ asitleri ile mikrobiyota ilişkisine odaklanan çalışmalar yaptı.</p>
+          <p data-i18n="bio.rabia">Gıda Mühendisi, Nörobilim PhD(c), RTTP. Yüksek lisansını katkısız ve koruyucusuz yeni ürün geliştirme üzerine tamamladı, Ondokuz Mayıs Üniversitesi'nde nörobilim doktorasını sürdürüyor. Neuroscience School of Advanced Studies'de aldığı “Bağırsak ve Beyin” eğitimiyle beyin sağlığını beslenme yoluyla destekleme odağını güçlendirdi. Beyin sağlığı ve mikrobiyota odaklı klinik çalışmalar yürütüyor; İspanya'da IdISBa'da (Balear Adaları Sağlık Araştırmaları Enstitüsü) bağırsak-beyin ekseni üzerine çalışıyor. Future Innovation Leaders, Future Lab ve Mercedes-Benz She's Mercedes programlarına seçilen girişimcilerden biri.</p>
         </article>
         <article class="person">
           <img src="img/terzi.webp" width="520" height="520" loading="lazy" alt="Prof. Dr. Murat Terzi">
@@ -832,6 +847,7 @@ p { margin: 0; }
     'alt.lab': 'Researcher pipetting in front of a fume hood in a laboratory', 'cap.lab': 'Laboratory work',
     
     'alt.community': 'A large group posing outdoors with a banner', 'cap.community': 'Community work',
+    'press.e': 'In the press', 'press.t': 'Food Online · Autumn 2026, Issue 24', 'press.d': '“1 Avuç Sağlık” (A Handful of Health): Rabia Akçatemiz’s article on plant diversity on the plate rather than supplement routines. In Turkish.', 'press.c': 'Read the issue →',
     'alt.event': 'Glass jars of orange peel, rosemary, cinnamon and coffee beans next to tasting cups on a table',
     'event.badge': 'Planned · Urla, spring 2027', 'event.eyebrow': 'A sensory tasting experience', 'event.tag': 'Eyes closed, palate open.',
     'event.p': 'In these sessions, designed together with Chef Aydan Üstkanat, guests practice recognizing, naming and remembering smells and tastes. The science side brings the neuroscience of flavor perception and the gut-brain axis; the gastronomy side brings aroma and flavor architecture.',
@@ -842,7 +858,7 @@ p { margin: 0; }
     'event.cta': 'For brand partnerships, sponsorship or attendance, write to <a href="mailto:rabia@insovio.com?subject=GastroSens">rabia@insovio.com</a>.',
     'team.eyebrow': 'Team', 'team.h2': 'Food engineering, neurology and microbiota in one team',
     'role.founder': 'Founder', 'role.advisor': 'Advisor',
-    'bio.rabia': 'Food Engineer, Neuroscience PhD(c), RTTP. Leads clinical studies focused on brain health and the microbiota. As a visiting researcher in Mallorca, Spain, she worked on the link between short-chain fatty acids and the microbiota.',
+    'bio.rabia': 'Food Engineer, Neuroscience PhD(c), RTTP. She completed her master’s degree on developing new additive- and preservative-free products and is pursuing a PhD in neuroscience at Ondokuz Mayıs University. Her “Gut and Brain” training at the Neuroscience School of Advanced Studies strengthened her focus on supporting brain health through nutrition. She leads clinical studies focused on brain health and the microbiota and works on the gut-brain axis at IdISBa, the Health Research Institute of the Balearic Islands in Spain. She was selected for the Future Innovation Leaders, Future Lab and Mercedes-Benz She’s Mercedes programs.',
     'bio.terzi': 'Neurologist, President of the Turkish Neurological Society',
     'bio.karacan': 'Microbiota and Bioinformatics Specialist',
     'team.hiring': '<b>We are growing our team.</b> If you would like to work with us in digital health, growth or product development, write to info@insovio.com.',
