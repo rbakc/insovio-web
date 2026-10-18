@@ -323,14 +323,13 @@ p { margin: 0; }
 .stage li { font-weight: 500; }
 @media (max-width: 880px) { .science { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .stage { grid-template-columns: 1fr; gap: 10px; } }
-.field { display: grid; grid-template-columns: 1fr 1.6fr; grid-template-rows: auto auto; gap: 14px; margin-top: clamp(40px, 6vw, 72px); }
+.field { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: clamp(40px, 6vw, 72px); }
 .field figure { margin: 0; position: relative; overflow: hidden; border-radius: 24px; min-width: 0; }
 .field img { width: 100%; height: 100%; object-fit: cover; }
-.field figure:first-child { grid-row: span 2; }
-.field figure:first-child img { position: absolute; inset: 0; }
-.field figure:not(:first-child) { aspect-ratio: 2.4 / 1; }
+.field figure { aspect-ratio: 4 / 3; }
+.field figure img { position: absolute; inset: 0; }
 .field figcaption { position: absolute; left: 12px; bottom: 12px; right: 12px; width: fit-content; font-size: var(--s-xs); font-weight: 600; padding: 7px 12px; border-radius: 999px; background: color-mix(in oklab, var(--surface) 92%, transparent); color: var(--ink); }
-@media (max-width: 640px) { .field { grid-template-columns: 1fr; } .field figure:first-child { grid-row: auto; aspect-ratio: 4 / 3; } }
+@media (max-width: 640px) { .field { grid-template-columns: 1fr; } }
 
 /* Event */
 .event-band { background: var(--tint); }
@@ -431,9 +430,9 @@ p { margin: 0; }
           <a class="btn btn-ghost" href="#yaklasim" data-i18n="hero.secondary">Yaklaşımımızı gör</a>
         </div>
         <div class="stats">
-          <div><strong>TRL 3→4</strong><span data-i18n="stat1">Klinik araştırma sürüyor</span></div>
+          <div><strong>7</strong><span data-i18n="stat1">Adımda laboratuvardan sofraya</span></div>
           <div><strong>30</strong><span data-i18n="stat2">Haftalık bitki çeşitliliği hedefi</span></div>
-          <div><strong>MS</strong><span data-i18n="stat3">Odaklı klinik çalışmalar</span></div>
+          <div><strong data-i18n="stat3.v">Klinik</strong><span data-i18n="stat3">Beyin sağlığı ve mikrobiyota odaklı çalışmalar</span></div>
         </div>
       </div>
       <figure class="hero-figure">
@@ -635,9 +634,8 @@ p { margin: 0; }
         <div class="science-copy">
           <span class="eyebrow" data-i18n="science.eyebrow">Bilim</span>
           <h2 id="bilim-title" data-i18n="science.h2">Mikrobiyom verisinden tabağa</h2>
-          <p data-i18n="science.p1">INSOVIO, nörolojik hastalıklar ve beyin sağlığı odağıyla başladı. Klinik araştırma tarafında multipl skleroz (MS) hastalarının bağırsak mikrobiyotasını ve kısa zincirli yağ asitlerinin kan plazmasına geçişini inceliyoruz.</p>
+          <p data-i18n="science.p1">INSOVIO'nun temelinde beyin sağlığı ve mikrobiyota odaklı klinik çalışmalar var. Bu çalışmalarda bağırsak mikrobiyotasını ve kısa zincirli yağ asitlerinin kan plazmasına geçişini inceliyoruz.</p>
           <p data-i18n="science.p2">Bu verilerden elde ettiğimiz içgörülerle lezzetli fonksiyonel gıdalar geliştiriyoruz. Beyin sağlığını korumak, sağlıklı yaşlanmak isteyen herkesin beklentisiyle de aynı noktada buluşuyoruz.</p>
-          <span class="trl"><span data-i18n="science.trl">Teknoloji hazırlık seviyesi</span> <b>TRL 3 → 4</b></span>
         </div>
         <ol class="timeline" aria-label="Geliştirme aşamaları" data-i18n-attr="aria-label:a.timeline">
           <li class="stage done">
@@ -666,10 +664,6 @@ p { margin: 0; }
         <figure>
           <img src="img/lab.webp" width="900" height="1120" loading="lazy" alt="Laboratuvarda çeker ocak önünde pipetle çalışan araştırmacı" data-i18n-attr="alt:alt.lab">
           <figcaption data-i18n="cap.lab">Laboratuvar çalışmaları</figcaption>
-        </figure>
-        <figure>
-          <img src="img/kamp.webp" width="1200" height="399" loading="lazy" alt="Açık havada matlar üzerinde egzersiz yapan katılımcılar" data-i18n-attr="alt:alt.camp">
-          <figcaption data-i18n="cap.camp">MS hastalarına yönelik rehabilitasyon kampı</figcaption>
         </figure>
         <figure>
           <img src="img/topluluk.webp" width="1024" height="502" loading="lazy" alt="Açık havada pankartla toplu fotoğraf veren kalabalık bir grup" data-i18n-attr="alt:alt.community">
@@ -717,7 +711,7 @@ p { margin: 0; }
           <img src="img/rabia.webp" width="520" height="520" loading="lazy" alt="Fatma Rabia Akçatemiz">
           <span class="role" data-i18n="role.founder">Kurucu</span>
           <h3>Fatma Rabia Akçatemiz</h3>
-          <p data-i18n="bio.rabia">Gıda Mühendisi, Nörobilim PhD(c), RTTP. MS hastalarında bağırsak mikrobiyotası üzerine klinik araştırma yürütüyor. Mallorca'da (İspanya) misafir araştırmacı olarak kısa zincirli yağ asitleri ile mikrobiyota ilişkisine odaklanan çalışmalar yaptı.</p>
+          <p data-i18n="bio.rabia">Gıda Mühendisi, Nörobilim PhD(c), RTTP. Beyin sağlığı ve mikrobiyota odaklı klinik çalışmalar yürütüyor. Mallorca'da (İspanya) misafir araştırmacı olarak kısa zincirli yağ asitleri ile mikrobiyota ilişkisine odaklanan çalışmalar yaptı.</p>
         </article>
         <article class="person">
           <img src="img/terzi.webp" width="520" height="520" loading="lazy" alt="Prof. Dr. Murat Terzi">
@@ -775,7 +769,7 @@ p { margin: 0; }
     'cta.pilot': 'Join the pilot',
     'bar.text': 'Pilot program applications are open',
     'hero.eyebrow': 'Microbiota-based functional food',
-    'stat1': 'Clinical research under way', 'stat2': 'Weekly plant diversity goal', 'stat3': 'Focused clinical studies',
+    'stat1': 'Steps from lab to table', 'stat2': 'Weekly plant diversity goal', 'stat3.v': 'Clinical', 'stat3': 'Studies focused on brain health and the microbiota',
     'card.label': 'Diversity tracking · example', 'card.q': 'How many plants this week?',
     'a.trust': 'Why INSOVIO',
     't1.h': 'Grounded in clinical research', 't1.p': 'From microbiome data to product',
@@ -787,7 +781,6 @@ p { margin: 0; }
     'hero.lead': 'We bring together taste, science and technology for a better life. We develop functional foods grounded in microbiota-based clinical research and pair them with digital well-being tracking.',
     'hero.secondary': 'See our approach',
     'alt.hero': 'Kitchen counter with yogurt, a smoothie, nut butter, granola bars, fresh vegetables and fruit, next to a phone showing a well-being app',
-    'chip.label': 'Technology readiness', 'chip.text': 'Clinical research phase under way',
     'alt.shelves': 'Store shelves packed with supplement and capsule bottles',
     'problem.caption': 'Shelves are packed with supplements, while our plates stay the same.',
     'problem.eyebrow': 'The problem', 'problem.h2': 'Why is living healthily so hard?',
@@ -830,15 +823,14 @@ p { margin: 0; }
     'flow.1': 'Everything in START', 'flow.2': 'Annual microbiome check', 'flow.btn': 'Apply for FLOW',
     'plans.note': 'We are testing our subscription model with pilot users. Applicants receive the details of the first period by email.',
     'science.eyebrow': 'Science', 'science.h2': 'From microbiome data to the plate',
-    'science.p1': 'INSOVIO started with a focus on neurological diseases and brain health. On the clinical side, we study the gut microbiota of people with multiple sclerosis (MS) and how short-chain fatty acids pass into blood plasma.',
+    'science.p1': 'INSOVIO is built on clinical studies focused on brain health and the microbiota. In this research, we study the gut microbiota and how short-chain fatty acids pass into blood plasma.',
     'science.p2': 'We use the insights from this data to develop delicious functional foods. The same work speaks to anyone who wants to protect their brain health and age well.',
-    'science.trl': 'Technology readiness level',
     'st.done': 'Done', 'st.now': 'In progress', 'st.next': 'Next',
     'd1': 'Scientific groundwork and literature validation', 'd2': 'First formulations', 'd3': 'Well-being experience and digital structure design',
     'n1': 'Clinical research phase',
     'x1': 'Lab-scale R&amp;D', 'x2': 'Pilot user groups and product validation', 'x3': 'Testing the subscription model',
     'alt.lab': 'Researcher pipetting in front of a fume hood in a laboratory', 'cap.lab': 'Laboratory work',
-    'alt.camp': 'Participants exercising on mats outdoors', 'cap.camp': 'Rehabilitation camp for people with MS',
+    
     'alt.community': 'A large group posing outdoors with a banner', 'cap.community': 'Community work',
     'alt.event': 'Glass jars of orange peel, rosemary, cinnamon and coffee beans next to tasting cups on a table',
     'event.badge': 'Planned · Urla, spring 2027', 'event.eyebrow': 'A sensory tasting experience', 'event.tag': 'Eyes closed, palate open.',
@@ -850,7 +842,7 @@ p { margin: 0; }
     'event.cta': 'For brand partnerships, sponsorship or attendance, write to <a href="mailto:rabia@insovio.com?subject=GastroSens">rabia@insovio.com</a>.',
     'team.eyebrow': 'Team', 'team.h2': 'Food engineering, neurology and microbiota in one team',
     'role.founder': 'Founder', 'role.advisor': 'Advisor',
-    'bio.rabia': 'Food Engineer, Neuroscience PhD(c), RTTP. Leads clinical research on the gut microbiota of people with MS. As a visiting researcher in Mallorca, Spain, she worked on the link between short-chain fatty acids and the microbiota.',
+    'bio.rabia': 'Food Engineer, Neuroscience PhD(c), RTTP. Leads clinical studies focused on brain health and the microbiota. As a visiting researcher in Mallorca, Spain, she worked on the link between short-chain fatty acids and the microbiota.',
     'bio.terzi': 'Neurologist, President of the Turkish Neurological Society',
     'bio.karacan': 'Microbiota and Bioinformatics Specialist',
     'team.hiring': '<b>We are growing our team.</b> If you would like to work with us in digital health, growth or product development, write to info@insovio.com.',
