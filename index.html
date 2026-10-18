@@ -183,12 +183,12 @@ p { margin: 0; }
 
 /* Trust strip */
 .trust { background: var(--surface); border-block: 1px solid var(--line); }
-.trust .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; padding-block: 28px; }
-.trust-item { display: grid; gap: 4px; align-content: start; padding-left: 20px; border-left: 2px solid var(--lime); }
-.trust-item strong { font-size: 1.375rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; color: var(--violet); }
-.trust-item span { font-size: var(--s-sm); color: var(--muted); line-height: 1.45; }
+.trust .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; padding-block: 24px; }
+.trust-item { display: grid; gap: 6px; align-content: start; padding: 18px 20px; border-radius: 20px; background: var(--lime); color: var(--on-lime); }
+.trust-item strong { font-size: 1.375rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; color: var(--on-lime); }
+.trust-item span { font-size: var(--s-sm); color: color-mix(in oklab, var(--on-lime) 78%, transparent); line-height: 1.45; }
 @media (max-width: 960px) { .trust .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .trust .wrap { grid-template-columns: 1fr; gap: 18px; } }
+@media (max-width: 520px) { .trust .wrap { grid-template-columns: 1fr; gap: 10px; } }
 
 /* Products spacing after the event band */
 #urunler { padding-top: clamp(64px, 9vw, 120px); }
@@ -469,7 +469,6 @@ p { margin: 0; }
 </head>
 <body>
 
-
 <div class="topbar"><a href="#etkinlik"><span data-i18n="bar.text">Yeni · GastroSens duyusal tadım deneyimi · Urla, İlkbahar 2027</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 
 <header class="site-header">
@@ -479,11 +478,11 @@ p { margin: 0; }
       <span class="logo-word" aria-hidden="true"></span>
     </a>
     <nav class="nav" aria-label="Ana menü" data-i18n-attr="aria-label:a.nav">
+      <a href="#etkinlik">GastroSens</a>
+      <a href="#urunler" data-i18n="nav.products">Ürünler</a>
       <a href="#cesitlilik" data-i18n="nav.diversity">Çeşitlilik</a>
       <a href="#yaklasim" data-i18n="nav.approach">Yaklaşım</a>
-      <a href="#urunler" data-i18n="nav.products">Ürünler</a>
       <a href="#bilim" data-i18n="nav.science">Bilim</a>
-      <a href="#etkinlik">GastroSens</a>
       <a href="#ekip" data-i18n="nav.team">Ekip</a>
     </nav>
     <div class="header-actions">
@@ -528,58 +527,6 @@ p { margin: 0; }
       <div class="trust-item"><strong data-i18n="t4.v">Gerçek gıda</strong><span data-i18n="t4.p">Her gün yenen ürünler, kapsül değil</span></div>
     </div>
   </section>
-
-  <section class="band" id="cesitlilik" aria-labelledby="cesitlilik-title">
-    <div class="wrap">
-      <div class="counter-panel">
-        <div class="counter-side">
-          <div class="section-head" style="margin-bottom:0">
-            <span class="eyebrow" data-i18n="counter.eyebrow">Çeşitlilik sayacı</span>
-            <h2 id="cesitlilik-title" data-i18n="counter.h2">Bu hafta kaç farklı bitki yedin?</h2>
-            <p class="lead" data-i18n="counter.lead">Geniş bir araştırmada haftada 30 ve üzeri farklı bitki tüketen kişilerin bağırsak mikrobiyotasının, 10 ve altı tüketenlere göre daha çeşitli olduğu görüldü. Meyve, sebze, baklagil, tahıl, kuruyemiş, tohum, ot ve baharatların hepsi sayılır.</p>
-          </div>
-          <div class="tally" aria-live="polite">
-            <div class="tally-num"><strong id="count">0</strong><span data-i18n="counter.unit">/ 30 bitki</span></div>
-            <div class="cells" id="cells" aria-hidden="true"></div>
-            <p class="tally-msg" id="msg"></p>
-            <div class="tally-foot">
-              <div class="legend" id="legend"></div>
-              <button class="link-btn" id="reset" type="button" data-i18n="counter.reset">Haftayı sıfırla</button>
-            </div>
-          </div>
-          <p class="source" data-i18n="counter.source">Kaynak: McDonald D. ve ark., American Gut Project, <i>mSystems</i>, 2018.</p>
-        </div>
-        <div class="groups" id="groups">
-          <div class="group">
-            <h3><i style="--dot: var(--c-diger)"></i><span data-i18n="add.h">Listede yok mu? <small>kendin ekle</small></span></h3>
-            <form class="add-row" id="add-form">
-              <label for="add-input" hidden data-i18n="add.label">Bitki adı</label>
-              <input id="add-input" type="text" placeholder="Örn. roka, semizotu, ayva" maxlength="32" autocomplete="off" data-i18n-attr="placeholder:add.ph">
-              <button class="btn btn-lime" type="submit" data-i18n="add.btn">Ekle</button>
-            </form>
-            <div class="chips" id="custom-chips" style="margin-top:10px"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="yaklasim" aria-labelledby="yaklasim-title">
-    <div class="wrap why">
-      <div class="section-head">
-        <span class="eyebrow" data-i18n="why.e">Neden INSOVIO</span>
-        <h2 id="yaklasim-title" data-i18n="approach.h2">Kapsül yerine <em>gerçek gıda</em>. Tahmin yerine takip.</h2>
-      </div>
-      <ol class="why-list">
-        <li><span class="why-from" data-i18n="w1.a">Raflar takviyeyle dolu</span><b data-i18n="w1.b">Her gün yenen gıdaları fonksiyonel hale getiriyoruz.</b></li>
-        <li><span class="why-from" data-i18n="w2.a">Sağlıklı rutinler kolay bırakılıyor</span><b data-i18n="w2.b">Hazırlık istemeyen, severek yiyeceğin ürünler.</b></li>
-        <li><span class="why-from" data-i18n="w3.a">Çeşitliliği takip etmek zor</span><b data-i18n="w3.b">Haftalık bitki sayacıyla kendin gör.</b></li>
-      </ol>
-    </div>
-  </section>
-
-
-
 
   <section class="band tint event-band" id="etkinlik" aria-labelledby="etkinlik-title">
     <div class="wrap event">
@@ -761,6 +708,55 @@ p { margin: 0; }
     </div>
   </section>
 
+  <section class="band" id="cesitlilik" aria-labelledby="cesitlilik-title">
+    <div class="wrap">
+      <div class="counter-panel">
+        <div class="counter-side">
+          <div class="section-head" style="margin-bottom:0">
+            <span class="eyebrow" data-i18n="counter.eyebrow">Çeşitlilik sayacı</span>
+            <h2 id="cesitlilik-title" data-i18n="counter.h2">Bu hafta kaç farklı bitki yedin?</h2>
+            <p class="lead" data-i18n="counter.lead">Geniş bir araştırmada haftada 30 ve üzeri farklı bitki tüketen kişilerin bağırsak mikrobiyotasının, 10 ve altı tüketenlere göre daha çeşitli olduğu görüldü. Meyve, sebze, baklagil, tahıl, kuruyemiş, tohum, ot ve baharatların hepsi sayılır.</p>
+          </div>
+          <div class="tally" aria-live="polite">
+            <div class="tally-num"><strong id="count">0</strong><span data-i18n="counter.unit">/ 30 bitki</span></div>
+            <div class="cells" id="cells" aria-hidden="true"></div>
+            <p class="tally-msg" id="msg"></p>
+            <div class="tally-foot">
+              <div class="legend" id="legend"></div>
+              <button class="link-btn" id="reset" type="button" data-i18n="counter.reset">Haftayı sıfırla</button>
+            </div>
+          </div>
+          <p class="source" data-i18n="counter.source">Kaynak: McDonald D. ve ark., American Gut Project, <i>mSystems</i>, 2018.</p>
+        </div>
+        <div class="groups" id="groups">
+          <div class="group">
+            <h3><i style="--dot: var(--c-diger)"></i><span data-i18n="add.h">Listede yok mu? <small>kendin ekle</small></span></h3>
+            <form class="add-row" id="add-form">
+              <label for="add-input" hidden data-i18n="add.label">Bitki adı</label>
+              <input id="add-input" type="text" placeholder="Örn. roka, semizotu, ayva" maxlength="32" autocomplete="off" data-i18n-attr="placeholder:add.ph">
+              <button class="btn btn-lime" type="submit" data-i18n="add.btn">Ekle</button>
+            </form>
+            <div class="chips" id="custom-chips" style="margin-top:10px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="yaklasim" aria-labelledby="yaklasim-title">
+    <div class="wrap why">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="why.e">Neden INSOVIO</span>
+        <h2 id="yaklasim-title" data-i18n="approach.h2">Kapsül yerine <em>gerçek gıda</em>. Tahmin yerine takip.</h2>
+      </div>
+      <ol class="why-list">
+        <li><span class="why-from" data-i18n="w1.a">Raflar takviyeyle dolu</span><b data-i18n="w1.b">Her gün yenen gıdaları fonksiyonel hale getiriyoruz.</b></li>
+        <li><span class="why-from" data-i18n="w2.a">Sağlıklı rutinler kolay bırakılıyor</span><b data-i18n="w2.b">Hazırlık istemeyen, severek yiyeceğin ürünler.</b></li>
+        <li><span class="why-from" data-i18n="w3.a">Çeşitliliği takip etmek zor</span><b data-i18n="w3.b">Haftalık bitki sayacıyla kendin gör.</b></li>
+      </ol>
+    </div>
+  </section>
+
   <section class="band" id="planlar" aria-labelledby="planlar-title">
     <div class="wrap">
       <div class="section-head">
@@ -832,7 +828,6 @@ p { margin: 0; }
       </a>
     </div>
   </section>
-
 
   <section class="band" id="ekip" aria-labelledby="ekip-title">
     <div class="wrap">
