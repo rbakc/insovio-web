@@ -286,6 +286,9 @@ p { margin: 0; }
   background-size: 13px 13px, 17px 17px; background-position: 0 0, 6px 8px;
   box-shadow: inset 0 0 0 5px rgb(255 255 255 / .22), 0 6px 14px -8px rgb(23 18 58 / .5);
 }
+.lavas-card.first { border-color: var(--violet); box-shadow: 0 0 0 1px var(--violet); }
+.lavas-status { display: inline-block; margin-bottom: 6px; font: 500 .6875rem/1 var(--f-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.lavas-card.first .lavas-status { color: var(--violet); }
 .lavas-card h4 { font-size: 1.125rem; font-weight: 700; line-height: 1.25; margin-bottom: 4px; }
 .lavas-card p { font-size: var(--s-sm); color: var(--muted); }
 .lavas-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
@@ -633,52 +636,58 @@ p { margin: 0; }
       <div class="lavas-head">
         <span class="eyebrow" data-i18n="lv.e">Ürün ailesi · Geliştirme aşamasında</span>
         <h3 data-i18n="lv.h">Lavaşlar</h3>
-        <p data-i18n="lv.p">Un yerine sebze ve baklagillerle yapılan, katkısız ve koruyucusuz üretmeyi hedeflediğimiz lavaşlar. Her biri haftalık bitki çeşitliliğine katkı sağlıyor. Kurucumuzun yüksek lisans çalışması da katkısız ve koruyucusuz ürün geliştirme üzerine.</p>
+        <p data-i18n="lv.p">Un yerine sebze ve baklagillerle yapılan, katkısız ve koruyucusuz üretmeyi hedeflediğimiz lavaşlar. Her biri haftalık bitki çeşitliliğine katkı sağlıyor. İlk seride malzemesi en az, tamamen bitkisel ve üretimi en kolay olan mercimek ve nohut unu lavaşlarıyla başlıyoruz. Kurucumuzun yüksek lisans çalışması da katkısız ve koruyucusuz ürün geliştirme üzerine.</p>
       </div>
       <ul class="lavas-grid">
-        <li class="lavas-card">
-          <span class="disc" style="--disc: #86B84A" aria-hidden="true"></span>
-          <div>
-            <h4 data-i18n="lv.avokado.n">Avokado Lavaş</h4>
-            <p data-i18n="lv.avokado.i">Avokado, yumurta, limon, susam, çörek otu</p>
-            <div class="lavas-tags"><span class="plants" data-i18n="lv.avokado.p">4 bitki</span><span data-i18n="lv.avokado.t0">Unsuz</span><span data-i18n="lv.avokado.t1">Yumurtalı</span></div>
-          </div>
-        </li>
-        <li class="lavas-card">
+        <li class="lavas-card first">
           <span class="disc" style="--disc: #E58A3A" aria-hidden="true"></span>
           <div>
+            <span class="lavas-status" data-i18n="lv.first">İlk seri</span>
             <h4 data-i18n="lv.mercimek.n">Kırmızı Mercimek Lavaşı</h4>
             <p data-i18n="lv.mercimek.i">Kırmızı mercimek, su, tuz, kimyon</p>
             <div class="lavas-tags"><span class="plants" data-i18n="lv.mercimek.p">2 bitki</span><span data-i18n="lv.mercimek.t0">Baklagil bazlı</span><span data-i18n="lv.mercimek.t1">3–4 malzeme</span></div>
           </div>
         </li>
-        <li class="lavas-card">
-          <span class="disc" style="--disc: #B5CF6B" aria-hidden="true"></span>
-          <div>
-            <h4 data-i18n="lv.kabak.n">Kabak Lavaşı</h4>
-            <p data-i18n="lv.kabak.i">Kabak, yumurta, peynir, karabiber</p>
-            <div class="lavas-tags"><span class="plants" data-i18n="lv.kabak.p">2 bitki</span><span data-i18n="lv.kabak.t0">Sebze bazlı</span><span data-i18n="lv.kabak.t1">Yumurtalı</span></div>
-          </div>
-        </li>
-        <li class="lavas-card">
+        <li class="lavas-card first">
           <span class="disc" style="--disc: #3F8F55" aria-hidden="true"></span>
           <div>
+            <span class="lavas-status" data-i18n="lv.first">İlk seri</span>
             <h4 data-i18n="lv.ispanak.n">Ispanaklı Nohut Lavaşı</h4>
             <p data-i18n="lv.ispanak.i">Nohut unu, ıspanak, zeytinyağı, tuz</p>
             <div class="lavas-tags"><span class="plants" data-i18n="lv.ispanak.p">3 bitki</span><span data-i18n="lv.ispanak.t0">Baklagil bazlı</span><span data-i18n="lv.ispanak.t1">Vegan tarif</span></div>
           </div>
         </li>
-        <li class="lavas-card">
+        <li class="lavas-card first">
           <span class="disc" style="--disc: #B3366B" aria-hidden="true"></span>
           <div>
+            <span class="lavas-status" data-i18n="lv.first">İlk seri</span>
             <h4 data-i18n="lv.pancar.n">Pancarlı Mercimek Lavaşı</h4>
             <p data-i18n="lv.pancar.i">Kırmızı mercimek, pancar, kimyon, tuz</p>
             <div class="lavas-tags"><span class="plants" data-i18n="lv.pancar.p">3 bitki</span><span data-i18n="lv.pancar.t0">Baklagil bazlı</span><span data-i18n="lv.pancar.t1">Vegan tarif</span></div>
           </div>
         </li>
         <li class="lavas-card">
+          <span class="disc" style="--disc: #86B84A" aria-hidden="true"></span>
+          <div>
+            <span class="lavas-status" data-i18n="lv.later">Sonraki aşama</span>
+            <h4 data-i18n="lv.avokado.n">Avokado Lavaş</h4>
+            <p data-i18n="lv.avokado.i">Avokado, yumurta, limon, susam, çörek otu</p>
+            <div class="lavas-tags"><span class="plants" data-i18n="lv.avokado.p">4 bitki</span><span data-i18n="lv.avokado.t0">Unsuz</span><span data-i18n="lv.avokado.t1">Yumurtalı</span></div>
+          </div>
+        </li>
+        <li class="lavas-card">
+          <span class="disc" style="--disc: #B5CF6B" aria-hidden="true"></span>
+          <div>
+            <span class="lavas-status" data-i18n="lv.later">Sonraki aşama</span>
+            <h4 data-i18n="lv.kabak.n">Kabak Lavaşı</h4>
+            <p data-i18n="lv.kabak.i">Kabak, yumurta, peynir, karabiber</p>
+            <div class="lavas-tags"><span class="plants" data-i18n="lv.kabak.p">2 bitki</span><span data-i18n="lv.kabak.t0">Sebze bazlı</span><span data-i18n="lv.kabak.t1">Yumurtalı</span></div>
+          </div>
+        </li>
+        <li class="lavas-card">
           <span class="disc" style="--disc: #9C7752" aria-hidden="true"></span>
           <div>
+            <span class="lavas-status" data-i18n="lv.later">Sonraki aşama</span>
             <h4 data-i18n="lv.karabugday.n">Fermente Karabuğday Lavaşı</h4>
             <p data-i18n="lv.karabugday.i">Karabuğday, su, tuz; doğal fermentasyon</p>
             <div class="lavas-tags"><span class="plants" data-i18n="lv.karabugday.p">1 bitki</span><span data-i18n="lv.karabugday.t0">Fermente</span><span data-i18n="lv.karabugday.t1">Vegan tarif</span></div>
@@ -943,9 +952,10 @@ p { margin: 0; }
     'lv.karabugday.p': '1 plant',
     'lv.karabugday.t0': 'Fermented',
     'lv.karabugday.t1': 'Vegan recipe',
+    'lv.first': 'First series', 'lv.later': 'Next stage',
     'lv.e': 'Product family · In development',
     'lv.h': 'Wraps',
-    'lv.p': 'Wraps made with vegetables and legumes instead of flour, which we aim to produce without additives or preservatives. Each one adds to your weekly plant diversity. Our founder’s master’s research was also on additive- and preservative-free product development.',
+    'lv.p': 'Wraps made with vegetables and legumes instead of flour, which we aim to produce without additives or preservatives. Each one adds to your weekly plant diversity. Our first series starts with the lentil and chickpea flour wraps, which have the fewest ingredients, are fully plant-based and are the simplest to produce. Our founder’s master’s research was also on additive- and preservative-free product development.',
     'lv.cta': 'Join the early tasters list',
     'lv.href': 'mailto:info@insovio.com?subject=Wrap%20early%20list',
     'lv.note': 'Recipes and names may change during development.',
