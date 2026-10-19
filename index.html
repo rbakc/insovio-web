@@ -100,6 +100,7 @@ p { margin: 0; }
 
 .wrap { max-width: 1200px; margin-inline: auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
 .band { padding-block: clamp(64px, 9vw, 120px); }
+.hero + .band { padding-top: clamp(8px, 2vw, 24px); }
 .band:not(.tint) + .band:not(.tint) { padding-top: 0; }
 .eyebrow { font-family: var(--f-mono); font-size: var(--s-xs); font-weight: 500; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
 .lead { font-size: clamp(1.0625rem, 1rem + .35vw, 1.25rem); color: var(--muted); max-width: 58ch; }
@@ -490,9 +491,9 @@ p { margin: 0; }
       <span class="logo-word" aria-hidden="true"></span>
     </a>
     <nav class="nav" aria-label="Ana menü" data-i18n-attr="aria-label:a.nav">
+      <a href="#cesitlilik" data-i18n="nav.diversity">Çeşitlilik</a>
       <a href="#etkinlik">GastroSens</a>
       <a href="#urunler" data-i18n="nav.products">Ürünler</a>
-      <a href="#cesitlilik" data-i18n="nav.diversity">Çeşitlilik</a>
       <a href="#yaklasim" data-i18n="nav.approach">Yaklaşım</a>
       <a href="#bilim" data-i18n="nav.science">Bilim</a>
       <a href="#ekip" data-i18n="nav.team">Ekip</a>
@@ -525,6 +526,41 @@ p { margin: 0; }
           <div class="hero-actions">
             <a class="btn btn-primary" href="#iletisim" data-i18n="cta.pilot">Pilot programa katıl</a>
             <a class="btn btn-ghost" href="#cesitlilik" data-i18n="hero.secondary">Bitki sayacını dene</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="cesitlilik" aria-labelledby="cesitlilik-title">
+    <div class="wrap">
+      <div class="counter-panel">
+        <div class="counter-side">
+          <div class="section-head" style="margin-bottom:0">
+            <span class="eyebrow" data-i18n="counter.eyebrow">Çeşitlilik sayacı</span>
+            <h2 id="cesitlilik-title" data-i18n="counter.h2">Bu hafta kaç farklı bitki yedin?</h2>
+            <p class="lead" data-i18n="counter.lead">Geniş bir araştırmada haftada 30 ve üzeri farklı bitki tüketen kişilerin bağırsak mikrobiyotasının, 10 ve altı tüketenlere göre daha çeşitli olduğu görüldü. Meyve, sebze, baklagil, tahıl, kuruyemiş, tohum, ot ve baharatların hepsi sayılır.</p>
+          </div>
+          <div class="tally" aria-live="polite">
+            <div class="tally-num"><strong id="count">0</strong><span data-i18n="counter.unit">/ 30 bitki</span></div>
+            <div class="cells" id="cells" aria-hidden="true"></div>
+            <p class="tally-msg" id="msg"></p>
+            <div class="tally-foot">
+              <div class="legend" id="legend"></div>
+              <button class="link-btn" id="reset" type="button" data-i18n="counter.reset">Haftayı sıfırla</button>
+            </div>
+          </div>
+          <p class="source" data-i18n="counter.source">Kaynak: McDonald D. ve ark., American Gut Project, <i>mSystems</i>, 2018.</p>
+        </div>
+        <div class="groups" id="groups">
+          <div class="group">
+            <h3><i style="--dot: var(--c-diger)"></i><span data-i18n="add.h">Listede yok mu? <small>kendin ekle</small></span></h3>
+            <form class="add-row" id="add-form">
+              <label for="add-input" hidden data-i18n="add.label">Bitki adı</label>
+              <input id="add-input" type="text" placeholder="Örn. roka, semizotu, ayva" maxlength="32" autocomplete="off" data-i18n-attr="placeholder:add.ph">
+              <button class="btn btn-lime" type="submit" data-i18n="add.btn">Ekle</button>
+            </form>
+            <div class="chips" id="custom-chips" style="margin-top:10px"></div>
           </div>
         </div>
       </div>
@@ -734,41 +770,6 @@ p { margin: 0; }
         <li><span>07</span><h4 data-i18n="s7.h">Geri bildirim</h4><p data-i18n="s7.p">Satış sonrası tüketici geri bildirimleriyle ürünü iyileştiriyoruz.</p></li>
         <li class="process-note"><span data-i18n="rd.e">Ar-Ge</span><h4 data-i18n="rd.h">Faydalı ama tadı sevilmeyen bileşenler</h4><p data-i18n="rd.p">Mikroenkapsülasyon ve lipozomal taşıma sistemleriyle bu bileşenleri lezzetten ödün vermeden gıdaya katmanın ve stabilitelerini korumanın yollarını araştırıyoruz.</p></li>
       </ol>
-    </div>
-  </section>
-
-  <section class="band" id="cesitlilik" aria-labelledby="cesitlilik-title">
-    <div class="wrap">
-      <div class="counter-panel">
-        <div class="counter-side">
-          <div class="section-head" style="margin-bottom:0">
-            <span class="eyebrow" data-i18n="counter.eyebrow">Çeşitlilik sayacı</span>
-            <h2 id="cesitlilik-title" data-i18n="counter.h2">Bu hafta kaç farklı bitki yedin?</h2>
-            <p class="lead" data-i18n="counter.lead">Geniş bir araştırmada haftada 30 ve üzeri farklı bitki tüketen kişilerin bağırsak mikrobiyotasının, 10 ve altı tüketenlere göre daha çeşitli olduğu görüldü. Meyve, sebze, baklagil, tahıl, kuruyemiş, tohum, ot ve baharatların hepsi sayılır.</p>
-          </div>
-          <div class="tally" aria-live="polite">
-            <div class="tally-num"><strong id="count">0</strong><span data-i18n="counter.unit">/ 30 bitki</span></div>
-            <div class="cells" id="cells" aria-hidden="true"></div>
-            <p class="tally-msg" id="msg"></p>
-            <div class="tally-foot">
-              <div class="legend" id="legend"></div>
-              <button class="link-btn" id="reset" type="button" data-i18n="counter.reset">Haftayı sıfırla</button>
-            </div>
-          </div>
-          <p class="source" data-i18n="counter.source">Kaynak: McDonald D. ve ark., American Gut Project, <i>mSystems</i>, 2018.</p>
-        </div>
-        <div class="groups" id="groups">
-          <div class="group">
-            <h3><i style="--dot: var(--c-diger)"></i><span data-i18n="add.h">Listede yok mu? <small>kendin ekle</small></span></h3>
-            <form class="add-row" id="add-form">
-              <label for="add-input" hidden data-i18n="add.label">Bitki adı</label>
-              <input id="add-input" type="text" placeholder="Örn. roka, semizotu, ayva" maxlength="32" autocomplete="off" data-i18n-attr="placeholder:add.ph">
-              <button class="btn btn-lime" type="submit" data-i18n="add.btn">Ekle</button>
-            </form>
-            <div class="chips" id="custom-chips" style="margin-top:10px"></div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
