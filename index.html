@@ -487,6 +487,8 @@ body.page-about #hakkimizda { padding-top: clamp(40px, 6vw, 80px); }
 .contact-list small { display: block; font: 500 .75rem/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .08em; opacity: .75; }
 .contact-list a { font-size: 1.125rem; font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
 .contact-list a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.contact-list .addr { display: block; font-size: 1.125rem; font-weight: 600; }
+.contact-list .addr-sub { display: block; font-size: var(--s-sm); opacity: .75; margin-top: 2px; }
 .copy-btn { font: 500 .75rem/1 var(--f-sans); color: inherit; background: transparent; border: 1px solid color-mix(in oklab, var(--on-contact) 40%, transparent); border-radius: 999px; padding: 8px 12px; cursor: pointer; }
 .copy-btn:hover { border-color: var(--on-contact); }
 @media (max-width: 880px) { .contact { grid-template-columns: 1fr; } }
@@ -617,7 +619,7 @@ body.page-about #hakkimizda { padding-top: clamp(40px, 6vw, 80px); }
           <div><dt data-i18n="e3.t">İlk seri</dt><dd data-i18n="e3.d">4 hafta, 4 oturum</dd></div>
           <div><dt data-i18n="e4.t">Temalar</dt><dd data-i18n="e4.d">Çiçekler, baharatlar, Ege otları, imza notalar</dd></div>
         </dl>
-        <p class="event-cta" data-i18n="event.cta">Marka ortaklığı, sponsorluk ya da katılım için <a href="mailto:rabia@insovio.com?subject=GastroSens">rabia@insovio.com</a> adresine yaz.</p>
+        <p class="event-cta" data-i18n="event.cta">Marka ortaklığı, sponsorluk ya da katılım için <a href="mailto:info@insovio.com?subject=GastroSens">info@insovio.com</a> adresine yaz.</p>
       </div>
     </div>
   </section>
@@ -912,9 +914,8 @@ body.page-about #hakkimizda { padding-top: clamp(40px, 6vw, 80px); }
         </div>
       </div>
       <ul class="contact-list">
-        <li><div><small data-i18n="c.general">Genel</small><a href="mailto:info@insovio.com">info@insovio.com</a></div><button class="copy-btn" type="button" data-copy="info@insovio.com" data-i18n="c.copy">Kopyala</button></li>
-        <li><div><small data-i18n="c.founder">Kurucu</small><a href="mailto:rabia@insovio.com">rabia@insovio.com</a></div><button class="copy-btn" type="button" data-copy="rabia@insovio.com" data-i18n="c.copy">Kopyala</button></li>
-        <li><div><small data-i18n="c.phone">Telefon</small><a href="tel:+34610561859">+34 610 56 18 59</a></div><button class="copy-btn" type="button" data-copy="+34 610 56 18 59" data-i18n="c.copy">Kopyala</button></li>
+        <li><div><small data-i18n="c.email">E-posta</small><a href="mailto:info@insovio.com">info@insovio.com</a></div><button class="copy-btn" type="button" data-copy="info@insovio.com" data-i18n="c.copy">Kopyala</button></li>
+        <li><div><small data-i18n="c.address">Adres</small><span class="addr">Samsun Teknopark</span><span class="addr-sub">Samsun, Türkiye</span></div></li>
       </ul>
     </div>
   </section>
@@ -1096,7 +1097,7 @@ body.page-about #hakkimizda { padding-top: clamp(40px, 6vw, 80px); }
     'l2.b': 'Taste', 'l2.s': 'Eyes closed, different plates arrive. Each one hides these notes, or none at all.',
     'l3.b': 'Find', 'l3.s': 'Guests fill in a guess card; at the end, the answers and the stories behind the recipes are revealed.',
     'e1.t': 'Duration', 'e1.d': 'About 3 hours', 'e2.t': 'Guests', 'e2.d': '40 per session', 'e3.t': 'First series', 'e3.d': '4 weeks, 4 sessions', 'e4.t': 'Themes', 'e4.d': 'Flowers, spices, Aegean herbs, signature notes',
-    'event.cta': 'For brand partnerships, sponsorship or attendance, write to <a href="mailto:rabia@insovio.com?subject=GastroSens">rabia@insovio.com</a>.',
+    'event.cta': 'For brand partnerships, sponsorship or attendance, write to <a href="mailto:info@insovio.com?subject=GastroSens">info@insovio.com</a>.',
     'about.e': 'About us', 'about.h2': 'Bringing science to the <em>table</em>',
     'about.p': 'INSOVIO was founded to turn microbiota-based clinical research into foods you will enjoy every day. With a focus on living well and healthy aging, we develop our products by bringing together food engineering, neurology and microbiota science.',
     'about.adv': 'Academic advisors',
@@ -1106,7 +1107,7 @@ body.page-about #hakkimizda { padding-top: clamp(40px, 6vw, 80px); }
     'contact.eyebrow': 'Pilot program', 'contact.h2': 'Be among the <em>first</em>.',
     'contact.lead': 'Join our pilot user groups, try our products first and help shape INSOVIO with your feedback. A short email about yourself is all it takes.',
     'contact.btn': 'Apply by email', 'contact.href': 'mailto:info@insovio.com?subject=Pilot%20program%20application',
-    'c.general': 'General', 'c.founder': 'Founder', 'c.phone': 'Phone', 'c.copy': 'Copy',
+    'c.email': 'Email', 'c.address': 'Address', 'c.copy': 'Copy',
     'footer': '© 2026 INSOVIO. The information on this site is for general information only and is not medical advice.'
   };
   var UI = {
