@@ -444,16 +444,18 @@ p { margin: 0; }
 @media (max-width: 880px) { .event { grid-template-columns: 1fr; } .event-img { max-width: 460px; } }
 
 /* Team */
-.team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px); }
-.person { display: grid; gap: 12px; align-content: start; }
-.person img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 28px; background: #fff; }
-.person .role { font: 500 .75rem/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--violet); }
-.person h3 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; }
-.person p { color: var(--muted); font-size: var(--s-sm); }
+.about-card { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); align-items: start; padding: clamp(20px, 3vw, 32px); border-radius: 28px; background: var(--surface); border: 1px solid var(--line); }
+.about-card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 20px; background: #fff; }
+.about-body { display: grid; gap: 12px; align-content: start; }
+.about-card .role { font: 500 .75rem/1.3 var(--f-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--violet); }
+.about-body h3 { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; }
+.about-body > p { color: var(--muted); font-size: var(--s-sm); max-width: 68ch; }
+.advisors { display: grid; gap: 10px; margin-top: 8px; padding-top: 18px; border-top: 1px solid var(--line); }
+.advisors ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 10px; }
+.advisors li { padding: 8px 14px; border-radius: 999px; background: var(--tint); color: var(--ink); font-weight: 600; font-size: var(--s-sm); }
 .hiring { margin-top: clamp(28px, 4vw, 44px); padding: 20px 24px; border-radius: 18px; border: 1px dashed var(--line); color: var(--muted); font-size: var(--s-sm); }
 .hiring b { color: var(--ink); font-weight: 600; }
-@media (max-width: 880px) { .team { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .team { grid-template-columns: 1fr; } .person img { max-width: 320px; } }
+@media (max-width: 760px) { .about-card { grid-template-columns: 1fr; } .about-card img { max-width: 280px; } }
 
 /* Contact */
 .contact-band { background: var(--contact-bg); color: var(--on-contact); }
@@ -496,7 +498,7 @@ p { margin: 0; }
       <a href="#urunler" data-i18n="nav.products">Ürünler</a>
       <a href="#yaklasim" data-i18n="nav.approach">Yaklaşım</a>
       <a href="#bilim" data-i18n="nav.science">Bilim</a>
-      <a href="#ekip" data-i18n="nav.team">Ekip</a>
+      <a href="#hakkimizda" data-i18n="nav.about">Hakkımızda</a>
     </nav>
     <div class="header-actions">
       <div class="lang" role="group" aria-label="Dil / Language">
@@ -859,32 +861,25 @@ p { margin: 0; }
     </div>
   </section>
 
-  <section class="band" id="ekip" aria-labelledby="ekip-title">
+  <section class="band" id="hakkimizda" aria-labelledby="hakkimizda-title">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow" data-i18n="team.eyebrow">Ekip</span>
-        <h2 id="ekip-title" data-i18n="team.h2">Gıda mühendisliği, nöroloji ve mikrobiyota bir arada</h2>
+        <span class="eyebrow" data-i18n="about.e">Hakkımızda</span>
+        <h2 id="hakkimizda-title" data-i18n="about.h2">Bilimi <em>sofraya</em> taşıyoruz</h2>
+        <p class="lead" data-i18n="about.p">INSOVIO, mikrobiyota temelli klinik araştırmaları her gün severek yiyeceğin gıdalara dönüştürmek için kuruldu. İyi yaşam ve sağlıklı yaş alma odağında, ürünlerimizi gıda mühendisliği, nöroloji ve mikrobiyota bilgisini bir araya getirerek geliştiriyoruz.</p>
       </div>
-      <div class="team">
-        <article class="person">
-          <img src="img/rabia.webp" width="520" height="520" loading="lazy" alt="Fatma Rabia Akçatemiz">
+      <article class="about-card">
+        <img src="img/rabia.webp" width="520" height="520" loading="lazy" alt="Fatma Rabia Akçatemiz">
+        <div class="about-body">
           <span class="role" data-i18n="role.founder">Kurucu</span>
           <h3>Fatma Rabia Akçatemiz</h3>
           <p data-i18n="bio.rabia">Gıda Mühendisi, Nörobilim PhD(c), RTTP. Yüksek lisansını katkısız ve koruyucusuz yeni ürün geliştirme üzerine tamamladı, Ondokuz Mayıs Üniversitesi'nde nörobilim doktorasını sürdürüyor. Neuroscience School of Advanced Studies'de aldığı “Bağırsak ve Beyin” eğitimiyle beyin sağlığını beslenme yoluyla destekleme odağını güçlendirdi. Beyin sağlığı ve mikrobiyota odaklı klinik çalışmalar yürütüyor; İspanya'da IdISBa'da (Balear Adaları Sağlık Araştırmaları Enstitüsü) bağırsak-beyin ekseni üzerine çalışıyor. Future Innovation Leaders, Future Lab ve Mercedes-Benz She's Mercedes programlarına seçilen girişimcilerden biri.</p>
-        </article>
-        <article class="person">
-          <img src="img/terzi.webp" width="520" height="520" loading="lazy" alt="Prof. Dr. Murat Terzi">
-          <span class="role" data-i18n="role.advisor">Danışman</span>
-          <h3>Prof. Dr. Murat Terzi</h3>
-          <p data-i18n="bio.terzi">Nöroloji Uzmanı, Türk Nöroloji Derneği Başkanı</p>
-        </article>
-        <article class="person">
-          <img src="img/karacan.webp" width="520" height="520" loading="lazy" alt="Dr. İlker Karacan">
-          <span class="role" data-i18n="role.advisor">Danışman</span>
-          <h3>Dr. İlker Karacan</h3>
-          <p data-i18n="bio.karacan">Mikrobiyota ve Biyoinformatik Uzmanı</p>
-        </article>
-      </div>
+          <div class="advisors">
+            <span class="role" data-i18n="about.adv">Akademik danışmanlar</span>
+            <ul><li>Prof. Dr. Murat Terzi</li><li>Dr. İlker Karacan</li></ul>
+          </div>
+        </div>
+      </article>
       <p class="hiring" data-i18n="team.hiring"><b>Ekibimizi büyütüyoruz.</b> Dijital sağlık, büyüme ve ürün geliştirme alanlarında birlikte çalışmak istersen info@insovio.com adresine yaz.</p>
     </div>
   </section>
@@ -924,7 +919,7 @@ p { margin: 0; }
   /* ---------- English strings (Turkish lives in the HTML) ---------- */
   var EN = {
     'a.home': 'INSOVIO home', 'a.nav': 'Main menu', 'a.timeline': 'Development stages',
-    'nav.approach': 'Approach', 'nav.diversity': 'Diversity', 'nav.products': 'Products', 'nav.science': 'Science', 'nav.event': 'Event', 'nav.team': 'Team',
+    'nav.approach': 'Approach', 'nav.diversity': 'Diversity', 'nav.products': 'Products', 'nav.science': 'Science', 'nav.event': 'Event', 'nav.about': 'About',
     'cta.pilot': 'Join the pilot',
     'promo.s': 'New · Urla, spring 2027', 'promo.d': 'Sensory tasting experience',
     'bar.text': 'New · GastroSens sensory tasting experience · Urla, spring 2027',
@@ -943,6 +938,8 @@ p { margin: 0; }
     'hero.secondary': 'Try the plant counter',
     'img.hero': 'img/en-konsept-giris.webp',
     'img.cheese': 'img/en-konsept-peynir.webp',
+    'img.flavors': 'img/en-konsept-cesitler.webp',
+    'img.lavas': 'img/en-konsept-lavas.webp',
     'alt.hero': 'Open INSOVIO Aegean Thyme spreadable cheese tub on a sunlit travertine counter, lid beside it, with bread, thyme, olives and cucumber and tomatoes',
     'why.e': 'Why INSOVIO',
     'w1.a': 'Shelves full of supplements', 'w1.b': 'We make everyday foods functional.',
@@ -1083,11 +1080,11 @@ p { margin: 0; }
     'l3.b': 'Find', 'l3.s': 'Guests fill in a guess card; at the end, the answers and the stories behind the recipes are revealed.',
     'e1.t': 'Duration', 'e1.d': 'About 3 hours', 'e2.t': 'Guests', 'e2.d': '40 per session', 'e3.t': 'First series', 'e3.d': '4 weeks, 4 sessions', 'e4.t': 'Themes', 'e4.d': 'Flowers, spices, Aegean herbs, signature notes',
     'event.cta': 'For brand partnerships, sponsorship or attendance, write to <a href="mailto:rabia@insovio.com?subject=GastroSens">rabia@insovio.com</a>.',
-    'team.eyebrow': 'Team', 'team.h2': 'Food engineering, neurology and microbiota in one team',
-    'role.founder': 'Founder', 'role.advisor': 'Advisor',
+    'about.e': 'About us', 'about.h2': 'Bringing science to the <em>table</em>',
+    'about.p': 'INSOVIO was founded to turn microbiota-based clinical research into foods you will enjoy every day. With a focus on living well and healthy aging, we develop our products by bringing together food engineering, neurology and microbiota science.',
+    'about.adv': 'Academic advisors',
+    'role.founder': 'Founder',
     'bio.rabia': 'Food Engineer, Neuroscience PhD(c), RTTP. She completed her master’s degree on developing new additive- and preservative-free products and is pursuing a PhD in neuroscience at Ondokuz Mayıs University. Her “Gut and Brain” training at the Neuroscience School of Advanced Studies strengthened her focus on supporting brain health through nutrition. She leads clinical studies focused on brain health and the microbiota and works on the gut-brain axis at IdISBa, the Health Research Institute of the Balearic Islands in Spain. She was selected for the Future Innovation Leaders, Future Lab and Mercedes-Benz She’s Mercedes programs.',
-    'bio.terzi': 'Neurologist, President of the Turkish Neurological Society',
-    'bio.karacan': 'Microbiota and Bioinformatics Specialist',
     'team.hiring': '<b>We are growing our team.</b> If you would like to work with us in digital health, growth or product development, write to info@insovio.com.',
     'contact.eyebrow': 'Pilot program', 'contact.h2': 'Be among the <em>first</em>.',
     'contact.lead': 'Join our pilot user groups, try our products first and help shape INSOVIO with your feedback. A short email about yourself is all it takes.',
