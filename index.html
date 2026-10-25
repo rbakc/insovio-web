@@ -147,7 +147,23 @@ p { margin: 0; }
 .lang button { font: 500 .75rem/1 var(--f-mono); letter-spacing: .04em; padding: 8px 10px; border-radius: 999px; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
 .lang button:hover { color: var(--ink); }
 .lang button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
-@media (max-width: 960px) { .nav { display: none; } }
+.nav a[aria-current="page"] { opacity: 1; color: var(--violet); }
+.menu-btn { display: none; }
+@media (max-width: 960px) {
+  .nav { display: none; }
+  .menu-btn { display: inline-grid; align-content: center; justify-items: center; gap: 4px; width: 42px; height: 42px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
+  .menu-btn span { display: block; width: 16px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .2s, opacity .2s; }
+  .site-header.nav-open .menu-btn span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .site-header.nav-open .menu-btn span:nth-child(2) { opacity: 0; }
+  .site-header.nav-open .menu-btn span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .site-header.nav-open .nav { display: grid; position: absolute; left: 0; right: 0; top: 100%; gap: 0; padding: 4px var(--gutter-r) 12px var(--gutter-l); background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 18px 30px -24px rgb(23 18 58 / .35); }
+  .site-header.nav-open .nav a { padding: 14px 0; font-size: 1.0625rem; opacity: 1; border-bottom: 1px solid color-mix(in oklab, var(--line) 70%, transparent); }
+  .site-header.nav-open .nav a:last-child { border-bottom: 0; }
+}
+/* Hakkımızda opens as its own page */
+body:not(.page-about) #hakkimizda { display: none; }
+body.page-about main > section:not(#hakkimizda):not(#iletisim) { display: none; }
+body.page-about #hakkimizda { padding-top: clamp(40px, 6vw, 80px); }
 @media (max-width: 460px) { .site-header .header-actions > .btn { display: none; } }
 
 /* Hero */
@@ -492,7 +508,7 @@ p { margin: 0; }
       <span class="logo-icon" aria-hidden="true"></span>
       <span class="logo-word" aria-hidden="true"></span>
     </a>
-    <nav class="nav" aria-label="Ana menü" data-i18n-attr="aria-label:a.nav">
+    <nav class="nav" id="site-nav" aria-label="Ana menü" data-i18n-attr="aria-label:a.nav">
       <a href="#cesitlilik" data-i18n="nav.diversity">Çeşitlilik</a>
       <a href="#etkinlik">GastroSens</a>
       <a href="#urunler" data-i18n="nav.products">Ürünler</a>
@@ -506,6 +522,7 @@ p { margin: 0; }
         <button type="button" id="lang-en" data-lang="en" aria-pressed="false" lang="en">EN</button>
       </div>
       <a class="btn btn-primary" href="#iletisim" data-i18n="cta.pilot">Pilot programa katıl</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü" data-i18n-attr="aria-label:a.menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -918,7 +935,7 @@ p { margin: 0; }
 (function () {
   /* ---------- English strings (Turkish lives in the HTML) ---------- */
   var EN = {
-    'a.home': 'INSOVIO home', 'a.nav': 'Main menu', 'a.timeline': 'Development stages',
+    'a.home': 'INSOVIO home', 'a.nav': 'Main menu', 'a.menu': 'Menu', 'a.timeline': 'Development stages',
     'nav.approach': 'Approach', 'nav.diversity': 'Diversity', 'nav.products': 'Products', 'nav.science': 'Science', 'nav.event': 'Event', 'nav.about': 'About',
     'cta.pilot': 'Join the pilot',
     'promo.s': 'New · Urla, spring 2027', 'promo.d': 'Sensory tasting experience',
@@ -1299,6 +1316,44 @@ p { margin: 0; }
   }
 
   applyLang();
+
+  /* ---------- Mobile menu ---------- */
+  var header = document.querySelector('.site-header');
+  var menuBtn = document.querySelector('.menu-btn');
+  function closeMenu() { header.classList.remove('nav-open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+  menuBtn.addEventListener('click', function () {
+    var open = header.classList.toggle('nav-open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('#site-nav a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+  /* ---------- Hakkımızda as its own page ---------- */
+  var aboutLink = document.querySelector('#site-nav a[href="#hakkimizda"]');
+  function setTitle() {
+    var about = document.body.classList.contains('page-about');
+    document.title = about ? (lang === 'en' ? 'About · INSOVIO' : 'Hakkımızda · INSOVIO') : 'INSOVIO';
+  }
+  function route(fromNav) {
+    var about = location.hash === '#hakkimizda';
+    var was = document.body.classList.contains('page-about');
+    document.body.classList.toggle('page-about', about);
+    if (about) aboutLink.setAttribute('aria-current', 'page'); else aboutLink.removeAttribute('aria-current');
+    setTitle();
+    if (about) { window.scrollTo({ top: 0, behavior: 'instant' }); return; }
+    if (fromNav && was) {
+      var id = location.hash.slice(1), el = id && document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'instant' }); else window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }
+  window.addEventListener('hashchange', function () { route(true); });
+  document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', setTitle); });
+  route(false);
+  window.addEventListener('load', function () {
+    if (!document.body.classList.contains('page-about')) return;
+    var toTop = function () { window.scrollTo({ top: 0, behavior: 'instant' }); };
+    toTop(); setTimeout(toTop, 0); setTimeout(toTop, 150);
+  });
 })();
 </script>
 
