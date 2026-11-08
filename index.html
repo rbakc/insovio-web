@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>INSOVIO</title>
-<meta name="description" content="INSOVIO: sağlıklı yaş alma ve iyi yaşam için, mikrobiyota temelli klinik araştırmalara dayanan lezzetli fonksiyonel gıdalar.">
+<title>INSOVIO · Mikrobiyom temelli insan optimizasyonu</title>
+<meta name="description" content="INSOVIO: mikrobiyom temelli insan optimizasyonu. Mikrobiyota biliminden kişiye özel beslenmeye: analiz, kişiselleştirme, fonksiyonel gıda ve izlem.">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,8 @@
 <meta name="theme-color" content="#4B3BD8">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://insovio.com/">
-<meta property="og:title" content="INSOVIO · Sağlıklı yaş almanın lezzetli hali">
-<meta property="og:description" content="Mikrobiyota temelli klinik araştırmalara dayanan, her gün severek yiyeceğin fonksiyonel gıdalar.">
+<meta property="og:title" content="INSOVIO · Mikrobiyom temelli insan optimizasyonu">
+<meta property="og:description" content="Mikrobiyota biliminden kişiye özel beslenmeye: analiz, kişiselleştirme, fonksiyonel gıda ve izlem.">
 <meta property="og:image" content="https://insovio.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
@@ -216,11 +216,15 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
 /* Problem */
 .why .section-head { margin-bottom: clamp(24px, 4vw, 40px); }
 .why-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: w; }
+.why-list.steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.why-list.steps span { font-size: var(--s-sm); color: var(--muted); }
+.why-note { margin-top: 18px; font-size: var(--s-xs); color: var(--muted); max-width: 80ch; }
+@media (max-width: 1100px) { .why-list.steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .why-list li { counter-increment: w; display: grid; gap: 14px; align-content: start; padding: 26px; border-radius: 24px; background: var(--surface); border: 1px solid var(--line); }
 .why-list li::before { content: "0" counter(w); font: 500 .75rem/1 var(--f-mono); letter-spacing: .08em; color: var(--violet); }
 .why-from { font-size: var(--s-sm); color: var(--muted); text-decoration: line-through; text-decoration-color: color-mix(in oklab, var(--muted) 60%, transparent); }
 .why-list b { font-size: 1.3125rem; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; }
-@media (max-width: 880px) { .why-list { grid-template-columns: 1fr; } }
+@media (max-width: 880px) { .why-list, .why-list.steps { grid-template-columns: 1fr; } }
 .problem { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 72px); align-items: start; }
 .problem figure { margin: 0; position: sticky; top: 110px; }
 .problem figure img { border-radius: 28px; aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
@@ -565,9 +569,9 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <div class="hero-panel">
-          <span class="eyebrow" data-i18n="hero.eyebrow">Lezzet · Bilim · İyi yaşam</span>
-          <h1 data-i18n="hero.h1">Sağlıklı yaş almanın <em>lezzetli</em> hali.</h1>
-          <p class="lead" data-i18n="hero.lead">Mikrobiyota temelli klinik araştırmalara dayanan, her gün severek yiyeceğin fonksiyonel gıdalar geliştiriyoruz. Odağımızda iyi yaşam ve sağlıklı yaş alma, onun önemli bir parçası olarak da beyin sağlığı var.</p>
+          <span class="eyebrow" data-i18n="hero.eyebrow">Mikrobiyom · Kişiselleştirme · İyi yaşam</span>
+          <h1 data-i18n="hero.h1">Mikrobiyom temelli <em>insan optimizasyonu</em>.</h1>
+          <p class="lead" data-i18n="hero.lead">Mikrobiyota biliminden kişiye özel beslenmeye: biyolojik veriyi anlıyor, hedefli bileşenleri her gün yenen gıdalara taşıyor ve zaman içinde birlikte izliyoruz.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#iletisim" data-i18n="cta.pilot">Pilot programa katıl</a>
             <a class="btn btn-ghost" href="#cesitlilik" data-i18n="hero.secondary">Bitki sayacını dene</a>
@@ -812,14 +816,16 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
   <section class="band" id="yaklasim" aria-labelledby="yaklasim-title">
     <div class="wrap why">
       <div class="section-head">
-        <span class="eyebrow" data-i18n="why.e">Neden INSOVIO</span>
-        <h2 id="yaklasim-title" data-i18n="approach.h2">Kapsül yerine <em>gerçek gıda</em>. Tahmin yerine takip.</h2>
+        <span class="eyebrow" data-i18n="why.e">Yaklaşımımız</span>
+        <h2 id="yaklasim-title" data-i18n="approach.h2">Mikrobiyomdan <em>kişiye özel</em> beslenmeye</h2>
       </div>
-      <ol class="why-list">
-        <li><span class="why-from" data-i18n="w1.a">Raflar takviyeyle dolu</span><b data-i18n="w1.b">Her gün yenen gıdaları fonksiyonel hale getiriyoruz.</b></li>
-        <li><span class="why-from" data-i18n="w2.a">Sağlıklı rutinler kolay bırakılıyor</span><b data-i18n="w2.b">Hazırlık istemeyen, severek yiyeceğin ürünler.</b></li>
-        <li><span class="why-from" data-i18n="w3.a">Çeşitliliği takip etmek zor</span><b data-i18n="w3.b">Haftalık bitki sayacıyla kendin gör.</b></li>
+      <ol class="why-list steps">
+        <li><b data-i18n="ap.1.t">Analiz et</b><span data-i18n="ap.1.d">Mikrobiyota profili ve kişisel bağlamla başlangıç resmini çıkarıyoruz.</span></li>
+        <li><b data-i18n="ap.2.t">Kişiselleştir</b><span data-i18n="ap.2.d">Uzman değerlendirmesiyle hedefli probiyotik ve prebiyotik seçeneklerini belirliyoruz.</span></li>
+        <li><b data-i18n="ap.3.t">Günlük yaşama taşı</b><span data-i18n="ap.3.d">Enkapsülasyon Ar-Ge’siyle bu bileşenleri her gün yenen gıdalara entegre ediyoruz.</span></li>
+        <li><b data-i18n="ap.4.t">İzle ve geliştir</b><span data-i18n="ap.4.d">Dijital kayıt, geri bildirim ve periyodik değerlendirmeyle yaklaşımı zamanla iyileştiriyoruz.</span></li>
       </ol>
+      <p class="why-note" data-i18n="ap.note">Geliştirme aşamasında. Pilot çalışmalar uzman eşliğinde ve onamla yürütülecek; ürünler için sağlık beyanı yapılmamaktadır.</p>
     </div>
   </section>
 
@@ -899,8 +905,8 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow" data-i18n="about.e">Hakkımızda</span>
-        <h2 id="hakkimizda-title" data-i18n="about.h2">Bilimi <em>sofraya</em> taşıyoruz</h2>
-        <p class="lead" data-i18n="about.p">INSOVIO, mikrobiyota temelli klinik araştırmaları her gün severek yiyeceğin gıdalara dönüştürmek için kuruldu. İyi yaşam ve sağlıklı yaş alma odağında, ürünlerimizi gıda mühendisliği, nöroloji ve mikrobiyota bilgisini bir araya getirerek geliştiriyoruz.</p>
+        <h2 id="hakkimizda-title" data-i18n="about.h2">Biyolojiden <em>kişiye özel</em> beslenmeye</h2>
+        <p class="lead" data-i18n="about.p">INSOVIO, mikrobiyom temelli bir insan optimizasyonu şirketi. Mikrobiyota araştırmalarını kişiye özel beslenmeye ve her gün yenen fonksiyonel gıdalara dönüştürüyor; ürünlerimizi gıda mühendisliği, nöroloji ve mikrobiyota bilgisini bir araya getirerek geliştiriyoruz.</p>
       </div>
       <article class="about-card">
         <img src="img/rabia.webp" width="520" height="520" loading="lazy" alt="Fatma Rabia Akçatemiz">
@@ -956,7 +962,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     'cta.pilot': 'Join the pilot',
     'promo.s': 'New · Urla, spring 2027', 'promo.d': 'Sensory tasting experience',
     'bar.text': 'New · GastroSens sensory tasting experience · Urla, spring 2027',
-    'hero.eyebrow': 'Taste · Science · Living well',
+    'hero.eyebrow': 'Microbiome · Personalisation · Living well',
     'stat1': 'Steps from lab to table', 'stat2': 'Disciplines in one team: food engineering, neurology, microbiota', 'stat3.v': 'Clinical', 'stat3': 'Studies focused on brain health and the microbiota',
     'card.label': 'Diversity tracking · example', 'card.q': 'How many plants this week?',
     'a.trust': 'Why INSOVIO',
@@ -966,18 +972,20 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     't3.h': 'A team of scientists', 't3.p': 'Product development from lab to table',
     't4.h': 'Digital tracking', 't4.p': 'Everyday foods, not capsules',
     'product.cta': 'Be among the first to try it',
-    'hero.h1': 'The <em>delicious</em> side of healthy aging.',
-    'hero.lead': 'We develop functional foods you will enjoy every day, grounded in microbiota-based clinical research. Our focus is living well and healthy aging, with brain health as a key part of it.',
+    'hero.h1': 'Microbiome-based <em>human optimization</em>.',
+    'hero.lead': 'From microbiota science to personalised nutrition: we read biological data, bring targeted ingredients into foods you eat every day and track progress with you over time.',
     'hero.secondary': 'Try the plant counter',
     'img.hero': 'img/en-konsept-giris.webp',
     'img.cheese': 'img/en-konsept-peynir.webp',
     'img.flavors': 'img/en-konsept-cesitler.webp',
     'img.lavas': 'img/en-konsept-lavas.webp',
     'alt.hero': 'Open INSOVIO Aegean Thyme spreadable cheese tub on a sunlit travertine counter, lid beside it, with bread, thyme, olives and cucumber and tomatoes',
-    'why.e': 'Why INSOVIO',
-    'w1.a': 'Shelves full of supplements', 'w1.b': 'We make everyday foods functional.',
-    'w2.a': 'Healthy routines are easy to drop', 'w2.b': 'Products you enjoy, with no prep needed.',
-    'w3.a': 'Variety is hard to track', 'w3.b': 'See it yourself with the weekly plant counter.',
+    'why.e': 'Our approach',
+    'ap.1.t': 'Analyse', 'ap.1.d': 'We start with a baseline from your microbiota profile and personal context.',
+    'ap.2.t': 'Personalise', 'ap.2.d': 'With expert review we choose targeted probiotic and prebiotic options.',
+    'ap.3.t': 'Bring it into daily life', 'ap.3.d': 'Through encapsulation R&amp;D we build these ingredients into foods you eat every day.',
+    'ap.4.t': 'Track and improve', 'ap.4.d': 'Digital logging, feedback and periodic reviews refine the approach over time.',
+    'ap.note': 'In development. Pilot studies will run with expert supervision and consent; no health claims are made for the products.',
     'se.e': 'Whole range · Plant wheel',
     'se.h': 'Every tub is part of the wheel',
     'se.p': 'Each of the 30 petals on our lids always stands for the same plant. Every product fills in the petals of its own plants; together, our spreadable cheeses and wraps cover all 30 plants for the week.',
@@ -995,7 +1003,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     'p3.h': 'Routines that are hard to keep', 'p3.p': 'Healthy recipes often call for special ingredients and long prep. That is why habits that reduce metabolic load and chronic inflammation rarely last.',
     'p4.h': 'Convenient is not always balanced', 'p4.p': 'When routines get hard, people reach for products that are convenient but not balanced.',
     'p5.h': 'Measuring and tracking is a chore', 'p5.p': 'People lack the tools and systems to manage their own well-being.',
-    'approach.eyebrow': 'Our approach', 'approach.h2': '<em>Real food</em> instead of capsules. Tracking instead of guessing.',
+    'approach.eyebrow': 'Our approach', 'approach.h2': 'From the microbiome to <em>personalised</em> nutrition',
     'alt.plates': 'Colorful breakfast and lunch plates made with fruit, vegetables, grains, nuts and eggs',
     'pl1.e': 'Real food', 'pl1.h': 'Delicious, functional nutrition', 'pl1.p': 'We develop our products from microbiota-based clinical research. Food you enjoy every day, designed with scientific data.',
     'pl2.e': 'Diversity tracking', 'pl2.h': 'How many different plants a week?', 'pl2.p': 'Counting the fruit and vegetable varieties you eat each week is a simple, research-informed way to look after your gut.',
@@ -1110,8 +1118,8 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     'l3.b': 'Find', 'l3.s': 'Guests fill in a guess card; at the end, the answers and the stories behind the recipes are revealed.',
     'e1.t': 'Duration', 'e1.d': 'About 3 hours', 'e2.t': 'Guests', 'e2.d': '40 per session', 'e3.t': 'First series', 'e3.d': '4 weeks, 4 sessions', 'e4.t': 'Themes', 'e4.d': 'Flowers, spices, Aegean herbs, signature notes',
     'event.cta': 'For brand partnerships, sponsorship or attendance, write to <a href="mailto:info@insovio.com?subject=GastroSens">info@insovio.com</a>.',
-    'about.e': 'About us', 'about.h2': 'Bringing science to the <em>table</em>',
-    'about.p': 'INSOVIO was founded to turn microbiota-based clinical research into foods you will enjoy every day. With a focus on living well and healthy aging, we develop our products by bringing together food engineering, neurology and microbiota science.',
+    'about.e': 'About us', 'about.h2': 'From biology to <em>personalised</em> nutrition',
+    'about.p': 'INSOVIO is a microbiome-based human optimization company. We turn microbiota research into personalised nutrition and functional foods you eat every day, developing our products by bringing together food engineering, neurology and microbiota science.',
     'about.adv': 'Academic advisors',
     'role.founder': 'Founder',
     'bio.rabia': 'Food Engineer, Neuroscience PhD(c), RTTP. She completed her master’s degree on developing new additive- and preservative-free products and is pursuing a PhD in neuroscience at Ondokuz Mayıs University. Her “Gut and Brain” training at the Neuroscience School of Advanced Studies strengthened her focus on supporting brain health through nutrition. She leads clinical studies focused on brain health and the microbiota and works on the gut-brain axis at IdISBa, the Health Research Institute of the Balearic Islands in Spain. She was selected for the Future Innovation Leaders, Future Lab and Mercedes-Benz She’s Mercedes programs.',
