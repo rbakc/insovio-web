@@ -8,73 +8,76 @@
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
 <link rel="canonical" href="https://insovio.com/">
-<meta name="theme-color" content="#4B3BD8">
+<meta name="theme-color" content="#5E6B2E">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://insovio.com/">
 <meta property="og:title" content="INSOVIO · Mikrobiyom temelli insan optimizasyonu">
-<meta property="og:description" content="Mikrobiyota biliminden kişiye özel beslenmeye: analiz, kişiselleştirme, fonksiyonel gıda ve izlem.">
+<meta property="og:description" content="Vücudumuzun yarısı biz değiliz. INSOVIO kendi verini ölçüyor, eksik bileşeni lezzetli gerçek gıdayla tamamlıyor ve etkisini izliyor.">
+<meta name="description" content="INSOVIO: mikrobiyom temelli insan optimizasyonu. Ölç, besle, izle. GastroSens duyusal deneyimi için ön kayıt açık.">
 <meta property="og:image" content="https://insovio.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
 <style>
-/* Layout: "Laboratuvar Moru". Lavender-white ground, deep violet panels for product and the plant counter, lime as the single bright accent. */
+/* Layout: "Zeytin ve Krem". Warm ivory ground, olive as the single accent, deep olive panels for the counter and contact, pale sage for small highlights. Serif display type, quiet sans for reading. */
 :root {
-  --bg: #F4F2FB;
-  --surface: #FFFFFF;
-  --tint: #EAE7F8;
-  --ink: #17123A;
-  --muted: #5A5480;
-  --line: #D9D4F3;
-  --violet: #4B3BD8;
-  --on-violet: #FFFFFF;
-  --lime: #C9F26B;
-  --on-lime: #17123A;
-  --deep: #17123A;
-  --on-deep: #F4F2FB;
-  --deep-muted: #C7C2E8;
-  --deep-line: #3C3577;
-  --shadow: 0 18px 40px -18px rgb(23 18 58 / .35);
-  --contact-bg: #17123A;
-  --on-contact: #F4F2FB;
+  --bg: #F5F0E6;
+  --surface: #FBF8F1;
+  --tint: #ECE5D6;
+  --ink: #2B3020;
+  --muted: #65685A;
+  --line: #DFD6C4;
+  --violet: #5E6B2E;
+  --on-violet: #FBF8F1;
+  --lime: #DCE3B8;
+  --on-lime: #2B3020;
+  --deep: #3A4327;
+  --on-deep: #F5F0E6;
+  --deep-muted: #D2D2B8;
+  --deep-line: #56603C;
+  --shadow: 0 18px 40px -18px rgb(43 48 32 / .28);
+  --contact-bg: #3A4327;
+  --on-contact: #F5F0E6;
+  --lavender: #A893CF;
 
   /* plant groups, drawn on the deep counter panel in both themes */
-  --c-sebze: #5BD08F;
-  --c-meyve: #FF7AA8;
-  --c-baklagil: #FFC24B;
-  --c-tahil: #E3A86B;
-  --c-kuruyemis: #C99A73;
-  --c-ot: #4FD1C5;
-  --c-diger: #A99BFF;
+  --c-sebze: #A3CC6E;
+  --c-meyve: #F29A8E;
+  --c-baklagil: #F2C35B;
+  --c-tahil: #E2B57E;
+  --c-kuruyemis: #CBA587;
+  --c-ot: #8FD0B9;
+  --c-diger: #BEABE8;
 
-  --f-sans: "Schibsted Grotesk", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
-  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --f-sans: "DM Sans", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+  --f-serif: "Cormorant Garamond", "Cormorant", Garamond, Georgia, "Times New Roman", serif;
+  --f-mono: "DM Sans", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
 
   --s-xs: .8125rem;
   --s-sm: .9375rem;
   --s-md: 1.0625rem;
   --s-lg: 1.375rem;
-  --s-xl: clamp(2rem, 1.3rem + 2.4vw, 3.25rem);
-  --s-2xl: clamp(3rem, 1.5rem + 5vw, 5.5rem);
+  --s-xl: clamp(2.35rem, 1.5rem + 2.8vw, 3.85rem);
+  --s-2xl: clamp(3.3rem, 1.7rem + 5.4vw, 6rem);
 
   --gutter-l: max(20px, env(safe-area-inset-left, 0px));
   --gutter-r: max(20px, env(safe-area-inset-right, 0px));
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0D0A1F; --surface: #17123A; --tint: #1B1645; --ink: #EEEBFF; --muted: #A9A3D6;
-    --line: #2D2760; --violet: #9A8FFF; --on-violet: #0D0A1F; --deep: #221B5E; --on-deep: #F4F2FB;
-    --deep-muted: #C7C2E8; --deep-line: #433B8A; --shadow: 0 18px 40px -18px rgb(0 0 0 / .7);
-    --contact-bg: #221B5E; --on-contact: #F4F2FB;
+    --bg: #171A12; --surface: #21251A; --tint: #282D1F; --ink: #EFEBDD; --muted: #B6B49E;
+    --line: #383E2B; --violet: #BCC97F; --on-violet: #171A12; --lime: #CBD6A0; --on-lime: #22261A; --deep: #2C3321; --on-deep: #F5F0E6;
+    --deep-muted: #D2D2B8; --deep-line: #4A5336; --shadow: 0 18px 40px -18px rgb(0 0 0 / .6);
+    --contact-bg: #2C3321; --on-contact: #F5F0E6; --lavender: #C2B2E6;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0D0A1F; --surface: #17123A; --tint: #1B1645; --ink: #EEEBFF; --muted: #A9A3D6;
-  --line: #2D2760; --violet: #9A8FFF; --on-violet: #0D0A1F; --deep: #221B5E; --on-deep: #F4F2FB;
-  --deep-muted: #C7C2E8; --deep-line: #433B8A; --shadow: 0 18px 40px -18px rgb(0 0 0 / .7);
-  --contact-bg: #221B5E; --on-contact: #F4F2FB;
+  --bg: #171A12; --surface: #21251A; --tint: #282D1F; --ink: #EFEBDD; --muted: #B6B49E;
+  --line: #383E2B; --violet: #BCC97F; --on-violet: #171A12; --lime: #CBD6A0; --on-lime: #22261A; --deep: #2C3321; --on-deep: #F5F0E6;
+  --deep-muted: #D2D2B8; --deep-line: #4A5336; --shadow: 0 18px 40px -18px rgb(0 0 0 / .6);
+  --contact-bg: #2C3321; --on-contact: #F5F0E6; --lavender: #C2B2E6;
   color-scheme: dark;
 }
 
@@ -149,14 +152,14 @@ p { margin: 0; }
 .lang button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
 .nav a[aria-current="page"] { opacity: 1; color: var(--violet); }
 .menu-btn { display: none; }
-@media (max-width: 960px) {
+@media (max-width: 1240px) {
   .nav { display: none; }
   .menu-btn { display: inline-grid; align-content: center; justify-items: center; gap: 4px; width: 42px; height: 42px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
   .menu-btn span { display: block; width: 16px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .2s, opacity .2s; }
   .site-header.nav-open .menu-btn span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
   .site-header.nav-open .menu-btn span:nth-child(2) { opacity: 0; }
   .site-header.nav-open .menu-btn span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-  .site-header.nav-open .nav { display: grid; position: absolute; left: 0; right: 0; top: 100%; gap: 0; padding: 4px var(--gutter-r) 12px var(--gutter-l); background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 18px 30px -24px rgb(23 18 58 / .35); }
+  .site-header.nav-open .nav { display: grid; position: absolute; left: 0; right: 0; top: 100%; gap: 0; padding: 4px var(--gutter-r) 12px var(--gutter-l); background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 18px 30px -24px rgb(43 48 32 / .35); }
   .site-header.nav-open .nav a { padding: 14px 0; font-size: 1.0625rem; opacity: 1; border-bottom: 1px solid color-mix(in oklab, var(--line) 70%, transparent); }
   .site-header.nav-open .nav a:last-child { border-bottom: 0; }
 }
@@ -173,7 +176,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
 .hero { padding-block: clamp(16px, 3vw, 32px) clamp(40px, 6vw, 72px); }
 .hero-card { position: relative; border-radius: 36px; overflow: hidden; min-height: clamp(560px, 58vw, 700px); display: flex; align-items: flex-end; padding: clamp(20px, 3vw, 40px); background: var(--tint); }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 55%; }
-.concept-tag { position: absolute; z-index: 1; font: 500 .6875rem/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 7px 10px; border-radius: 999px; background: rgb(23 18 58 / .6); color: #fff; pointer-events: none; }
+.concept-tag { position: absolute; z-index: 1; font: 500 .6875rem/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 7px 10px; border-radius: 999px; background: rgb(43 48 32 / .6); color: #fff; pointer-events: none; }
 .hero-card > .concept-tag { top: clamp(20px, 3vw, 40px); left: clamp(20px, 3vw, 40px); }
 .media { position: relative; margin: 0; }
 .media > .concept-tag { right: 14px; bottom: 14px; }
@@ -282,7 +285,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
   transition: background-color .15s ease, border-color .15s ease, color .15s ease;
 }
 .chip:hover { border-color: var(--dot); }
-.chip[aria-pressed="true"] { background: var(--dot); border-color: var(--dot); color: #17123A; }
+.chip[aria-pressed="true"] { background: var(--dot); border-color: var(--dot); color: #2B3020; }
 .add-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .add-row input {
   flex: 1 1 200px; min-width: 0; font: 400 var(--s-sm)/1.2 var(--f-sans); color: var(--on-deep);
@@ -336,7 +339,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
 .ptabs button b { font-size: var(--s-md); font-weight: 700; line-height: 1.2; }
 .ptabs button small { font: 500 .6875rem/1.2 var(--f-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 .ptabs button:hover { border-color: var(--violet); }
-.ptabs button[aria-selected="true"] { background: var(--violet); border-color: var(--violet); color: #fff; }
+.ptabs button[aria-selected="true"] { background: var(--violet); border-color: var(--violet); color: var(--on-violet); }
 .ptabs button[aria-selected="true"] small { color: rgb(255 255 255 / .8); }
 .ptabs button:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
 @media (max-width: 600px) { .ptabs { gap: 6px; } .ptabs button { padding: 12px; border-radius: 14px; } .ptabs button b { font-size: .9375rem; } }
@@ -385,7 +388,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
   width: 84px; height: 84px; border-radius: 50%; background-color: var(--disc);
   background-image: radial-gradient(rgb(255 255 255 / .45) 1.3px, transparent 1.8px), radial-gradient(rgb(0 0 0 / .22) 1.2px, transparent 1.7px);
   background-size: 13px 13px, 17px 17px; background-position: 0 0, 6px 8px;
-  box-shadow: inset 0 0 0 5px rgb(255 255 255 / .22), 0 6px 14px -8px rgb(23 18 58 / .5);
+  box-shadow: inset 0 0 0 5px rgb(255 255 255 / .22), 0 6px 14px -8px rgb(43 48 32 / .5);
 }
 
 /* Process */
@@ -526,19 +529,111 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 32px; align-items: center; }
 .site-footer p { font-size: var(--s-xs); color: var(--muted); max-width: 60ch; }
 .site-footer .tagline { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+/* Zeytin ve Krem: display type */
+h1, h2, .product-copy h3, .lavas-head h3, .fonk-head h3, .series-copy h3, .flavors-head h4, .plan h3, .about-body h3,
+.promo b, .trust-item strong, .tally-num strong, .series-center b, .event-tag, .fonk-card h4, .layers b, .press-title {
+  font-family: var(--f-serif); font-weight: 600; letter-spacing: -.005em;
+}
+h1 { line-height: 1.02; }
+h2 { line-height: 1.06; }
+.hero h1 { font-size: clamp(2.9rem, 1.5rem + 3.6vw, 4.4rem); line-height: 1.02; letter-spacing: -.01em; }
+.product-copy h3, .lavas-head h3, .fonk-head h3, .series-copy h3 { line-height: 1.04; }
+.flavors-head h4 { font-size: 2.05rem; }
+.plan h3 { font-size: 2.35rem; }
+.about-body h3 { font-size: 1.8rem; }
+.promo b { font-size: 1.5rem; }
+.trust-item strong { font-size: 1.65rem; line-height: 1.12; }
+.event-tag { font-size: 1.85rem; }
+.fonk-card h4, .layers b { font-size: 1.5rem; line-height: 1.15; }
+.press-title { font-size: 1.3rem; }
+:is(h1, h2, h3, h4) em { font-style: italic; font-weight: 600; }
+.eyebrow, .badge, .fonk-tech, .about-card .role, .stage-label, .process span, .why-list li::before { font-weight: 600; letter-spacing: .14em; }
+.eyebrow { color: var(--violet); }
+.logo-word { width: auto; height: auto; background: none; -webkit-mask-image: none; mask-image: none; font: 600 1.7rem/1 var(--f-serif); letter-spacing: .16em; padding-left: .02em; }
+.logo-icon { background: var(--violet); }
+.site-footer .logo-word { font-size: 1.5rem; }
+.btn { font-weight: 600; letter-spacing: .01em; }
+
+/* İnsan optimizasyonu */
+.optim { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.optim-copy { display: grid; gap: 28px; min-width: 0; }
+.optim-copy .lead b { color: var(--violet); }
+.optim-hero { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.optim-big { display: grid; gap: 12px; align-content: start; padding: clamp(20px, 2.4vw, 28px); border-radius: 26px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.optim-big strong { font: 600 clamp(3.3rem, 2rem + 3.4vw, 5rem)/.9 var(--f-serif); color: var(--violet); letter-spacing: -.02em; }
+.optim-big span { color: var(--muted); line-height: 1.45; }
+.optim-big b, .optim-facts b { color: var(--ink); }
+.optim-how { display: grid; gap: 12px; padding: clamp(20px, 2.4vw, 28px); border-radius: 26px; background: var(--deep); color: var(--on-deep); }
+.optim-how .eyebrow { color: var(--lime); }
+.optim-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: os; }
+.optim-steps li { display: grid; gap: 6px; align-content: start; counter-increment: os; min-width: 0; }
+.optim-steps li + li { border-left: 1px solid var(--deep-line); padding-left: 16px; }
+.optim-steps b { font: 600 1.7rem/1.05 var(--f-serif); }
+.optim-steps b::before { content: "0" counter(os); display: block; margin-bottom: 6px; font: 600 .75rem/1 var(--f-sans); letter-spacing: .14em; color: var(--lime); }
+.optim-steps span { color: var(--deep-muted); font-size: var(--s-sm); line-height: 1.45; }
+.optim-fig { margin: 0; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(150px, 210px); align-items: stretch; }
+.optim-fig img { display: block; width: 100%; height: auto; border-radius: 28px; grid-column: 1 / 3; grid-row: 1; }
+.optim-facts { list-style: none; margin: 0; padding: 14px 0; grid-column: 2; grid-row: 1; display: grid; align-content: space-between; gap: 10px; position: relative; right: -14px; }
+.optim-facts li { display: grid; gap: 4px; padding: 14px 16px; border-radius: 18px; background: color-mix(in srgb, var(--surface) 90%, transparent); border: 1px solid var(--line); box-shadow: var(--shadow); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.optim-facts strong { font: 600 1.9rem/1 var(--f-serif); color: var(--violet); }
+.optim-facts span { font-size: var(--s-xs); color: var(--muted); line-height: 1.4; }
+.optim-axis { grid-column: 1 / -1; display: grid; gap: 14px; padding-top: 8px; border-top: 1px solid var(--line); }
+.axis-pills { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.axis-pills li { padding: 10px 16px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: var(--s-sm); font-weight: 600; color: var(--ink); }
+.axis-pills li.hot { background: var(--violet); border-color: var(--violet); color: var(--on-violet); }
+.axis-note { margin: 0; font-family: var(--f-serif); font-style: italic; font-size: clamp(1.2rem, 1rem + .6vw, 1.5rem); color: var(--ink); }
+.optim-src { margin: 0; font-size: var(--s-xs); color: var(--muted); }
+@media (max-width: 960px) {
+  .optim { grid-template-columns: minmax(0, 1fr); }
+  .optim-fig { max-width: 560px; }
+}
+@media (max-width: 640px) {
+  .optim-hero, .optim-steps { grid-template-columns: minmax(0, 1fr); }
+  .optim-steps li + li { border-left: 0; padding-left: 0; border-top: 1px solid var(--deep-line); padding-top: 14px; }
+  .optim-fig { grid-template-columns: minmax(0, 1fr); }
+  .optim-facts { grid-column: 1; grid-row: 2; right: 0; padding: 14px 0 0; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Yaklaşım: yöntemler ve döngüsel kaynak */
+.methods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+.method { display: grid; gap: 8px; align-content: start; padding: 24px; border-radius: 24px; background: var(--tint); border: 1px solid var(--line); }
+.method h3 { margin: 0; font: 600 1.6rem/1.1 var(--f-serif); }
+.method-src { font: italic 600 1.08rem/1.3 var(--f-serif); color: var(--violet); }
+.method p { margin: 0; color: var(--muted); font-size: var(--s-sm); }
+.waste { margin: 16px 0 0; padding: 18px 24px; border-radius: 20px; background: var(--deep); color: var(--on-deep); font-size: var(--s-sm); }
+.waste b { color: var(--lime); letter-spacing: .06em; margin-right: 6px; }
+@media (max-width: 880px) { .methods { grid-template-columns: minmax(0, 1fr); } }
+
+/* GastroSens ön kayıt */
+.event-lead { margin: 0; font-size: var(--s-lg); line-height: 1.35; color: var(--ink); }
+.event-route { margin: 0; font-size: var(--s-sm); color: var(--muted); }
+.event-route b { color: var(--ink); }
+.signup { display: flex; align-items: center; gap: 20px; padding: 18px; border-radius: 24px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.signup-qr { flex: none; width: 116px; height: 116px; border-radius: 12px; image-rendering: pixelated; background: #FFFCF7; }
+.signup-copy { display: grid; gap: 8px; justify-items: start; min-width: 0; }
+.signup-copy b { font: 600 1.45rem/1.1 var(--f-serif); }
+.signup-copy span { font-size: var(--s-sm); color: var(--muted); }
+@media (max-width: 640px) { .signup-qr { display: none; } .signup { padding: 20px; } }
+.btn-outline-light { border-color: currentColor; color: var(--on-contact); background: transparent; }
+
+@media (max-width: 480px) { .hero h1 { font-size: clamp(2.2rem, 1.4rem + 4.2vw, 2.6rem); } .hero-panel { min-width: 0; } .hero-card > * { min-width: 0; } }
+.optim-fig img { background: var(--tint); }
+@media (max-width: 400px) { .logo-word { font-size: 1.35rem; letter-spacing: .1em; } .site-footer .logo-word { font-size: 1.3rem; } :root { --s-xl: 2.05rem; } }
 </style>
 </head>
 <body>
 
-<div class="topbar"><a href="#etkinlik"><span data-i18n="bar.text">Yeni · GastroSens duyusal tadım deneyimi · Urla, İlkbahar 2027</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="topbar"><a href="#etkinlik"><span data-i18n="bar.text">GastroSens ön kaydı açık · Urla, İlkbahar 2027</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="INSOVIO ana sayfa" data-i18n-attr="aria-label:a.home">
       <span class="logo-icon" aria-hidden="true"></span>
-      <span class="logo-word" aria-hidden="true"></span>
+      <span class="logo-word" aria-hidden="true">INSOVIO</span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Ana menü" data-i18n-attr="aria-label:a.nav">
+      <a href="#optimizasyon" data-i18n="nav.optim">Optimizasyon</a>
       <a href="#cesitlilik" data-i18n="nav.diversity">Çeşitlilik</a>
       <a href="#etkinlik">GastroSens</a>
       <a href="#urunler" data-i18n="nav.products">Ürünlerimiz</a>
@@ -565,18 +660,64 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
         <span class="concept-tag" data-i18n="concept">Konsept görsel</span>
         <a class="promo" href="#etkinlik">
           <img src="img/etkinlik.webp" width="1007" height="941" alt="">
-          <span class="promo-text"><small data-i18n="promo.s">Yeni · Urla, İlkbahar 2027</small><b>GastroSens</b><span class="promo-sub" data-i18n="promo.d">Duyusal tadım deneyimi</span></span>
+          <span class="promo-text"><small data-i18n="promo.s">Ön kayıt açık · Urla, İlkbahar 2027</small><b>GastroSens</b><span class="promo-sub" data-i18n="promo.d">Duyusal tadım deneyimi</span></span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <div class="hero-panel">
-          <span class="eyebrow" data-i18n="hero.eyebrow">Mikrobiyom · Kişiselleştirme · İyi yaşam</span>
+          <span class="eyebrow" data-i18n="hero.eyebrow">Mikrobiyom · Kişiselleştirme · Gerçek gıda</span>
           <h1 data-i18n="hero.h1">Mikrobiyom temelli <em>insan optimizasyonu</em>.</h1>
-          <p class="lead" data-i18n="hero.lead">Mikrobiyota biliminden kişiye özel beslenmeye: biyolojik veriyi anlıyor, hedefli bileşenleri her gün yenen gıdalara taşıyor ve zaman içinde birlikte izliyoruz.</p>
+          <p class="lead" data-i18n="hero.lead">Vücudumuzun yarısı biz değiliz. Kendi verimizi ölçüyor, eksik bileşeni lezzetli gerçek gıdayla tamamlıyor ve etkisini birlikte izliyoruz.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#iletisim" data-i18n="cta.pilot">Pilot programa katıl</a>
-            <a class="btn btn-ghost" href="#cesitlilik" data-i18n="hero.secondary">Bitki sayacını dene</a>
+            <a class="btn btn-ghost" href="#optimizasyon" data-i18n="hero.secondary">Nasıl çalışıyor?</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="band optim-band" id="optimizasyon" aria-labelledby="optimizasyon-title">
+    <div class="wrap optim">
+      <div class="optim-copy">
+        <div class="section-head" style="margin-bottom:0">
+          <span class="eyebrow" data-i18n="op.e">İnsan optimizasyonu</span>
+          <h2 id="optimizasyon-title" data-i18n="op.h2">Vücudumuzun yarısı <em>biz değiliz.</em></h2>
+          <p class="lead" data-i18n="op.lead"><b>Biyoloji, yeni yazılım:</b> artık ölçülebilir, okunabilir ve tasarlanabilir.</p>
+        </div>
+        <div class="optim-hero">
+          <div class="optim-big"><strong>%1</strong><span data-i18n="op.genes">Genlerimizin yalnızca bu kadarı bize ait; gerisi <b>mikrobiyotanın</b>.</span></div>
+          <div class="optim-big"><strong>~%50</strong><span data-i18n="op.cells">Hücrelerimizin yalnızca <b>yarısı</b> insan hücresi.</span></div>
+        </div>
+        <div class="optim-how">
+          <span class="eyebrow" data-i18n="os.e">Nasıl optimize ediyoruz?</span>
+          <ol class="optim-steps">
+            <li><b data-i18n="os.1.t">Ölç</b><span data-i18n="os.1.d">Kendi mikrobiyota verimiz</span></li>
+            <li><b data-i18n="os.2.t">Besle</b><span data-i18n="os.2.d">Eksik bileşen, lezzetli gerçek gıdada</span></li>
+            <li><b data-i18n="os.3.t">İzle</b><span data-i18n="os.3.d">30 bitki hedefi ve geri bildirim</span></li>
+          </ol>
+        </div>
+      </div>
+      <figure class="optim-fig">
+        <img src="img/optimizasyon.webp" width="725" height="900" loading="lazy" alt="Beyni ve bağırsakları ışıkla birbirine bağlı, bitkilerle çevrili insan silueti" data-i18n-attr="alt:alt.optim">
+        <ul class="optim-facts">
+          <li><strong>%20</strong><span data-i18n="of.1">enerjimizi tek başına <b>BEYİN</b> kullanır</span></li>
+          <li><strong data-i18n="of.2v">2. beyin</strong><span data-i18n="of.2"><b>BAĞIRSAKTA</b> omurilikten fazla nöron var</span></li>
+          <li><strong>~%90</strong><span data-i18n="of.3">serotonin <b>BAĞIRSAKTA</b> üretilir</span></li>
+          <li><strong>%70</strong><span data-i18n="of.4">bağışıklığımız <b>BAĞIRSAKTA</b> yer alır</span></li>
+        </ul>
+      </figure>
+      <div class="optim-axis">
+        <span class="eyebrow" data-i18n="ax.e">Beyin–bağırsak ekseni · 5 iletişim yolu</span>
+        <ul class="axis-pills">
+          <li data-i18n="ax.1">Vagus siniri</li>
+          <li data-i18n="ax.2">Bağışıklık</li>
+          <li class="hot" data-i18n="ax.3">Hormonlar</li>
+          <li data-i18n="ax.4">Mikrobiyal metabolitler</li>
+          <li data-i18n="ax.5">Nörotransmitterler</li>
+        </ul>
+        <p class="axis-note" data-i18n="ax.note">Hormonlar devreye girince bu iletişim kişiye özelleşir; ölçüm de kişisel olmalı.</p>
+        <p class="optim-src" data-i18n="op.src">Kaynaklar: Sender ve ark., PLoS Biol 2016 · Qin ve ark., Nature 2010 · Cryan ve ark., Physiol Rev 2019 · Yano ve ark., Cell 2015 · Conde, Pande, Yoo, a16z 2019.</p>
       </div>
     </div>
   </section>
@@ -631,10 +772,11 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
         <img src="img/etkinlik.webp" width="1007" height="941" loading="lazy" alt="Masada portakal kabuğu, biberiye, tarçın ve kahve çekirdeği dolu cam kavanozlar ile tadım kaseleri" data-i18n-attr="alt:alt.event">
       </figure>
       <div class="event-copy">
-        <span class="badge" data-i18n="event.badge">Planlanıyor · Urla, İlkbahar 2027</span>
+        <span class="badge" data-i18n="event.badge">Ön kayıt açık · Urla, İlkbahar 2027</span>
         <span class="eyebrow" data-i18n="event.eyebrow">Duyusal tadım deneyimi</span>
         <h2 id="etkinlik-title">GastroSens</h2>
         <p class="event-tag" data-i18n="event.tag">Gözler kapalı, damak açık.</p>
+        <p class="event-lead" data-i18n="event.lead">Gurmelerin yeteneğini öğrenilebilir bir deneyime dönüştürüyoruz.</p>
         <p data-i18n="event.p">Şef Aydan Üstkanat ile birlikte tasarladığımız bu buluşmalarda katılımcılar koku ve tadı tanımayı, adlandırmayı ve hatırlamayı çalışıyor. Bilim tarafı lezzet algısının nörobilimini ve bağırsak-beyin eksenini, gastronomi tarafı aroma ve lezzet mimarisini getiriyor.</p>
         <ol class="layers">
           <li><b data-i18n="l1.b">Tanı</b><span data-i18n="l1.s">Koku kapsülleriyle imza notaları tek tek koklayıp tadıyoruz.</span></li>
@@ -647,7 +789,17 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
           <div><dt data-i18n="e3.t">İlk seri</dt><dd data-i18n="e3.d">4 hafta, 4 oturum</dd></div>
           <div><dt data-i18n="e4.t">Temalar</dt><dd data-i18n="e4.d">Çiçekler, baharatlar, Ege otları, imza notalar</dd></div>
         </dl>
-        <p class="event-cta" data-i18n="event.cta">Marka ortaklığı, sponsorluk ya da katılım için <a href="mailto:info@insovio.com?subject=GastroSens">info@insovio.com</a> adresine yaz.</p>
+        <p class="event-route" data-i18n="event.route"><b>Rota</b> · Urla’da ilk seri (TR) → global pilotlar: Mallorca · Portekiz · Dubai</p>
+        <div class="signup">
+          <img class="signup-qr" src="img/gastrosens-kayit-qr.png" width="120" height="120" alt="GastroSens ön kayıt formunun QR kodu" data-i18n-attr="alt:alt.qr">
+          <div class="signup-copy">
+            <b data-i18n="signup.t">Ön kayıt</b>
+            <span data-i18n="signup.d">Tarihler ve bilet bilgisi netleştiğinde ilk sen haberdar ol.</span>
+            <a class="btn btn-primary" href="https://forms.gle/f3bLTrSBrMYMptt48" target="_blank" rel="noopener" data-i18n="signup.btn">Ön kayda katıl</a>
+          </div>
+        </div>
+
+        <p class="event-cta" data-i18n="event.cta">Marka ortaklığı ya da sponsorluk için <a href="mailto:info@insovio.com?subject=GastroSens">info@insovio.com</a> adresine yaz.</p>
       </div>
     </div>
   </section>
@@ -790,7 +942,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
           <p class="series-note" data-i18n="se.n">Aynı türden bitkiler bir kez sayılır. Örneğin kekik hem Ege Kekikli'de hem Za'atar'da aynı yapraktır; zeytin yaprağı da zeytinle aynı yaprağı doldurur.</p>
         </div>
         <div class="series-wheel">
-          <div class="series-svg" data-i18n="se.svg"><svg role="img" aria-hidden="true" class="series-svg" viewBox="0 0 600 600"><ellipse cx="323.6" cy="75.2" rx="40" ry="13" transform="rotate(-84 323.6 75.2)" fill="#C9A227" stroke="#C9A227" stroke-width="0"/><text x="323.6" y="75.2" transform="rotate(-84 323.6 75.2)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#17123A">DEREOTU</text><ellipse cx="369.8" cy="85.1" rx="40" ry="13" transform="rotate(-72 369.8 85.1)" fill="#C9A227" stroke="#C9A227" stroke-width="0"/><text x="369.8" y="85.1" transform="rotate(-72 369.8 85.1)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#17123A">LİMON</text><ellipse cx="413.0" cy="104.3" rx="40" ry="13" transform="rotate(-60 413.0 104.3)" fill="#E58A3A" stroke="#E58A3A" stroke-width="0"/><text x="413.0" y="104.3" transform="rotate(-60 413.0 104.3)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#17123A">MERCİMEK</text><ellipse cx="451.2" cy="132.0" rx="40" ry="13" transform="rotate(-48 451.2 132.0)" fill="#E58A3A" stroke="#E58A3A" stroke-width="0"/><text x="451.2" y="132.0" transform="rotate(-48 451.2 132.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#17123A">KİMYON</text><ellipse cx="482.8" cy="167.2" rx="40" ry="13" transform="rotate(-36 482.8 167.2)" fill="#6E8B3D" stroke="#6E8B3D" stroke-width="0"/><text x="482.8" y="167.2" transform="rotate(-36 482.8 167.2)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">KEKİK</text><ellipse cx="506.5" cy="208.1" rx="40" ry="13" transform="rotate(-24 506.5 208.1)" fill="#6E8B3D" stroke="#6E8B3D" stroke-width="0"/><text x="506.5" y="208.1" transform="rotate(-24 506.5 208.1)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">ZEYTİN</text><ellipse cx="521.1" cy="253.0" rx="40" ry="13" transform="rotate(-12 521.1 253.0)" fill="#B5523B" stroke="#B5523B" stroke-width="0"/><text x="521.1" y="253.0" transform="rotate(-12 521.1 253.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">SUMAK</text><ellipse cx="526.0" cy="300.0" rx="40" ry="13" transform="rotate(0 526.0 300.0)" fill="#B5523B" stroke="#B5523B" stroke-width="0"/><text x="526.0" y="300.0" transform="rotate(0 526.0 300.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">SUSAM</text><ellipse cx="521.1" cy="347.0" rx="40" ry="13" transform="rotate(12 521.1 347.0)" fill="#D2483A" stroke="#D2483A" stroke-width="0"/><text x="521.1" y="347.0" transform="rotate(12 521.1 347.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">DOMATES</text><ellipse cx="506.5" cy="391.9" rx="40" ry="13" transform="rotate(24 506.5 391.9)" fill="#D2483A" stroke="#D2483A" stroke-width="0"/><text x="506.5" y="391.9" transform="rotate(24 506.5 391.9)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">FESLEĞEN</text><ellipse cx="482.8" cy="432.8" rx="40" ry="13" transform="rotate(36 482.8 432.8)" fill="#A83232" stroke="#A83232" stroke-width="0"/><text x="482.8" y="432.8" transform="rotate(36 482.8 432.8)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">İSOT</text><ellipse cx="451.2" cy="468.0" rx="40" ry="13" transform="rotate(48 451.2 468.0)" fill="#A83232" stroke="#A83232" stroke-width="0"/><text x="451.2" y="468.0" transform="rotate(48 451.2 468.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">CEVİZ</text><ellipse cx="413.0" cy="495.7" rx="40" ry="13" transform="rotate(60 413.0 495.7)" fill="#8E86A8" stroke="#8E86A8" stroke-width="0"/><text x="413.0" y="495.7" transform="rotate(60 413.0 495.7)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#17123A">ÇÖREK OTU</text><ellipse cx="369.8" cy="514.9" rx="40" ry="13" transform="rotate(72 369.8 514.9)" fill="#8E86A8" stroke="#8E86A8" stroke-width="0"/><text x="369.8" y="514.9" transform="rotate(72 369.8 514.9)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#17123A">TAZE SOĞAN</text><ellipse cx="323.6" cy="524.8" rx="40" ry="13" transform="rotate(84 323.6 524.8)" fill="#4E8F3A" stroke="#4E8F3A" stroke-width="0"/><text x="323.6" y="524.8" transform="rotate(84 323.6 524.8)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">NOHUT</text><ellipse cx="276.4" cy="524.8" rx="40" ry="13" transform="rotate(96 276.4 524.8)" fill="#4E8F3A" stroke="#4E8F3A" stroke-width="0"/><text x="276.4" y="524.8" transform="rotate(276 276.4 524.8)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">ISPANAK</text><ellipse cx="230.2" cy="514.9" rx="40" ry="13" transform="rotate(108 230.2 514.9)" fill="#9B2D5C" stroke="#9B2D5C" stroke-width="0"/><text x="230.2" y="514.9" transform="rotate(288 230.2 514.9)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">PANCAR</text><ellipse cx="187.0" cy="495.7" rx="40" ry="13" transform="rotate(120 187.0 495.7)" fill="#5E8C31" stroke="#5E8C31" stroke-width="0"/><text x="187.0" y="495.7" transform="rotate(300 187.0 495.7)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">AVOKADO</text><ellipse cx="148.8" cy="468.0" rx="40" ry="13" transform="rotate(132 148.8 468.0)" fill="#7FAF5A" stroke="#7FAF5A" stroke-width="0"/><text x="148.8" y="468.0" transform="rotate(312 148.8 468.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#17123A">KABAK</text><ellipse cx="117.2" cy="432.8" rx="40" ry="13" transform="rotate(144 117.2 432.8)" fill="#7FAF5A" stroke="#7FAF5A" stroke-width="0"/><text x="117.2" y="432.8" transform="rotate(324 117.2 432.8)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#17123A">KARABİBER</text><ellipse cx="93.5" cy="391.9" rx="40" ry="13" transform="rotate(156 93.5 391.9)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="93.5" y="391.9" transform="rotate(336 93.5 391.9)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">KARABUĞDAY</text><ellipse cx="78.9" cy="347.0" rx="40" ry="13" transform="rotate(168 78.9 347.0)" fill="#3E9A6B" stroke="#3E9A6B" stroke-width="0"/><text x="78.9" y="347.0" transform="rotate(348 78.9 347.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">NANE</text><ellipse cx="74.0" cy="300.0" rx="40" ry="13" transform="rotate(180 74.0 300.0)" fill="#3E9A6B" stroke="#3E9A6B" stroke-width="0"/><text x="74.0" y="300.0" transform="rotate(360 74.0 300.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">MAYDANOZ</text><ellipse cx="78.9" cy="253.0" rx="40" ry="13" transform="rotate(192 78.9 253.0)" fill="#3E9A6B" stroke="#3E9A6B" stroke-width="0"/><text x="78.9" y="253.0" transform="rotate(372 78.9 253.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">SARIMSAK</text><ellipse cx="93.5" cy="208.1" rx="40" ry="13" transform="rotate(204 93.5 208.1)" fill="#7A3E5C" stroke="#7A3E5C" stroke-width="0"/><text x="93.5" y="208.1" transform="rotate(384 93.5 208.1)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">İNCİR</text><ellipse cx="117.2" cy="167.2" rx="40" ry="13" transform="rotate(216 117.2 167.2)" fill="#5B7A5A" stroke="#5B7A5A" stroke-width="0"/><text x="117.2" y="167.2" transform="rotate(396 117.2 167.2)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">BİBERİYE</text><ellipse cx="148.8" cy="132.0" rx="40" ry="13" transform="rotate(228 148.8 132.0)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="148.8" y="132.0" transform="rotate(408 148.8 132.0)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">KETEN</text><ellipse cx="187.0" cy="104.3" rx="40" ry="13" transform="rotate(240 187.0 104.3)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="187.0" y="104.3" transform="rotate(420 187.0 104.3)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">CHİA</text><ellipse cx="230.2" cy="85.1" rx="40" ry="13" transform="rotate(252 230.2 85.1)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="230.2" y="85.1" transform="rotate(432 230.2 85.1)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="9.459999999999999" letter-spacing=".4" fill="#FFFFFF">AYÇEKİRDEĞİ</text><ellipse cx="276.4" cy="75.2" rx="40" ry="13" transform="rotate(264 276.4 75.2)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="276.4" y="75.2" transform="rotate(444 276.4 75.2)" text-anchor="middle" dominant-baseline="central" font-family="JetBrains Mono, ui-monospace, Menlo, monospace" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">HAŞHAŞ</text></svg></div>
+          <div class="series-svg" data-i18n="se.svg"><svg role="img" aria-hidden="true" class="series-svg" viewBox="0 0 600 600"><ellipse cx="323.6" cy="75.2" rx="40" ry="13" transform="rotate(-84 323.6 75.2)" fill="#C9A227" stroke="#C9A227" stroke-width="0"/><text x="323.6" y="75.2" transform="rotate(-84 323.6 75.2)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#2B3020">DEREOTU</text><ellipse cx="369.8" cy="85.1" rx="40" ry="13" transform="rotate(-72 369.8 85.1)" fill="#C9A227" stroke="#C9A227" stroke-width="0"/><text x="369.8" y="85.1" transform="rotate(-72 369.8 85.1)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#2B3020">LİMON</text><ellipse cx="413.0" cy="104.3" rx="40" ry="13" transform="rotate(-60 413.0 104.3)" fill="#E58A3A" stroke="#E58A3A" stroke-width="0"/><text x="413.0" y="104.3" transform="rotate(-60 413.0 104.3)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#2B3020">MERCİMEK</text><ellipse cx="451.2" cy="132.0" rx="40" ry="13" transform="rotate(-48 451.2 132.0)" fill="#E58A3A" stroke="#E58A3A" stroke-width="0"/><text x="451.2" y="132.0" transform="rotate(-48 451.2 132.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#2B3020">KİMYON</text><ellipse cx="482.8" cy="167.2" rx="40" ry="13" transform="rotate(-36 482.8 167.2)" fill="#6E8B3D" stroke="#6E8B3D" stroke-width="0"/><text x="482.8" y="167.2" transform="rotate(-36 482.8 167.2)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">KEKİK</text><ellipse cx="506.5" cy="208.1" rx="40" ry="13" transform="rotate(-24 506.5 208.1)" fill="#6E8B3D" stroke="#6E8B3D" stroke-width="0"/><text x="506.5" y="208.1" transform="rotate(-24 506.5 208.1)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">ZEYTİN</text><ellipse cx="521.1" cy="253.0" rx="40" ry="13" transform="rotate(-12 521.1 253.0)" fill="#B5523B" stroke="#B5523B" stroke-width="0"/><text x="521.1" y="253.0" transform="rotate(-12 521.1 253.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">SUMAK</text><ellipse cx="526.0" cy="300.0" rx="40" ry="13" transform="rotate(0 526.0 300.0)" fill="#B5523B" stroke="#B5523B" stroke-width="0"/><text x="526.0" y="300.0" transform="rotate(0 526.0 300.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">SUSAM</text><ellipse cx="521.1" cy="347.0" rx="40" ry="13" transform="rotate(12 521.1 347.0)" fill="#D2483A" stroke="#D2483A" stroke-width="0"/><text x="521.1" y="347.0" transform="rotate(12 521.1 347.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">DOMATES</text><ellipse cx="506.5" cy="391.9" rx="40" ry="13" transform="rotate(24 506.5 391.9)" fill="#D2483A" stroke="#D2483A" stroke-width="0"/><text x="506.5" y="391.9" transform="rotate(24 506.5 391.9)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">FESLEĞEN</text><ellipse cx="482.8" cy="432.8" rx="40" ry="13" transform="rotate(36 482.8 432.8)" fill="#A83232" stroke="#A83232" stroke-width="0"/><text x="482.8" y="432.8" transform="rotate(36 482.8 432.8)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">İSOT</text><ellipse cx="451.2" cy="468.0" rx="40" ry="13" transform="rotate(48 451.2 468.0)" fill="#A83232" stroke="#A83232" stroke-width="0"/><text x="451.2" y="468.0" transform="rotate(48 451.2 468.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">CEVİZ</text><ellipse cx="413.0" cy="495.7" rx="40" ry="13" transform="rotate(60 413.0 495.7)" fill="#8E86A8" stroke="#8E86A8" stroke-width="0"/><text x="413.0" y="495.7" transform="rotate(60 413.0 495.7)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#2B3020">ÇÖREK OTU</text><ellipse cx="369.8" cy="514.9" rx="40" ry="13" transform="rotate(72 369.8 514.9)" fill="#8E86A8" stroke="#8E86A8" stroke-width="0"/><text x="369.8" y="514.9" transform="rotate(72 369.8 514.9)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#2B3020">TAZE SOĞAN</text><ellipse cx="323.6" cy="524.8" rx="40" ry="13" transform="rotate(84 323.6 524.8)" fill="#4E8F3A" stroke="#4E8F3A" stroke-width="0"/><text x="323.6" y="524.8" transform="rotate(84 323.6 524.8)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">NOHUT</text><ellipse cx="276.4" cy="524.8" rx="40" ry="13" transform="rotate(96 276.4 524.8)" fill="#4E8F3A" stroke="#4E8F3A" stroke-width="0"/><text x="276.4" y="524.8" transform="rotate(276 276.4 524.8)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">ISPANAK</text><ellipse cx="230.2" cy="514.9" rx="40" ry="13" transform="rotate(108 230.2 514.9)" fill="#9B2D5C" stroke="#9B2D5C" stroke-width="0"/><text x="230.2" y="514.9" transform="rotate(288 230.2 514.9)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">PANCAR</text><ellipse cx="187.0" cy="495.7" rx="40" ry="13" transform="rotate(120 187.0 495.7)" fill="#5E8C31" stroke="#5E8C31" stroke-width="0"/><text x="187.0" y="495.7" transform="rotate(300 187.0 495.7)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">AVOKADO</text><ellipse cx="148.8" cy="468.0" rx="40" ry="13" transform="rotate(132 148.8 468.0)" fill="#7FAF5A" stroke="#7FAF5A" stroke-width="0"/><text x="148.8" y="468.0" transform="rotate(312 148.8 468.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#2B3020">KABAK</text><ellipse cx="117.2" cy="432.8" rx="40" ry="13" transform="rotate(144 117.2 432.8)" fill="#7FAF5A" stroke="#7FAF5A" stroke-width="0"/><text x="117.2" y="432.8" transform="rotate(324 117.2 432.8)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#2B3020">KARABİBER</text><ellipse cx="93.5" cy="391.9" rx="40" ry="13" transform="rotate(156 93.5 391.9)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="93.5" y="391.9" transform="rotate(336 93.5 391.9)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">KARABUĞDAY</text><ellipse cx="78.9" cy="347.0" rx="40" ry="13" transform="rotate(168 78.9 347.0)" fill="#3E9A6B" stroke="#3E9A6B" stroke-width="0"/><text x="78.9" y="347.0" transform="rotate(348 78.9 347.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">NANE</text><ellipse cx="74.0" cy="300.0" rx="40" ry="13" transform="rotate(180 74.0 300.0)" fill="#3E9A6B" stroke="#3E9A6B" stroke-width="0"/><text x="74.0" y="300.0" transform="rotate(360 74.0 300.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">MAYDANOZ</text><ellipse cx="78.9" cy="253.0" rx="40" ry="13" transform="rotate(192 78.9 253.0)" fill="#3E9A6B" stroke="#3E9A6B" stroke-width="0"/><text x="78.9" y="253.0" transform="rotate(372 78.9 253.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">SARIMSAK</text><ellipse cx="93.5" cy="208.1" rx="40" ry="13" transform="rotate(204 93.5 208.1)" fill="#7A3E5C" stroke="#7A3E5C" stroke-width="0"/><text x="93.5" y="208.1" transform="rotate(384 93.5 208.1)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">İNCİR</text><ellipse cx="117.2" cy="167.2" rx="40" ry="13" transform="rotate(216 117.2 167.2)" fill="#5B7A5A" stroke="#5B7A5A" stroke-width="0"/><text x="117.2" y="167.2" transform="rotate(396 117.2 167.2)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">BİBERİYE</text><ellipse cx="148.8" cy="132.0" rx="40" ry="13" transform="rotate(228 148.8 132.0)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="148.8" y="132.0" transform="rotate(408 148.8 132.0)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">KETEN</text><ellipse cx="187.0" cy="104.3" rx="40" ry="13" transform="rotate(240 187.0 104.3)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="187.0" y="104.3" transform="rotate(420 187.0 104.3)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">CHİA</text><ellipse cx="230.2" cy="85.1" rx="40" ry="13" transform="rotate(252 230.2 85.1)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="230.2" y="85.1" transform="rotate(432 230.2 85.1)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="9.459999999999999" letter-spacing=".4" fill="#FFFFFF">AYÇEKİRDEĞİ</text><ellipse cx="276.4" cy="75.2" rx="40" ry="13" transform="rotate(264 276.4 75.2)" fill="#8A6A3B" stroke="#8A6A3B" stroke-width="0"/><text x="276.4" y="75.2" transform="rotate(444 276.4 75.2)" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, Helvetica, Arial, sans-serif" font-weight="500" font-size="11" letter-spacing=".4" fill="#FFFFFF">HAŞHAŞ</text></svg></div>
           <div class="series-center"><b>30</b><span data-i18n="se.c">farklı bitki</span></div>
         </div>
       </div>
@@ -817,15 +969,23 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     <div class="wrap why">
       <div class="section-head">
         <span class="eyebrow" data-i18n="why.e">Yaklaşımımız</span>
-        <h2 id="yaklasim-title" data-i18n="approach.h2">Mikrobiyomdan <em>kişiye özel</em> beslenmeye</h2>
+        <h2 id="yaklasim-title" data-i18n="approach.h2">Veriden bileşene, <em>bileşenden izleme</em></h2>
+        <p class="lead" data-i18n="approach.lead">Lezzeti, doğru ölçüyü ve faydayı aynı üründe bulmak zor. Faydalı bileşenler var; en zengin oldukları kabuk ve çekirdekler acı olduğu için çoğu zaman atılıyor. Ölçemediğimiz şeyi de yönetemeyiz.</p>
       </div>
       <ol class="why-list steps">
-        <li><b data-i18n="ap.1.t">Analiz et</b><span data-i18n="ap.1.d">Mikrobiyota profili ve kişisel bağlamla başlangıç resmini çıkarıyoruz.</span></li>
-        <li><b data-i18n="ap.2.t">Kişiselleştir</b><span data-i18n="ap.2.d">Uzman değerlendirmesiyle hedefli probiyotik ve prebiyotik seçeneklerini belirliyoruz.</span></li>
-        <li><b data-i18n="ap.3.t">Günlük yaşama taşı</b><span data-i18n="ap.3.d">Enkapsülasyon Ar-Ge’siyle bu bileşenleri her gün yenen gıdalara entegre ediyoruz.</span></li>
-        <li><b data-i18n="ap.4.t">İzle ve geliştir</b><span data-i18n="ap.4.d">Dijital kayıt, geri bildirim ve periyodik değerlendirmeyle yaklaşımı zamanla iyileştiriyoruz.</span></li>
+        <li><b data-i18n="ap.1.t">Veri</b><span data-i18n="ap.1.d">Mikrobiyota profili, kişinin kendi sağlık bağlamı ve uzman değerlendirmesiyle başlangıç resmini çıkarıyoruz.</span></li>
+        <li><b data-i18n="ap.2.t">Bileşen</b><span data-i18n="ap.2.d">Kabuk ve çekirdeklerdeki biyoaktifleri doğal kaplamalarla koruyor, acı ve buruk tadı maskeliyoruz.</span></li>
+        <li><b data-i18n="ap.3.t">Ürün</b><span data-i18n="ap.3.d">Bu bileşenleri lezzetli, ölçülü ve her gün yenen gerçek gıdalara taşıyoruz.</span></li>
+        <li><b data-i18n="ap.4.t">İzlem</b><span data-i18n="ap.4.d">Ambalajda bitki sayısı yer alacak; barkodu okutup haftalık 30 bitki hedefini uygulamada izleyebileceksin.</span></li>
       </ol>
-      <p class="why-note" data-i18n="ap.note">Geliştirme aşamasında. Pilot çalışmalar uzman eşliğinde ve onamla yürütülecek; ürünler için sağlık beyanı yapılmamaktadır.</p>
+      <div class="methods">
+        <article class="method"><h3 data-i18n="me.1.t">Mikroenkapsülasyon</h3><span class="method-src" data-i18n="me.1.s">Portakal kabuğu · hesperidin</span><p data-i18n="me.1.d">Acı tadı doğal kaplamayla maskeler, biyoaktifi ışık ve oksidasyondan korur.</p></article>
+        <article class="method"><h3 data-i18n="me.2.t">Dondurarak kurutma</h3><span class="method-src" data-i18n="me.2.s">Nar kabuğu · punikalajin</span><p data-i18n="me.2.d">Isıya duyarlı bileşeni düşük sıcaklıkta kurutarak korur.</p></article>
+        <article class="method"><h3 data-i18n="me.3.t">Süperkritik CO₂</h3><span class="method-src" data-i18n="me.3.s">Üzüm çekirdeği · proantosiyanidin</span><p data-i18n="me.3.d">Biyoaktifi çözücü kalıntısı bırakmadan ayırır.</p></article>
+      </div>
+      <p class="waste" data-i18n="waste"><b>Atıktan değere.</b> Narenciye işlenirken meyvenin %40–60’ı, narın yaklaşık yarısı kabuk olarak atığa gidiyor; biz bu yan ürünleri gıdaya geri kazandırıyoruz.</p>
+
+      <p class="why-note" data-i18n="ap.note">Geliştirme aşamasında. Yöntem, bileşene göre seçilir; eşleşmeler örnektir. Pilot çalışmalar uzman eşliğinde ve onamla yürütülecek; ürünler için sağlık beyanı yapılmamaktadır. Kaynak: Olmedo-Galarza ve ark., Sustainability 2025 · Akhtar ve ark., Food Chem 2015.</p>
     </div>
   </section>
 
@@ -932,6 +1092,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
         <p class="lead" data-i18n="contact.lead">Pilot kullanıcı gruplarımıza katıl, ürünlerimizi ilk sen dene ve geri bildirimlerinle INSOVIO'yu birlikte şekillendirelim. Bize kısaca kendinden bahseden bir e-posta göndermen yeterli.</p>
         <div class="contact-actions">
           <a class="btn btn-lime" href="mailto:info@insovio.com?subject=Pilot%20program%20ba%C5%9Fvurusu" data-i18n="contact.btn" data-i18n-attr="href:contact.href">E-posta ile başvur</a>
+          <a class="btn btn-outline-light" href="https://forms.gle/f3bLTrSBrMYMptt48" target="_blank" rel="noopener" data-i18n="contact.gs">GastroSens ön kaydı</a>
         </div>
       </div>
       <ul class="contact-list">
@@ -946,7 +1107,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
   <div class="wrap">
     <a class="logo" href="#top" aria-label="INSOVIO ana sayfa" data-i18n-attr="aria-label:a.home">
       <span class="logo-icon" aria-hidden="true"></span>
-      <span class="logo-word" aria-hidden="true"></span>
+      <span class="logo-word" aria-hidden="true">INSOVIO</span>
     </a>
     <span class="tagline" lang="en">Science &amp; Sincerity</span>
     <p data-i18n="footer">© 2026 INSOVIO. Bu sitedeki bilgiler bilgilendirme amaçlıdır ve tıbbi tavsiye yerine geçmez.</p>
@@ -958,11 +1119,33 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
   /* ---------- English strings (Turkish lives in the HTML) ---------- */
   var EN = {
     'a.home': 'INSOVIO home', 'a.nav': 'Main menu', 'a.menu': 'Menu', 'a.timeline': 'Development stages',
+    'nav.optim': 'Optimization',
+    'op.e': 'Human optimization', 'op.h2': 'Half of our body <em>isn’t us.</em>',
+    'op.lead': '<b>Biology is the new software:</b> it can now be measured, read and designed.',
+    'op.genes': 'Only this share of our genes is ours; the rest belongs to <b>the microbiota</b>.',
+    'op.cells': 'Only <b>half</b> of our cells are human cells.',
+    'os.e': 'How we optimize', 'os.1.t': 'Measure', 'os.1.d': 'Your own microbiota data', 'os.2.t': 'Nourish', 'os.2.d': 'The missing ingredient, in delicious real food', 'os.3.t': 'Track', 'os.3.d': 'A 30-plant goal and feedback',
+    'alt.optim': 'Human silhouette with brain and gut linked by light, surrounded by herbs',
+    'of.1': 'of our energy is used by the <b>BRAIN</b> alone', 'of.2v': '2nd brain', 'of.2': 'the <b>GUT</b> holds more neurons than the spinal cord',
+    'of.3': 'of serotonin is made in the <b>GUT</b>', 'of.4': 'of our immune system sits in the <b>GUT</b>',
+    'ax.e': 'Brain–gut axis · 5 communication routes', 'ax.1': 'Vagus nerve', 'ax.2': 'Immune system', 'ax.3': 'Hormones', 'ax.4': 'Microbial metabolites', 'ax.5': 'Neurotransmitters',
+    'ax.note': 'Once hormones come in, this conversation becomes personal; so should the measurement.',
+    'op.src': 'Sources: Sender et al., PLoS Biol 2016 · Qin et al., Nature 2010 · Cryan et al., Physiol Rev 2019 · Yano et al., Cell 2015 · Conde, Pande, Yoo, a16z 2019.',
+    'approach.lead': 'It is hard to find taste, the right dose and benefit in one product. The beneficial compounds exist, yet the peels and seeds richest in them are usually thrown away because they taste bitter. And we can’t manage what we don’t measure.',
+    'me.1.t': 'Microencapsulation', 'me.1.s': 'Orange peel · hesperidin', 'me.1.d': 'Masks bitterness with a natural coating and protects the bioactive from light and oxidation.',
+    'me.2.t': 'Freeze-drying', 'me.2.s': 'Pomegranate peel · punicalagin', 'me.2.d': 'Dries heat-sensitive compounds at low temperature to preserve them.',
+    'me.3.t': 'Supercritical CO₂', 'me.3.s': 'Grape seed · proanthocyanidins', 'me.3.d': 'Extracts the bioactive without leaving solvent residue.',
+    'waste': '<b>From waste to value.</b> When citrus is processed, 40–60% of the fruit ends up as waste, and peel makes up about half of a pomegranate; we bring these by-products back into food.',
+    'event.lead': 'We turn the talent of gourmets into an experience anyone can learn.',
+    'event.route': '<b>Route</b> · First series in Urla (TR) → global pilots: Mallorca · Portugal · Dubai',
+    'alt.qr': 'QR code for the GastroSens pre-registration form',
+    'signup.t': 'Pre-registration', 'signup.d': 'Be the first to hear when dates and tickets are confirmed.', 'signup.btn': 'Pre-register',
+    'contact.gs': 'GastroSens pre-registration',
     'nav.approach': 'Approach', 'nav.diversity': 'Diversity', 'nav.products': 'Our products', 'nav.science': 'Science', 'nav.event': 'Event', 'nav.about': 'About',
     'cta.pilot': 'Join the pilot',
-    'promo.s': 'New · Urla, spring 2027', 'promo.d': 'Sensory tasting experience',
-    'bar.text': 'New · GastroSens sensory tasting experience · Urla, spring 2027',
-    'hero.eyebrow': 'Microbiome · Personalisation · Living well',
+    'promo.s': 'Pre-registration open · Urla, spring 2027', 'promo.d': 'Sensory tasting experience',
+    'bar.text': 'GastroSens pre-registration is open · Urla, spring 2027',
+    'hero.eyebrow': 'Microbiome · Personalisation · Real food',
     'stat1': 'Steps from lab to table', 'stat2': 'Disciplines in one team: food engineering, neurology, microbiota', 'stat3.v': 'Clinical', 'stat3': 'Studies focused on brain health and the microbiota',
     'card.label': 'Diversity tracking · example', 'card.q': 'How many plants this week?',
     'a.trust': 'Why INSOVIO',
@@ -973,25 +1156,25 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     't4.h': 'Digital tracking', 't4.p': 'Everyday foods, not capsules',
     'product.cta': 'Be among the first to try it',
     'hero.h1': 'Microbiome-based <em>human optimization</em>.',
-    'hero.lead': 'From microbiota science to personalised nutrition: we read biological data, bring targeted ingredients into foods you eat every day and track progress with you over time.',
-    'hero.secondary': 'Try the plant counter',
+    'hero.lead': 'Half of our body isn’t us. We measure your own data, add the missing ingredient through delicious real food and track the effect together.',
+    'hero.secondary': 'How it works',
     'img.hero': 'img/en-konsept-giris.webp',
     'img.cheese': 'img/en-konsept-peynir.webp',
     'img.flavors': 'img/en-konsept-cesitler.webp',
     'img.lavas': 'img/en-konsept-lavas.webp',
     'alt.hero': 'Open INSOVIO Aegean Thyme spreadable cheese tub on a sunlit travertine counter, lid beside it, with bread, thyme, olives and cucumber and tomatoes',
     'why.e': 'Our approach',
-    'ap.1.t': 'Analyse', 'ap.1.d': 'We start with a baseline from your microbiota profile and personal context.',
-    'ap.2.t': 'Personalise', 'ap.2.d': 'With expert review we choose targeted probiotic and prebiotic options.',
-    'ap.3.t': 'Bring it into daily life', 'ap.3.d': 'Through encapsulation R&amp;D we build these ingredients into foods you eat every day.',
-    'ap.4.t': 'Track and improve', 'ap.4.d': 'Digital logging, feedback and periodic reviews refine the approach over time.',
-    'ap.note': 'In development. Pilot studies will run with expert supervision and consent; no health claims are made for the products.',
+    'ap.1.t': 'Data', 'ap.1.d': 'We start with your microbiota profile, your own health context and expert review.',
+    'ap.2.t': 'Ingredient', 'ap.2.d': 'We protect the bioactives in peels and seeds with natural coatings and mask their bitter, astringent taste.',
+    'ap.3.t': 'Product', 'ap.3.d': 'We bring these ingredients into delicious, well-dosed real foods you eat every day.',
+    'ap.4.t': 'Tracking', 'ap.4.d': 'Each pack will show its plant count; scan the barcode and follow your weekly 30-plant goal in the app.',
+    'ap.note': 'In development. The method is chosen per ingredient; the pairings are examples. Pilot studies will run with expert supervision and consent; no health claims are made for the products. Sources: Olmedo-Galarza et al., Sustainability 2025 · Akhtar et al., Food Chem 2015.',
     'se.e': 'Whole range · Plant wheel',
     'se.h': 'Every tub is part of the wheel',
     'se.p': 'Each of the 30 petals on our lids always stands for the same plant. Every product fills in the petals of its own plants; together, our spreadable cheeses and wraps cover all 30 plants for the week.',
     'se.n': 'Plants of the same species count once. Thyme, for example, is the same petal in Aegean Thyme and in Za\'atar, and olive leaf fills the same petal as olive.',
     'se.c': 'different plants',
-    'se.svg': "<svg role=\"img\" aria-hidden=\"true\" class=\"series-svg\" viewBox=\"0 0 600 600\"><ellipse cx=\"323.6\" cy=\"75.2\" rx=\"40\" ry=\"13\" transform=\"rotate(-84 323.6 75.2)\" fill=\"#C9A227\" stroke=\"#C9A227\" stroke-width=\"0\"/><text x=\"323.6\" y=\"75.2\" transform=\"rotate(-84 323.6 75.2)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#17123A\">DILL</text><ellipse cx=\"369.8\" cy=\"85.1\" rx=\"40\" ry=\"13\" transform=\"rotate(-72 369.8 85.1)\" fill=\"#C9A227\" stroke=\"#C9A227\" stroke-width=\"0\"/><text x=\"369.8\" y=\"85.1\" transform=\"rotate(-72 369.8 85.1)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#17123A\">LEMON</text><ellipse cx=\"413.0\" cy=\"104.3\" rx=\"40\" ry=\"13\" transform=\"rotate(-60 413.0 104.3)\" fill=\"#E58A3A\" stroke=\"#E58A3A\" stroke-width=\"0\"/><text x=\"413.0\" y=\"104.3\" transform=\"rotate(-60 413.0 104.3)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#17123A\">LENTIL</text><ellipse cx=\"451.2\" cy=\"132.0\" rx=\"40\" ry=\"13\" transform=\"rotate(-48 451.2 132.0)\" fill=\"#E58A3A\" stroke=\"#E58A3A\" stroke-width=\"0\"/><text x=\"451.2\" y=\"132.0\" transform=\"rotate(-48 451.2 132.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#17123A\">CUMIN</text><ellipse cx=\"482.8\" cy=\"167.2\" rx=\"40\" ry=\"13\" transform=\"rotate(-36 482.8 167.2)\" fill=\"#6E8B3D\" stroke=\"#6E8B3D\" stroke-width=\"0\"/><text x=\"482.8\" y=\"167.2\" transform=\"rotate(-36 482.8 167.2)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">THYME</text><ellipse cx=\"506.5\" cy=\"208.1\" rx=\"40\" ry=\"13\" transform=\"rotate(-24 506.5 208.1)\" fill=\"#6E8B3D\" stroke=\"#6E8B3D\" stroke-width=\"0\"/><text x=\"506.5\" y=\"208.1\" transform=\"rotate(-24 506.5 208.1)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">OLIVE</text><ellipse cx=\"521.1\" cy=\"253.0\" rx=\"40\" ry=\"13\" transform=\"rotate(-12 521.1 253.0)\" fill=\"#B5523B\" stroke=\"#B5523B\" stroke-width=\"0\"/><text x=\"521.1\" y=\"253.0\" transform=\"rotate(-12 521.1 253.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">SUMAC</text><ellipse cx=\"526.0\" cy=\"300.0\" rx=\"40\" ry=\"13\" transform=\"rotate(0 526.0 300.0)\" fill=\"#B5523B\" stroke=\"#B5523B\" stroke-width=\"0\"/><text x=\"526.0\" y=\"300.0\" transform=\"rotate(0 526.0 300.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">SESAME</text><ellipse cx=\"521.1\" cy=\"347.0\" rx=\"40\" ry=\"13\" transform=\"rotate(12 521.1 347.0)\" fill=\"#D2483A\" stroke=\"#D2483A\" stroke-width=\"0\"/><text x=\"521.1\" y=\"347.0\" transform=\"rotate(12 521.1 347.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">TOMATO</text><ellipse cx=\"506.5\" cy=\"391.9\" rx=\"40\" ry=\"13\" transform=\"rotate(24 506.5 391.9)\" fill=\"#D2483A\" stroke=\"#D2483A\" stroke-width=\"0\"/><text x=\"506.5\" y=\"391.9\" transform=\"rotate(24 506.5 391.9)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">BASIL</text><ellipse cx=\"482.8\" cy=\"432.8\" rx=\"40\" ry=\"13\" transform=\"rotate(36 482.8 432.8)\" fill=\"#A83232\" stroke=\"#A83232\" stroke-width=\"0\"/><text x=\"482.8\" y=\"432.8\" transform=\"rotate(36 482.8 432.8)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">ISOT</text><ellipse cx=\"451.2\" cy=\"468.0\" rx=\"40\" ry=\"13\" transform=\"rotate(48 451.2 468.0)\" fill=\"#A83232\" stroke=\"#A83232\" stroke-width=\"0\"/><text x=\"451.2\" y=\"468.0\" transform=\"rotate(48 451.2 468.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">WALNUT</text><ellipse cx=\"413.0\" cy=\"495.7\" rx=\"40\" ry=\"13\" transform=\"rotate(60 413.0 495.7)\" fill=\"#8E86A8\" stroke=\"#8E86A8\" stroke-width=\"0\"/><text x=\"413.0\" y=\"495.7\" transform=\"rotate(60 413.0 495.7)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#17123A\">NIGELLA</text><ellipse cx=\"369.8\" cy=\"514.9\" rx=\"40\" ry=\"13\" transform=\"rotate(72 369.8 514.9)\" fill=\"#8E86A8\" stroke=\"#8E86A8\" stroke-width=\"0\"/><text x=\"369.8\" y=\"514.9\" transform=\"rotate(72 369.8 514.9)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#17123A\">SCALLION</text><ellipse cx=\"323.6\" cy=\"524.8\" rx=\"40\" ry=\"13\" transform=\"rotate(84 323.6 524.8)\" fill=\"#4E8F3A\" stroke=\"#4E8F3A\" stroke-width=\"0\"/><text x=\"323.6\" y=\"524.8\" transform=\"rotate(84 323.6 524.8)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">CHICKPEA</text><ellipse cx=\"276.4\" cy=\"524.8\" rx=\"40\" ry=\"13\" transform=\"rotate(96 276.4 524.8)\" fill=\"#4E8F3A\" stroke=\"#4E8F3A\" stroke-width=\"0\"/><text x=\"276.4\" y=\"524.8\" transform=\"rotate(276 276.4 524.8)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">SPINACH</text><ellipse cx=\"230.2\" cy=\"514.9\" rx=\"40\" ry=\"13\" transform=\"rotate(108 230.2 514.9)\" fill=\"#9B2D5C\" stroke=\"#9B2D5C\" stroke-width=\"0\"/><text x=\"230.2\" y=\"514.9\" transform=\"rotate(288 230.2 514.9)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">BEET</text><ellipse cx=\"187.0\" cy=\"495.7\" rx=\"40\" ry=\"13\" transform=\"rotate(120 187.0 495.7)\" fill=\"#5E8C31\" stroke=\"#5E8C31\" stroke-width=\"0\"/><text x=\"187.0\" y=\"495.7\" transform=\"rotate(300 187.0 495.7)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">AVOCADO</text><ellipse cx=\"148.8\" cy=\"468.0\" rx=\"40\" ry=\"13\" transform=\"rotate(132 148.8 468.0)\" fill=\"#7FAF5A\" stroke=\"#7FAF5A\" stroke-width=\"0\"/><text x=\"148.8\" y=\"468.0\" transform=\"rotate(312 148.8 468.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#17123A\">ZUCCHINI</text><ellipse cx=\"117.2\" cy=\"432.8\" rx=\"40\" ry=\"13\" transform=\"rotate(144 117.2 432.8)\" fill=\"#7FAF5A\" stroke=\"#7FAF5A\" stroke-width=\"0\"/><text x=\"117.2\" y=\"432.8\" transform=\"rotate(324 117.2 432.8)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#17123A\">PEPPER</text><ellipse cx=\"93.5\" cy=\"391.9\" rx=\"40\" ry=\"13\" transform=\"rotate(156 93.5 391.9)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"93.5\" y=\"391.9\" transform=\"rotate(336 93.5 391.9)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">BUCKWHEAT</text><ellipse cx=\"78.9\" cy=\"347.0\" rx=\"40\" ry=\"13\" transform=\"rotate(168 78.9 347.0)\" fill=\"#3E9A6B\" stroke=\"#3E9A6B\" stroke-width=\"0\"/><text x=\"78.9\" y=\"347.0\" transform=\"rotate(348 78.9 347.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">MINT</text><ellipse cx=\"74.0\" cy=\"300.0\" rx=\"40\" ry=\"13\" transform=\"rotate(180 74.0 300.0)\" fill=\"#3E9A6B\" stroke=\"#3E9A6B\" stroke-width=\"0\"/><text x=\"74.0\" y=\"300.0\" transform=\"rotate(360 74.0 300.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">PARSLEY</text><ellipse cx=\"78.9\" cy=\"253.0\" rx=\"40\" ry=\"13\" transform=\"rotate(192 78.9 253.0)\" fill=\"#3E9A6B\" stroke=\"#3E9A6B\" stroke-width=\"0\"/><text x=\"78.9\" y=\"253.0\" transform=\"rotate(372 78.9 253.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">GARLIC</text><ellipse cx=\"93.5\" cy=\"208.1\" rx=\"40\" ry=\"13\" transform=\"rotate(204 93.5 208.1)\" fill=\"#7A3E5C\" stroke=\"#7A3E5C\" stroke-width=\"0\"/><text x=\"93.5\" y=\"208.1\" transform=\"rotate(384 93.5 208.1)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">FIG</text><ellipse cx=\"117.2\" cy=\"167.2\" rx=\"40\" ry=\"13\" transform=\"rotate(216 117.2 167.2)\" fill=\"#5B7A5A\" stroke=\"#5B7A5A\" stroke-width=\"0\"/><text x=\"117.2\" y=\"167.2\" transform=\"rotate(396 117.2 167.2)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">ROSEMARY</text><ellipse cx=\"148.8\" cy=\"132.0\" rx=\"40\" ry=\"13\" transform=\"rotate(228 148.8 132.0)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"148.8\" y=\"132.0\" transform=\"rotate(408 148.8 132.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">FLAXSEED</text><ellipse cx=\"187.0\" cy=\"104.3\" rx=\"40\" ry=\"13\" transform=\"rotate(240 187.0 104.3)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"187.0\" y=\"104.3\" transform=\"rotate(420 187.0 104.3)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">CHIA</text><ellipse cx=\"230.2\" cy=\"85.1\" rx=\"40\" ry=\"13\" transform=\"rotate(252 230.2 85.1)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"230.2\" y=\"85.1\" transform=\"rotate(432 230.2 85.1)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">SUNFLOWER</text><ellipse cx=\"276.4\" cy=\"75.2\" rx=\"40\" ry=\"13\" transform=\"rotate(264 276.4 75.2)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"276.4\" y=\"75.2\" transform=\"rotate(444 276.4 75.2)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"JetBrains Mono, ui-monospace, Menlo, monospace\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">POPPY</text></svg>",
+    'se.svg': "<svg role=\"img\" aria-hidden=\"true\" class=\"series-svg\" viewBox=\"0 0 600 600\"><ellipse cx=\"323.6\" cy=\"75.2\" rx=\"40\" ry=\"13\" transform=\"rotate(-84 323.6 75.2)\" fill=\"#C9A227\" stroke=\"#C9A227\" stroke-width=\"0\"/><text x=\"323.6\" y=\"75.2\" transform=\"rotate(-84 323.6 75.2)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#2B3020\">DILL</text><ellipse cx=\"369.8\" cy=\"85.1\" rx=\"40\" ry=\"13\" transform=\"rotate(-72 369.8 85.1)\" fill=\"#C9A227\" stroke=\"#C9A227\" stroke-width=\"0\"/><text x=\"369.8\" y=\"85.1\" transform=\"rotate(-72 369.8 85.1)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#2B3020\">LEMON</text><ellipse cx=\"413.0\" cy=\"104.3\" rx=\"40\" ry=\"13\" transform=\"rotate(-60 413.0 104.3)\" fill=\"#E58A3A\" stroke=\"#E58A3A\" stroke-width=\"0\"/><text x=\"413.0\" y=\"104.3\" transform=\"rotate(-60 413.0 104.3)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#2B3020\">LENTIL</text><ellipse cx=\"451.2\" cy=\"132.0\" rx=\"40\" ry=\"13\" transform=\"rotate(-48 451.2 132.0)\" fill=\"#E58A3A\" stroke=\"#E58A3A\" stroke-width=\"0\"/><text x=\"451.2\" y=\"132.0\" transform=\"rotate(-48 451.2 132.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#2B3020\">CUMIN</text><ellipse cx=\"482.8\" cy=\"167.2\" rx=\"40\" ry=\"13\" transform=\"rotate(-36 482.8 167.2)\" fill=\"#6E8B3D\" stroke=\"#6E8B3D\" stroke-width=\"0\"/><text x=\"482.8\" y=\"167.2\" transform=\"rotate(-36 482.8 167.2)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">THYME</text><ellipse cx=\"506.5\" cy=\"208.1\" rx=\"40\" ry=\"13\" transform=\"rotate(-24 506.5 208.1)\" fill=\"#6E8B3D\" stroke=\"#6E8B3D\" stroke-width=\"0\"/><text x=\"506.5\" y=\"208.1\" transform=\"rotate(-24 506.5 208.1)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">OLIVE</text><ellipse cx=\"521.1\" cy=\"253.0\" rx=\"40\" ry=\"13\" transform=\"rotate(-12 521.1 253.0)\" fill=\"#B5523B\" stroke=\"#B5523B\" stroke-width=\"0\"/><text x=\"521.1\" y=\"253.0\" transform=\"rotate(-12 521.1 253.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">SUMAC</text><ellipse cx=\"526.0\" cy=\"300.0\" rx=\"40\" ry=\"13\" transform=\"rotate(0 526.0 300.0)\" fill=\"#B5523B\" stroke=\"#B5523B\" stroke-width=\"0\"/><text x=\"526.0\" y=\"300.0\" transform=\"rotate(0 526.0 300.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">SESAME</text><ellipse cx=\"521.1\" cy=\"347.0\" rx=\"40\" ry=\"13\" transform=\"rotate(12 521.1 347.0)\" fill=\"#D2483A\" stroke=\"#D2483A\" stroke-width=\"0\"/><text x=\"521.1\" y=\"347.0\" transform=\"rotate(12 521.1 347.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">TOMATO</text><ellipse cx=\"506.5\" cy=\"391.9\" rx=\"40\" ry=\"13\" transform=\"rotate(24 506.5 391.9)\" fill=\"#D2483A\" stroke=\"#D2483A\" stroke-width=\"0\"/><text x=\"506.5\" y=\"391.9\" transform=\"rotate(24 506.5 391.9)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">BASIL</text><ellipse cx=\"482.8\" cy=\"432.8\" rx=\"40\" ry=\"13\" transform=\"rotate(36 482.8 432.8)\" fill=\"#A83232\" stroke=\"#A83232\" stroke-width=\"0\"/><text x=\"482.8\" y=\"432.8\" transform=\"rotate(36 482.8 432.8)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">ISOT</text><ellipse cx=\"451.2\" cy=\"468.0\" rx=\"40\" ry=\"13\" transform=\"rotate(48 451.2 468.0)\" fill=\"#A83232\" stroke=\"#A83232\" stroke-width=\"0\"/><text x=\"451.2\" y=\"468.0\" transform=\"rotate(48 451.2 468.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">WALNUT</text><ellipse cx=\"413.0\" cy=\"495.7\" rx=\"40\" ry=\"13\" transform=\"rotate(60 413.0 495.7)\" fill=\"#8E86A8\" stroke=\"#8E86A8\" stroke-width=\"0\"/><text x=\"413.0\" y=\"495.7\" transform=\"rotate(60 413.0 495.7)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#2B3020\">NIGELLA</text><ellipse cx=\"369.8\" cy=\"514.9\" rx=\"40\" ry=\"13\" transform=\"rotate(72 369.8 514.9)\" fill=\"#8E86A8\" stroke=\"#8E86A8\" stroke-width=\"0\"/><text x=\"369.8\" y=\"514.9\" transform=\"rotate(72 369.8 514.9)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#2B3020\">SCALLION</text><ellipse cx=\"323.6\" cy=\"524.8\" rx=\"40\" ry=\"13\" transform=\"rotate(84 323.6 524.8)\" fill=\"#4E8F3A\" stroke=\"#4E8F3A\" stroke-width=\"0\"/><text x=\"323.6\" y=\"524.8\" transform=\"rotate(84 323.6 524.8)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">CHICKPEA</text><ellipse cx=\"276.4\" cy=\"524.8\" rx=\"40\" ry=\"13\" transform=\"rotate(96 276.4 524.8)\" fill=\"#4E8F3A\" stroke=\"#4E8F3A\" stroke-width=\"0\"/><text x=\"276.4\" y=\"524.8\" transform=\"rotate(276 276.4 524.8)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">SPINACH</text><ellipse cx=\"230.2\" cy=\"514.9\" rx=\"40\" ry=\"13\" transform=\"rotate(108 230.2 514.9)\" fill=\"#9B2D5C\" stroke=\"#9B2D5C\" stroke-width=\"0\"/><text x=\"230.2\" y=\"514.9\" transform=\"rotate(288 230.2 514.9)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">BEET</text><ellipse cx=\"187.0\" cy=\"495.7\" rx=\"40\" ry=\"13\" transform=\"rotate(120 187.0 495.7)\" fill=\"#5E8C31\" stroke=\"#5E8C31\" stroke-width=\"0\"/><text x=\"187.0\" y=\"495.7\" transform=\"rotate(300 187.0 495.7)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">AVOCADO</text><ellipse cx=\"148.8\" cy=\"468.0\" rx=\"40\" ry=\"13\" transform=\"rotate(132 148.8 468.0)\" fill=\"#7FAF5A\" stroke=\"#7FAF5A\" stroke-width=\"0\"/><text x=\"148.8\" y=\"468.0\" transform=\"rotate(312 148.8 468.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#2B3020\">ZUCCHINI</text><ellipse cx=\"117.2\" cy=\"432.8\" rx=\"40\" ry=\"13\" transform=\"rotate(144 117.2 432.8)\" fill=\"#7FAF5A\" stroke=\"#7FAF5A\" stroke-width=\"0\"/><text x=\"117.2\" y=\"432.8\" transform=\"rotate(324 117.2 432.8)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#2B3020\">PEPPER</text><ellipse cx=\"93.5\" cy=\"391.9\" rx=\"40\" ry=\"13\" transform=\"rotate(156 93.5 391.9)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"93.5\" y=\"391.9\" transform=\"rotate(336 93.5 391.9)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">BUCKWHEAT</text><ellipse cx=\"78.9\" cy=\"347.0\" rx=\"40\" ry=\"13\" transform=\"rotate(168 78.9 347.0)\" fill=\"#3E9A6B\" stroke=\"#3E9A6B\" stroke-width=\"0\"/><text x=\"78.9\" y=\"347.0\" transform=\"rotate(348 78.9 347.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">MINT</text><ellipse cx=\"74.0\" cy=\"300.0\" rx=\"40\" ry=\"13\" transform=\"rotate(180 74.0 300.0)\" fill=\"#3E9A6B\" stroke=\"#3E9A6B\" stroke-width=\"0\"/><text x=\"74.0\" y=\"300.0\" transform=\"rotate(360 74.0 300.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">PARSLEY</text><ellipse cx=\"78.9\" cy=\"253.0\" rx=\"40\" ry=\"13\" transform=\"rotate(192 78.9 253.0)\" fill=\"#3E9A6B\" stroke=\"#3E9A6B\" stroke-width=\"0\"/><text x=\"78.9\" y=\"253.0\" transform=\"rotate(372 78.9 253.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">GARLIC</text><ellipse cx=\"93.5\" cy=\"208.1\" rx=\"40\" ry=\"13\" transform=\"rotate(204 93.5 208.1)\" fill=\"#7A3E5C\" stroke=\"#7A3E5C\" stroke-width=\"0\"/><text x=\"93.5\" y=\"208.1\" transform=\"rotate(384 93.5 208.1)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">FIG</text><ellipse cx=\"117.2\" cy=\"167.2\" rx=\"40\" ry=\"13\" transform=\"rotate(216 117.2 167.2)\" fill=\"#5B7A5A\" stroke=\"#5B7A5A\" stroke-width=\"0\"/><text x=\"117.2\" y=\"167.2\" transform=\"rotate(396 117.2 167.2)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">ROSEMARY</text><ellipse cx=\"148.8\" cy=\"132.0\" rx=\"40\" ry=\"13\" transform=\"rotate(228 148.8 132.0)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"148.8\" y=\"132.0\" transform=\"rotate(408 148.8 132.0)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">FLAXSEED</text><ellipse cx=\"187.0\" cy=\"104.3\" rx=\"40\" ry=\"13\" transform=\"rotate(240 187.0 104.3)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"187.0\" y=\"104.3\" transform=\"rotate(420 187.0 104.3)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">CHIA</text><ellipse cx=\"230.2\" cy=\"85.1\" rx=\"40\" ry=\"13\" transform=\"rotate(252 230.2 85.1)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"230.2\" y=\"85.1\" transform=\"rotate(432 230.2 85.1)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">SUNFLOWER</text><ellipse cx=\"276.4\" cy=\"75.2\" rx=\"40\" ry=\"13\" transform=\"rotate(264 276.4 75.2)\" fill=\"#8A6A3B\" stroke=\"#8A6A3B\" stroke-width=\"0\"/><text x=\"276.4\" y=\"75.2\" transform=\"rotate(444 276.4 75.2)\" text-anchor=\"middle\" dominant-baseline=\"central\" font-family=\"DM Sans, Helvetica, Arial, sans-serif\" font-weight=\"500\" font-size=\"11\" letter-spacing=\".4\" fill=\"#FFFFFF\">POPPY</text></svg>",
     'concept': 'Concept image',
     'alt.flavors': 'Three INSOVIO spreadable cheese flavors: Aegean Thyme, Za\'atar, and Dill and Lemon',
     'alt.lavas': 'INSOVIO red lentil wraps in a paper sleeve with a round window, next to a bowl of red lentils and parsley',
@@ -1003,7 +1186,7 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     'p3.h': 'Routines that are hard to keep', 'p3.p': 'Healthy recipes often call for special ingredients and long prep. That is why habits that reduce metabolic load and chronic inflammation rarely last.',
     'p4.h': 'Convenient is not always balanced', 'p4.p': 'When routines get hard, people reach for products that are convenient but not balanced.',
     'p5.h': 'Measuring and tracking is a chore', 'p5.p': 'People lack the tools and systems to manage their own well-being.',
-    'approach.eyebrow': 'Our approach', 'approach.h2': 'From the microbiome to <em>personalised</em> nutrition',
+    'approach.eyebrow': 'Our approach', 'approach.h2': 'From data to ingredient, <em>from ingredient to tracking</em>',
     'alt.plates': 'Colorful breakfast and lunch plates made with fruit, vegetables, grains, nuts and eggs',
     'pl1.e': 'Real food', 'pl1.h': 'Delicious, functional nutrition', 'pl1.p': 'We develop our products from microbiota-based clinical research. Food you enjoy every day, designed with scientific data.',
     'pl2.e': 'Diversity tracking', 'pl2.h': 'How many different plants a week?', 'pl2.p': 'Counting the fruit and vegetable varieties you eat each week is a simple, research-informed way to look after your gut.',
@@ -1111,13 +1294,13 @@ body.page-products #iletisim { margin-top: clamp(56px, 7vw, 96px); }
     'alt.community': 'A large group posing outdoors with a banner', 'cap.community': 'Community work',
     'press.e': 'In the press', 'press.t': 'Food Online · Autumn 2026, Issue 24', 'press.d': '“1 Avuç Sağlık” (A Handful of Health): Rabia Akçatemiz’s article on plant diversity on the plate rather than supplement routines. In Turkish.', 'press.c': 'Read the issue →',
     'alt.event': 'Glass jars of orange peel, rosemary, cinnamon and coffee beans next to tasting cups on a table',
-    'event.badge': 'Planned · Urla, spring 2027', 'event.eyebrow': 'A sensory tasting experience', 'event.tag': 'Eyes closed, palate open.',
+    'event.badge': 'Pre-registration open · Urla, spring 2027', 'event.eyebrow': 'A sensory tasting experience', 'event.tag': 'Eyes closed, palate open.',
     'event.p': 'In these sessions, designed together with Chef Aydan Üstkanat, guests practice recognizing, naming and remembering smells and tastes. The science side brings the neuroscience of flavor perception and the gut-brain axis; the gastronomy side brings aroma and flavor architecture.',
     'l1.b': 'Learn', 'l1.s': 'We smell and taste the signature notes one by one with scent capsules.',
     'l2.b': 'Taste', 'l2.s': 'Eyes closed, different plates arrive. Each one hides these notes, or none at all.',
     'l3.b': 'Find', 'l3.s': 'Guests fill in a guess card; at the end, the answers and the stories behind the recipes are revealed.',
     'e1.t': 'Duration', 'e1.d': 'About 3 hours', 'e2.t': 'Guests', 'e2.d': '40 per session', 'e3.t': 'First series', 'e3.d': '4 weeks, 4 sessions', 'e4.t': 'Themes', 'e4.d': 'Flowers, spices, Aegean herbs, signature notes',
-    'event.cta': 'For brand partnerships, sponsorship or attendance, write to <a href="mailto:info@insovio.com?subject=GastroSens">info@insovio.com</a>.',
+    'event.cta': 'For brand partnerships or sponsorship, write to <a href="mailto:info@insovio.com?subject=GastroSens">info@insovio.com</a>.',
     'about.e': 'About us', 'about.h2': 'From biology to <em>personalised</em> nutrition',
     'about.p': 'INSOVIO is a microbiome-based human optimization company. We turn microbiota research into personalised nutrition and functional foods you eat every day, developing our products by bringing together food engineering, neurology and microbiota science.',
     'about.adv': 'Academic advisors',
